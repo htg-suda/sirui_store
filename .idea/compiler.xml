@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="store-good" />
+        <module name="shop-registry" />
+        <module name="store-file-service" />
+        <module name="store-common" />
+        <module name="store-user" />
+        <module name="store-gateway" />
+        <module name="store-client-feign" />
+        <module name="store-auth" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="shop-registry" target="1.8" />
+      <module name="sirui_store" target="1.8" />
+      <module name="store-auth" target="1.8" />
+      <module name="store-client-feign" target="1.8" />
+      <module name="store-common" target="1.8" />
+      <module name="store-file-service" target="1.8" />
+      <module name="store-gateway" target="1.8" />
+      <module name="store-good" target="1.8" />
+      <module name="store-user" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="shop-registry" options="-parameters" />
+      <module name="store-auth" options="-parameters" />
+      <module name="store-client-feign" options="-parameters" />
+      <module name="store-common" options="-parameters" />
+      <module name="store-file-service" options="-parameters" />
+      <module name="store-gateway" options="-parameters" />
+      <module name="store-good" options="-parameters" />
+      <module name="store-user" options="-parameters" />
+    </option>
+  </component>
+</project>

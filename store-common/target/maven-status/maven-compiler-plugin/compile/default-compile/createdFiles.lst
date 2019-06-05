@@ -1,0 +1,14 @@
+com/htg/common/entity/Brand.class
+com/htg/common/entity/GoodSpuDetail.class
+com/htg/common/base/BaseEntity.class
+com/htg/common/entity/GoodSpecGroupItem.class
+com/htg/common/entity/GoodSpecGroup.class
+com/htg/common/entity/GoodSkuStock.class
+com/htg/common/result/CodeEnum.class
+com/htg/common/entity/GoodSpecValue.class
+com/htg/common/entity/GoodSpecItem.class
+com/htg/common/entity/GoodCategory.class
+com/htg/common/entity/GoodSpu.class
+com/htg/common/result/CommonResult.class
+com/htg/common/entity/GoodSku.class
+com/htg/common/entity/BrandCategory.class

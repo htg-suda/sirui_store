@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htg.good.mapper.BrandMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.Brand">
+        <id column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="name_cn" property="nameCn"/>
+        <result column="name_eg" property="nameEg"/>
+        <result column="icon" property="icon"/>
+        <result column="initial" property="initial"/>
+        <result column="sort" property="sort"/>
+        <result column="ascription" property="ascription"/>
+        <result column="verify" property="verify"/>
+        <result column="verify_remark" property="verifyRemark"/>
+        <result column="del_flag" property="delFlag"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        create_user,
+        update_user,
+        create_time,
+        update_time,
+        id, name_cn, name_eg, icon, initial, sort, ascription,verify, verify_remark, del_flag
+    </sql>
+
+    <select id="selectByName" resultMap="BaseResultMap" parameterType="map">
+        select
+        <include refid="Base_Column_List"/>
+        from sr_brand
+        <where>
+            <if test="nameCN!= null">
+                name_cn=#{nameCN,jdbcType=VARCHAR}
+            </if>
+            <if test="nameEG!= null">
+                or name_eg=#{nameEG,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from sr_brand order by sort asc ;
+    </select>
+</mapper>

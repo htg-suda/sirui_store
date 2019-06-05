@@ -1,0 +1,21 @@
+server:
+  port: 8891
+
+img_path:
+  category: /res/public/img/category/icon/
+  user_head_: /res/public/img/category/icon/
+
+spring:
+  application:
+    name: store_file_service
+
+#eureka 的客户端配置:
+eureka:
+  client:
+    fetch-registry: true        #客户端是否获取eureka服务器注册表上的注册信息，默认为true
+    register-with-eureka: true  #指示此实例是否应将其信息注册到eureka服务器以供其他服务发现，默认为false
+    service-url:                # 注册中心地址
+      defaultZone: http://localhost:8000/eureka
+  instance:                     #server 中 显示的status 中信息
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true

@@ -1,0 +1,14 @@
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/GoodCategory.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/BrandCategory.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/GoodSpuDetail.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/GoodSku.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/base/BaseEntity.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/result/CodeEnum.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/GoodSpu.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/GoodSkuStock.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/result/CommonResult.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/Brand.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/GoodSpecGroup.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/GoodSpecGroupItem.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/GoodSpecValue.java
+/home/htg/work/project/sirui_store/store-common/src/main/java/com/htg/common/entity/GoodSpecItem.java

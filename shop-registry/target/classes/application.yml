@@ -1,0 +1,16 @@
+# 服务端口号
+server:
+  port: 8000
+
+#eureka 配置
+eureka:
+  instance:
+    hostname: localhost  #eureka 服务端的实例名称
+  client:
+    register-with-eureka: false  # 是否将本Eureka服务注册到自己的Eureka 的服务中 ,false 表示否
+    fetch-registry: false # 服务发现 ,false 表示不从 Eureka 注册中心不去主动发现服务,只是用来管理服务
+    service-url:  # 这个url地址就是向 其他微服务进行暴露的,让其他微服务进行注册或发现 的
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false #自我保护机制 在开发阶段关闭掉,这样可以立即检测服务是否存在,在上线时要设置为true ,可以增加服务的稳定性
+

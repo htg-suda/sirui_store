@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htg.good.mapper.GoodSpecItemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.GoodSpecItem">
+        <id column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="name" property="name"/>
+        <result column="category_id" property="categoryId"/>
+        <result column="group_id" property="groupId"/>
+        <result column="spec_type" property="specType"/>
+        <result column="enum_options" property="enumOptions"/>
+        <result column="unit" property="unit"/>
+        <result column="is_general" property="isGeneral"/>
+        <result column="is_necessary" property="isNecessary"/>
+        <result column="del_flag" property="delFlag"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        create_user,
+        update_user,
+        create_time,
+        update_time,
+        id, name, category_id, group_id, spec_type, enum_options,unit, is_general, is_necessary, del_flag
+    </sql>
+
+
+    <select id="selectByGroupId" parameterType="integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_good_spec_item
+        where group_id=#{groupId};
+    </select>
+
+</mapper>
