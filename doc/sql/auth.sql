@@ -6,7 +6,7 @@
 -- oauth_client_token  比较特殊不用于Provider，是客户端用的
 
 /*参考文档  http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html*/
-
+/* https://www.cnblogs.com/Irving/p/9306008.html */
 create database store_auth charset utf8;
 use store_auth;
 

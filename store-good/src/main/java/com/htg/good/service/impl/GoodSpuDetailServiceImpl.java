@@ -1,6 +1,6 @@
 package com.htg.good.service.impl;
 
-import com.htg.common.entity.GoodSpuDetail;
+import com.htg.common.entity.good.GoodSpuDetail;
 import com.htg.good.mapper.GoodSpuDetailMapper;
 import com.htg.good.service.IGoodSpuDetailService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

@@ -1,10 +1,8 @@
 package com.htg.good.mapper;
 
-import com.htg.common.entity.GoodCategory;
+import com.htg.common.entity.good.GoodCategory;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
-import java.io.Serializable;
-import java.util.Collection;
 import java.util.List;
 
 /**

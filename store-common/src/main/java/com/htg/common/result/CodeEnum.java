@@ -22,7 +22,11 @@ public enum CodeEnum {
     SPU_NOT_EXIST(-1017, "商品SPU不存在"),
     SPU_DETAIL_NOT_EXIST(-1018, "商品SPU DETAIL不存在"),
     SPU_ID_ERROR(-1019, "商品SPU ID 错误"),
-    CATEGORY_BRAND_IS_ERROR(-1020, "品牌和分类不对应");
+    CATEGORY_BRAND_IS_ERROR(-1020, "品牌和分类不对应"),
+    ADD_GOOD_SPU_ERROR(-1021, "添加商品SPU异常"),
+    Modify_GOOD_SPU_ERROR(-1022, "修改商品SPU异常"),
+    Modify_GOOD_SPU_STATE_ERROR(-1023, "修改SPU状态异常"),
+    Modify_GOOD_SPU_VERIFY_ERROR(-1024, "修改SPU审核状态异常");
 
     private int code;
     private String msg;

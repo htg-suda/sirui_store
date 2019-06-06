@@ -1,6 +1,6 @@
 package com.htg.good.mapper;
 
-import com.htg.common.entity.GoodSkuStock;
+import com.htg.common.entity.good.GoodSkuStock;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**

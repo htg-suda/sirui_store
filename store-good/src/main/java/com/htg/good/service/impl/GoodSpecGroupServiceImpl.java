@@ -1,7 +1,7 @@
 package com.htg.good.service.impl;
 
-import com.htg.common.entity.GoodCategory;
-import com.htg.common.entity.GoodSpecGroup;
+import com.htg.common.entity.good.GoodCategory;
+import com.htg.common.entity.good.GoodSpecGroup;
 import com.htg.common.result.CodeEnum;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;

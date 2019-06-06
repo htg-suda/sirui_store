@@ -126,7 +126,6 @@ create table sr_good_spu(
     promotion_type tinyint not null default 0 comment '促销类型 0-无促销 1-抢购 2-限时折扣',
     pay_num int  default 0 comment '付款人数',
     evaluate_num int default 0 comment '评价数量',
-    general_spec_value_snapshot varchar(1000) comment 'spu 通用规格值 {list:[{"specItemId":2,"specItemValue":"1209","is_necessary":1,"is_general":0}]}',
     freight decimal(10,2) default 0 comment '运费,0-包邮,免运费',
     state tinyint not null default 1 comment '0-下架(商家行为), 1-在售,10-违规被禁止售卖(管理员行为),一旦禁止售卖则无法上架',
     state_remark varchar(255) default null comment '违规原因',
@@ -160,20 +159,31 @@ create table sr_good_spu_detail(
 
 
 
-/*spu里面只保存 通用 规格参数值表 */
-/*create table sr_good_spec_value (
+-- spu 规格参数值表
+drop table if exists sr_spu_good_spec_value;
+create table sr_spu_good_spec_value (
     id int primary key auto_increment comment '通用的规格参数值的id',
-    spec_item_id int not null comment '规格参数名id',
     spec_value varchar(255) not null comment '规格参数值,当参数名规定了 numeric 的时候表示是可以转换为数值类型',
+    spu_id  int not null  comment '商品spu_id',
+    -- 以下都是快照字段
+    spec_item_id int not null comment '规格参数名id',
+    spec_item_name varchar(20) not null comment '规格参数健值',
+    category_id int not null comment '产品分类id',
+    group_id int  not null comment '规格组id',
+    spec_type  varchar(20) not null comment '规格值的类型, num-数值类型 , enum 枚举类型 ,str-文本类型,images-图片url地址如xxx.png;xxx.png',
+    enum_options varchar(1000) comment '如果是枚举类型的话,其各个枚举值,以逗号分割',
+    unit varchar(20) default null comment '在为数值类型的时候的单位,比如12mm中的mm',
+    is_necessary tinyint default 1 comment '是否必填,0-不是, 1-是' ,
     -- 附带信息
     create_user int not null comment '创建人的id',
     update_user int not null comment '更新人的id',
     create_time datetime not null comment '创建时间',
     update_time datetime not null comment '更新时间'
-)comment '商品规格值表' charset utf8;*/
+)comment '商品spu规格值表' charset utf8;
 
 
 /*spu 下有多个 商品的sku, 一对多的关系 ,sku表*/
+drop table  if exists sr_good_sku;
 create table sr_good_sku(
     id int primary key auto_increment comment '商品sku id',
     spu_id int not null comment '商品的spu id ,spu 和 sku 是一对多关系',
@@ -184,7 +194,6 @@ create table sr_good_sku(
     price decimal(10,2) not null comment '商品价格',
     promotion_price decimal(10,2)  comment '促销价格',
     market_price decimal(10,2) comment '市场价格',
-    own_spec varchar(1000) comment 'sku 商品特有的规格参数值 ,比如某一款手机为红色',
     status tinyint not null  default 0 comment '0- 商品有效,-1 商品无效',
      -- 附带信息
     del_flag tinyint default 0 comment '删除状态,0-有效,-1 -删除',
@@ -195,7 +204,8 @@ create table sr_good_sku(
 )comment '商品的sku 表,具体到某一款商品' charset utf8 ;
 
 
-create table sr_good_sku(
+drop table  if exists sr_good_sku_detail;
+create table sr_good_sku_detail(
     sku_id int unique key not null comment '商品sku_id ,参考商品sku 表',
     sub_img  text  comment '商品副图,一个json 数组的字符串 xxxx.png;xxxx.png',
     detail_desc text default null comment '商品描述详情,是一段html富文本',
@@ -209,6 +219,7 @@ create table sr_good_sku(
 
 
 /* 商品sku 库存表 同sku 表是一对一关系  */
+drop table  if exists sr_good_sku_stock;
 create table sr_good_sku_stock(
     sku_id int unique key comment '参考商品的sku 表,和sku表一对一的关系',
     stock int not null  default 0 comment '商品的库存总量',
@@ -220,6 +231,31 @@ create table sr_good_sku_stock(
     create_time datetime not null comment '创建时间',
     update_time datetime not null comment '更新时间'
 ) comment '商品sku库存表' charset utf8;
+
+
+-- sku规格参数值表
+drop table  if exists sr_sku_good_spec_value;
+create table sr_sku_good_spec_value (
+     id int primary key auto_increment comment '通用的规格参数值的id',
+     spec_value varchar(255) not null comment '规格参数值,当参数名规定了 numeric 的时候表示是可以转换为数值类型',
+     sku_id  int not null  comment '商品sku_id',
+    -- 以下都是快照字段
+     spec_item_id int not null comment '规格参数名id',
+     spec_item_name varchar(20) not null comment '规格参数健值',
+     category_id int not null comment '产品分类id',
+     group_id int  not null comment '规格组id',
+     spec_type  varchar(20) not null comment '规格值的类型, num-数值类型 , enum 枚举类型 ,str-文本类型,images-图片url地址如xxx.png;xxx.png',
+     enum_options varchar(1000) comment '如果是枚举类型的话,其各个枚举值,以逗号分割',
+     unit varchar(20) default null comment '在为数值类型的时候的单位,比如12mm中的mm',
+     is_necessary tinyint default 1 comment '是否必填,0-不是, 1-是' ,
+    -- 附带信息
+     create_user int not null comment '创建人的id',
+     update_user int not null comment '更新人的id',
+     create_time datetime not null comment '创建时间',
+     update_time datetime not null comment '更新时间'
+)comment '商品sku规格值表' charset utf8;
+
+
 
 /*后期会面临的一个问题是, 一个参数是属于spu 的参数 ,还是 sku 的参数 ,比如工位的经纬度 ???? */
 --  ---------------------------------------------------------------------------------

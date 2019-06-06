@@ -3,7 +3,7 @@
 <mapper namespace="com.htg.good.mapper.GoodSpecItemMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.htg.common.entity.GoodSpecItem">
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.good.GoodSpecItem">
         <id column="id" property="id"/>
         <result column="create_user" property="createUser"/>
         <result column="update_user" property="updateUser"/>
@@ -13,6 +13,7 @@
         <result column="category_id" property="categoryId"/>
         <result column="group_id" property="groupId"/>
         <result column="spec_type" property="specType"/>
+        <result column="enum_options" property="enumOptions"/>
         <result column="unit" property="unit"/>
         <result column="is_general" property="isGeneral"/>
         <result column="is_necessary" property="isNecessary"/>
@@ -25,7 +26,7 @@
         update_user,
         create_time,
         update_time,
-        id, name, category_id, group_id, spec_type, unit, is_general, is_necessary, del_flag
+        id, name, category_id, group_id, spec_type, enum_options,unit, is_general, is_necessary, del_flag
     </sql>
 
 

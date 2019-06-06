@@ -3,7 +3,7 @@
 <mapper namespace="com.htg.good.mapper.GoodSpuMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.htg.common.entity.GoodSpu">
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.good.GoodSpu">
         <id column="id" property="id"/>
         <result column="create_user" property="createUser"/>
         <result column="update_user" property="updateUser"/>
@@ -19,7 +19,6 @@
         <result column="promotion_type" property="promotionType"/>
         <result column="pay_num" property="payNum"/>
         <result column="evaluate_num" property="evaluateNum"/>
-        <result column="general_spec_value_snapshot" property="generalSpecValueSnapshot"/>
         <result column="freight" property="freight"/>
         <result column="state" property="state"/>
         <result column="state_remark" property="stateRemark"/>
@@ -36,7 +35,7 @@
         update_user,
         create_time,
         update_time,
-        id, store_id, category_id, cate_ids, brand_id, name, sub_title, main_img, promotion_type, pay_num, evaluate_num, general_spec_value_snapshot, freight, state, state_remark, verify, verify_remark, pack_list, after_sell, del_flag
+        id, store_id, category_id, cate_ids, brand_id, name, sub_title, main_img, promotion_type, pay_num, evaluate_num, freight, state, state_remark, verify, verify_remark, pack_list, after_sell, del_flag
     </sql>
 
     <select id="selectByPage" resultMap="BaseResultMap">

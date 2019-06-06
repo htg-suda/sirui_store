@@ -3,7 +3,7 @@
 <mapper namespace="com.htg.good.mapper.GoodSpuDetailMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.htg.common.entity.GoodSpuDetail">
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.good.GoodSpuDetail">
         <id column="spu_id" property="spuId"/>
         <result column="create_user" property="createUser"/>
         <result column="update_user" property="updateUser"/>
@@ -23,7 +23,7 @@
         update_time,
         spu_id, sub_img, detail_desc, collect_num, del_flag
     </sql>
-    <select id="selectBySpuId" resultType="com.htg.common.entity.GoodSpuDetail" parameterType="integer">
+    <select id="selectBySpuId" resultType="com.htg.common.entity.good.GoodSpuDetail" parameterType="integer">
         select
         <include refid="Base_Column_List"/>
         from where spu_id=#{spuId}

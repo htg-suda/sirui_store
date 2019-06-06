@@ -3,7 +3,7 @@
 <mapper namespace="com.htg.good.mapper.GoodCategoryMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.htg.common.entity.GoodCategory">
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.good.GoodCategory">
         <id column="id" property="id"/>
         <result column="create_user" property="createUser"/>
         <result column="update_user" property="updateUser"/>

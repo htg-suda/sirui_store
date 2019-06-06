@@ -1,6 +1,6 @@
 package com.htg.good.service;
 
-import com.htg.common.entity.GoodSpecItem;
+import com.htg.common.entity.good.GoodSpecItem;
 import com.baomidou.mybatisplus.service.IService;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;

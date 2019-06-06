@@ -1,13 +1,13 @@
 package com.htg.good.controller.shop;
 
-import com.htg.common.dto.shop.GoodSpuListDto;
-import com.htg.common.dto.shop.ShopAddGoodSpuDto;
-import com.htg.common.dto.shop.ShopModifyGoodSpuDto;
+import com.htg.common.dto.good.shop.GoodSpuListDto;
+import com.htg.common.dto.good.shop.ShopAddGoodSpuDto;
+import com.htg.common.dto.good.shop.ShopModifyGoodSpuDto;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespPage;
-import com.htg.common.vo.shop.ShopGoodSpuDetailVo;
-import com.htg.common.vo.shop.ShopGoodSpuVo;
+import com.htg.common.vo.good.shop.ShopGoodSpuDetailVo;
+import com.htg.common.vo.good.shop.ShopGoodSpuVo;
 import com.htg.good.exception.GlobalException;
 import com.htg.good.service.IGoodSpuService;
 import io.swagger.annotations.Api;
@@ -68,8 +68,5 @@ public class GoodSpuController {
     public CommonResult<ShopGoodSpuDetailVo> getShopGoodSpuDetailById(@NotNull(message = "spu id不能为空") @PathVariable Integer spuId) throws GlobalException {
         return goodSpuService.getShopGoodSpuDetailById(spuId);
     }
-
-
-
 }
 

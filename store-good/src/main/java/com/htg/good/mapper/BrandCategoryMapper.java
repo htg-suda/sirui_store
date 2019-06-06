@@ -1,6 +1,6 @@
 package com.htg.good.mapper;
 
-import com.htg.common.entity.BrandCategory;
+import com.htg.common.entity.good.BrandCategory;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 

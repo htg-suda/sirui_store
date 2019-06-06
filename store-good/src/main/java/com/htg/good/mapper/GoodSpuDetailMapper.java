@@ -1,6 +1,6 @@
 package com.htg.good.mapper;
 
-import com.htg.common.entity.GoodSpuDetail;
+import com.htg.common.entity.good.GoodSpuDetail;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**

@@ -1,7 +1,7 @@
 package com.htg.good.mapper;
 
 import com.baomidou.mybatisplus.plugins.Page;
-import com.htg.common.entity.GoodSpu;
+import com.htg.common.entity.good.GoodSpu;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 

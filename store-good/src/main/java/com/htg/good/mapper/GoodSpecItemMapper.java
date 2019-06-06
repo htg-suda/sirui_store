@@ -1,8 +1,7 @@
 package com.htg.good.mapper;
 
-import com.htg.common.entity.GoodSpecItem;
+import com.htg.common.entity.good.GoodSpecItem;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import io.swagger.models.auth.In;
 
 import java.util.List;
 

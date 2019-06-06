@@ -3,7 +3,7 @@
 <mapper namespace="com.htg.good.mapper.GoodSkuStockMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.htg.common.entity.GoodSkuStock">
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.good.GoodSkuStock">
     <result column="create_user" property="createUser" />
     <result column="update_user" property="updateUser" />
     <result column="create_time" property="createTime" />

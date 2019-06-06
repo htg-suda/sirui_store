@@ -34,13 +34,13 @@ insert into permission_category value (3,'c','商户',0,0,now(),now());
 insert into permission_category value (4,'d','交易',0,0,now(),now());
 
 
-
 create table permission (
     id int primary key auto_increment comment '权限id',
     category_id int not null comment '分类id',
     name varchar(50) not null comment '权限名',
     permission_num tinyint not null comment '权限编码 1,2,3,4... 用户前端解析',
     permission_code varchar(50) not null comment '权限码,用户后端权鉴,如商品管理就是: sys:good:manage',
+    permission_resource
     -- 附带信息
     del_flag tinyint default 0 comment '删除状态,0-有效,-1 -删除',
     create_user int not null comment '创建人的id',
@@ -48,4 +48,22 @@ create table permission (
     create_time datetime not null comment '创建时间',
     update_time datetime not null comment '更新时间'
 )comment '权限表' charset utf8;
+
+
+/*
+shop:good:add
+shop:good:query
+shop:good:modify
+
+
+sys:good:query
+sys:good:modfiy
+
+
+user:good:query
+
+
+
+
+*/
 

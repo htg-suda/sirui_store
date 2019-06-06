@@ -1,6 +1,6 @@
 package com.htg.good.mapper;
 
-import com.htg.common.entity.Brand;
+import com.htg.common.entity.good.Brand;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 import java.util.List;

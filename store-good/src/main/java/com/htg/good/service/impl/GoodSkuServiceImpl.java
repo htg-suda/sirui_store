@@ -1,6 +1,6 @@
 package com.htg.good.service.impl;
 
-import com.htg.common.entity.GoodSku;
+import com.htg.common.entity.good.GoodSku;
 import com.htg.good.mapper.GoodSkuMapper;
 import com.htg.good.service.IGoodSkuService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

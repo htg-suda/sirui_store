@@ -1,5 +1,5 @@
 package com.htg.good.controller.system;
-import com.htg.common.entity.GoodSpecItem;
+import com.htg.common.entity.good.GoodSpecItem;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespList;

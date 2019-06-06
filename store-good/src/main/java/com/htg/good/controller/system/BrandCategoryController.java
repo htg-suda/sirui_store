@@ -1,7 +1,7 @@
 package com.htg.good.controller.system;
 
 
-import com.htg.common.entity.BrandCategory;
+import com.htg.common.entity.good.BrandCategory;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.good.exception.GlobalException;

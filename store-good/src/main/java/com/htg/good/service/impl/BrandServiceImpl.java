@@ -1,13 +1,13 @@
 package com.htg.good.service.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.htg.common.dto.system.BrandDto;
-import com.htg.common.entity.Brand;
+import com.htg.common.dto.good.system.BrandDto;
+import com.htg.common.entity.good.Brand;
 import com.htg.common.result.CodeEnum;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespList;
-import com.htg.common.vo.BrandVo;
+import com.htg.common.vo.good.BrandVo;
 import com.htg.good.constant.BrandConst;
 import com.htg.good.constant.Del_FLAG;
 import com.htg.good.exception.GlobalException;

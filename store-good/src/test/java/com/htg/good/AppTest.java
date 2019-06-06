@@ -2,14 +2,11 @@ package com.htg.good;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.htg.common.entity.GoodSpu;
 import com.htg.common.result.CommonResult;
-import com.htg.common.vo.shop.ShopGoodSpuDetailVo;
+import com.htg.common.vo.good.shop.ShopGoodSpuDetailVo;
 import com.htg.good.entity.UserBean;
 import com.htg.good.exception.GlobalException;
-import com.htg.good.service.IGoodSpuDetailService;
 import com.htg.good.service.IGoodSpuService;
-import com.htg.good.service.impl.GoodSpuServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -48,9 +45,6 @@ public class AppTest {
     public void test02() throws GlobalException {
         CommonResult<ShopGoodSpuDetailVo> shopGoodSpuDetailById = iGoodSpuService.getShopGoodSpuDetailById(2);
         ShopGoodSpuDetailVo data = shopGoodSpuDetailById.getData();
-        String generalSpecValueSnapshot = data.getGeneralSpecValueSnapshot();
-        log.info(generalSpecValueSnapshot);
-
     }
 
 

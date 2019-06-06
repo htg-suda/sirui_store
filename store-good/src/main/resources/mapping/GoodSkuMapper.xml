@@ -3,20 +3,20 @@
 <mapper namespace="com.htg.good.mapper.GoodSkuMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.htg.common.entity.GoodSku">
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.good.GoodSku">
         <id column="id" property="id" />
     <result column="create_user" property="createUser" />
     <result column="update_user" property="updateUser" />
     <result column="create_time" property="createTime" />
     <result column="update_time" property="updateTime" />
         <result column="spu_id" property="spuId" />
+        <result column="spu_num" property="spuNum" />
+        <result column="collect_num" property="collectNum" />
         <result column="name" property="name" />
-        <result column="images" property="images" />
+        <result column="main_image" property="mainImage" />
         <result column="price" property="price" />
         <result column="promotion_price" property="promotionPrice" />
         <result column="market_price" property="marketPrice" />
-        <result column="own_spec" property="ownSpec" />
-        <result column="detail_desc" property="detailDesc" />
         <result column="status" property="status" />
         <result column="del_flag" property="delFlag" />
     </resultMap>
@@ -27,7 +27,7 @@
         update_user,
         create_time,
         update_time,
-        id, spu_id, name, images, price, promotion_price, market_price, own_spec, detail_desc, status, del_flag
+        id, spu_id, spu_num, collect_num, name, main_image, price, promotion_price, market_price, status, del_flag
     </sql>
 
 </mapper>

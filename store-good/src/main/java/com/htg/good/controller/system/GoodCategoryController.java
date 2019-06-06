@@ -1,11 +1,11 @@
 package com.htg.good.controller.system;
-import com.htg.common.dto.system.GoodCategoryDto;
-import com.htg.common.entity.GoodCategory;
+import com.htg.common.dto.good.system.GoodCategoryDto;
+import com.htg.common.entity.good.GoodCategory;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespList;
-import com.htg.common.vo.BrandVo;
-import com.htg.common.vo.GoodCategoryVo;
+import com.htg.common.vo.good.BrandVo;
+import com.htg.common.vo.good.GoodCategoryVo;
 import com.htg.good.exception.GlobalException;
 import com.htg.good.service.IGoodCategoryService;
 import io.swagger.annotations.Api;

@@ -1,8 +1,8 @@
 package com.htg.good.service.impl;
 
-import com.htg.common.entity.Brand;
-import com.htg.common.entity.BrandCategory;
-import com.htg.common.entity.GoodCategory;
+import com.htg.common.entity.good.Brand;
+import com.htg.common.entity.good.BrandCategory;
+import com.htg.common.entity.good.GoodCategory;
 import com.htg.common.result.CodeEnum;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;

@@ -1,7 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e969e324-9247-494b-9f20-2a92b7f415c0" name="Default Changelist" comment="" />
+    <list default="true" id="e969e324-9247-494b-9f20-2a92b7f415c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/AdminSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/UserAuthenticationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/UserSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/SpuSpecModifyValueDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysModifyGoodSpuStateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysVerifyGoodSpuDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/UserGoodSpuListDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/base/GoodSpuVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/base/SpuGoodSpecValueVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopGoodSpuVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopSpuGoodSpecValueVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSpuDetailVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserSpuGoodSpecValueVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSkuDetailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/SkuGoodSpecValueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/SpuGoodSpecValueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/SysGoodSpuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/user/UserGoodSpuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSkuDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/ISkuGoodSpecValueService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/ISpuGoodSpecValueService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/SkuGoodSpecValueServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/SpuGoodSpecValueServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sql/auth.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/auth.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sql/good.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/good.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sql/permission.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/permission.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-client-feign/store-client-feign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-client-feign/store-client-feign.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/GoodSpuDetailModifyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/GoodSpuDetailModifyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/GoodSpuListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/GoodSpuListDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/GoodSpuModifyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/GoodSpuModifyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/ShopAddGoodSpuDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopAddGoodSpuDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/ShopModifyGoodSpuDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopModifyGoodSpuDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/system/BrandDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/BrandDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/system/GoodCategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/GoodCategoryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/Brand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/BrandCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/BrandCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSku.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSkuStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSkuStock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpecGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpecGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpecItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpecItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpuDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpuDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/BrandVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/BrandVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/GoodCategoryVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/GoodCategoryVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/shop/ShopGoodSpuDetailVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopGoodSpuDetailVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/shop/ShopGoodSpuVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSpuVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/dto/shop/GoodSpuDetailModifyDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/dto/shop/GoodSpuListDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/dto/shop/GoodSpuModifyDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/dto/shop/ShopAddGoodSpuDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/dto/shop/ShopModifyGoodSpuDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/dto/system/BrandDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/dto/system/GoodCategoryDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/entity/Brand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/entity/BrandCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/entity/GoodCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/entity/GoodSku.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/entity/GoodSkuStock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/entity/GoodSpecGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/entity/GoodSpecItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/entity/GoodSpu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/entity/GoodSpuDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/result/CodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/result/CodeEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/vo/BrandVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/vo/GoodCategoryVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/vo/shop/ShopGoodSpuDetailVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/vo/shop/ShopGoodSpuVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/target/store-common-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/constant/GoodSkuConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/constant/GoodSpuConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecGroupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/BrandCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/BrandCategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/BrandMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/BrandMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodCategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSkuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSkuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSkuStockMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSkuStockMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpecGroupMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpecGroupMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpecItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpecItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpuDetailMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpuDetailMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IBrandCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IBrandCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IBrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IBrandService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSkuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSkuStockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSkuStockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpecGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpecGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpecItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpecItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/BrandCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/BrandCategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/BrandServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodCategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuStockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuStockServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpecGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpecGroupServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpecItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpecItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuDetailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/BrandCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/BrandCategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/BrandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/BrandMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodCategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSkuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSkuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSkuStockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSkuStockMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpecGroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpecGroupMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpecItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpecItemMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpuDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpuDetailMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/shop/GoodSpuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/shop/GoodSpuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/BrandCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/BrandCategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/BrandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/BrandController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodCategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodSpecGroupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodSpecGroupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodSpecItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodSpecItemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/BrandCategoryMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/BrandCategoryMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/BrandMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/BrandMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodCategoryMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodCategoryMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSkuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSkuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSkuStockMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSkuStockMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSpecGroupMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSpecGroupMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSpecItemMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSpecItemMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSpuDetailMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSpuDetailMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSpuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSpuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IBrandCategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IBrandCategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IBrandService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IBrandService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodCategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodCategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSkuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSkuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSkuStockService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSkuStockService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpecGroupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpecGroupService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpecItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpecItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpuDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpuDetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/BrandCategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/BrandCategoryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/BrandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/BrandServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodCategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodCategoryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSkuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSkuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSkuStockServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSkuStockServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpecGroupServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpecGroupServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpecItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpecItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpuDetailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpuDetailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpuServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/BrandCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/BrandCategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/BrandMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/BrandMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodCategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSkuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSkuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSkuStockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSkuStockMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSpecGroupMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSpecGroupMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSpecItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSpecItemMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSpuDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSpuDetailMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSpuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSpuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/target/test-classes/com/htg/good/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/test-classes/com/htg/good/AppTest.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/store-good/target/" />
@@ -42,12 +207,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuController.java">
+        <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/SysGoodSpuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="18">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,19 +221,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpecItem.java">
+        <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="50" selection-start-line="50" selection-end-line="53" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpuMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+            <state relative-caret-position="18">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,24 +235,61 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="107">
+              <caret line="266" column="102" selection-start-line="266" selection-start-column="102" selection-end-line="266" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addGoodSpu#0;class#GoodSpuServiceImpl#0" />
-                <element signature="method#modify#0;class#GoodSpuServiceImpl#0" />
-                <element signature="method#list#0;class#GoodSpuServiceImpl#0" />
                 <element signature="method#getShopGoodSpuDetailById#0;class#GoodSpuServiceImpl#0" />
+                <element signature="method#getUserGoodSpuDetailById#0;class#GoodSpuServiceImpl#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/doc/sql/good.sql">
+        <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/constant/GoodSpuConst.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+            <state relative-caret-position="38">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysVerifyGoodSpuDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -104,8 +300,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -120,60 +316,63 @@
       <find>uri</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuDetailService.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuDetailServiceImpl.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpuDetailMapper.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/GoodSpuDetailModifyDto.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSkuDetailService.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/SkuGoodSpecValueServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuDetailServiceImpl.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpu.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/GoodSpuModifyDto.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpuDetailMapper.xml" />
-        <option value="$PROJECT_DIR$/store-file-service/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/shop-registry/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSkuController.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/GoodSPUListDto.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/config/MybatisPlusConfig.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpuMapper.java" />
         <option value="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpuMapper.xml" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/GoodSpuListDto.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/RespPage.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandController.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandCategoryController.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecGroupController.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecItemController.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/shop/ShopSpu.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/BrandVo.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/system/BrandDto.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/resources/mapping/BrandMapper.xml" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/Brand.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpuDetail.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuService.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/shop/ShopGoodSpuDetailVo.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/shop/ShopGoodSpuVo.java" />
         <option value="$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java" />
-        <option value="$PROJECT_DIR$/shop-client-feign/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/GoodClent.java" />
-        <option value="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/GoodClient.java" />
-        <option value="$PROJECT_DIR$/store-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/store-gateway/src/main/resources/Application.yaml" />
-        <option value="$PROJECT_DIR$/store-gateway/src/main/java/com/htg/gateway/GateWayApplication.java" />
-        <option value="$PROJECT_DIR$/store-good/pom.xml" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/StoreGoodApplication.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/store-gateway/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/store-client-feign/pom.xml" />
-        <option value="$PROJECT_DIR$/store-user/pom.xml" />
-        <option value="$PROJECT_DIR$/doc/sql/auth.js" />
-        <option value="$PROJECT_DIR$/doc/sql/auth.sql" />
-        <option value="$PROJECT_DIR$/store-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodCategoryController.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/ShopAddGoodSpuDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/SpuGoodSpecValue.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/ISpuGoodSpecValueService.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/SpuGoodSpecValueMapper.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/resources/mapping/SpuGoodSpecValueMapper.xml" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/SpuGoodSpecValueServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/shop/ShopGoodSpuDetailVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/SpuGoodSpecModifyValue.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/SpuSpecModifyValueDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/ShopModifyGoodSpuDto.java" />
         <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuController.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java" />
+        <option value="$PROJECT_DIR$/doc/sql/auth.sql" />
+        <option value="$PROJECT_DIR$/doc/sql/permission.sql" />
+        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/UserSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/UserAuthenticationManager.java" />
+        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/AdminSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/GoodSpuListDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/UserGoodSpuListDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/base/GoodSpuVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSpuVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/base/SpuGoodSpecValue.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/base/SpuGoodSpecValueVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/UserGoodSpuVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopGoodSpuVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserSpuGoodSpecValue.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserSpuGoodSpecValueVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSpuDetailVo.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/user/UserGoodSpuController.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopSpuGoodSpecValueVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopGoodSpuDetailVo.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/constant/GoodSkuConst.java" />
         <option value="$PROJECT_DIR$/doc/sql/good.sql" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysModfiyGoodSpuDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysModfiyGoodSpuStatusDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysModfiyGoodSpuStateDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpu.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/constant/GoodSpuConst.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysModifyGoodSpuStateDto.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuService.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysVerifyGoodSpuDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/SysGoodSpuController.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -182,49 +381,71 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="store-good" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="store-auth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="store-good" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+          <item name="store-auth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="store-good" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="store-auth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.springframework.cloud:spring-cloud-starter-security:2.1.2.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="store-auth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.springframework.cloud:spring-cloud-starter-security:2.1.2.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+          <item name="org.springframework.cloud:spring-cloud-starter:2.1.1.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="store-auth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.springframework.cloud:spring-cloud-starter-security:2.1.2.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+          <item name="org.springframework.boot:spring-boot-starter-actuator:2.1.4.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="store-auth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.springframework.cloud:spring-cloud-starter-security:2.1.2.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+          <item name="org.springframework.cloud:spring-cloud-security:2.1.2.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="store-auth" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="org.springframework.cloud:spring-cloud-starter-security:2.1.2.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+          <item name="org.springframework.cloud:spring-cloud-security:2.1.2.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
+          <item name="org.springframework.boot:spring-boot-starter-security:2.1.4.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
-    <option name="width" value="1366" />
-    <option name="height" value="743" />
+    <option name="x" value="-112" />
+    <option name="y" value="231" />
+    <option name="width" value="1024" />
+    <option name="height" value="555" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
               <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
@@ -270,6 +491,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="good" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
+              <item name="store-good" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="good" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
@@ -287,7 +519,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="CatdeaLogs" />
     </panes>
   </component>
@@ -297,9 +528,10 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -317,18 +549,18 @@
       <recent name="com.htg" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.htg.common.result" />
-      <recent name="com.htg.common.dto" />
-      <recent name="com.htg.common.vo" />
-      <recent name="com.htg.file.utils" />
-      <recent name="com.htg.file.config" />
+      <recent name="com.htg.common.dto.good.system" />
+      <recent name="com.htg.common.vo.good.user" />
+      <recent name="com.htg.common.vo.good.base" />
+      <recent name="com.htg.common.dto.good.user" />
+      <recent name="com.htg.auth.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl" />
+      <recent name="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop" />
       <recent name="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/result" />
       <recent name="$PROJECT_DIR$/store-good/src/main/java/com/htg/good" />
       <recent name="$PROJECT_DIR$/store-good/src/main/java/com/htg" />
-      <recent name="$PROJECT_DIR$/store-common/src/main/java/com/htg/common" />
-      <recent name="$PROJECT_DIR$/doc" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -347,9 +579,9 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.23333333" />
+    <option name="contentProportion" value="0.03643411" />
   </component>
-  <component name="RunManager" selected="Spring Boot.GateWayApplication">
+  <component name="RunManager" selected="Spring Boot.StoreGoodApplication">
     <configuration name="AppTest.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="store-good" />
       <extension name="coverage">
@@ -419,17 +651,17 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.AppTest.test02" />
       <item itemvalue="Spring Boot.StoreGoodApplication" />
       <item itemvalue="Spring Boot.StoreFileService" />
       <item itemvalue="Spring Boot.RegisterApplication" />
-      <item itemvalue="JUnit.AppTest.test02" />
       <item itemvalue="Spring Boot.GateWayApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.StoreFileService" />
-        <item itemvalue="Spring Boot.RegisterApplication" />
         <item itemvalue="Spring Boot.StoreGoodApplication" />
+        <item itemvalue="Spring Boot.RegisterApplication" />
+        <item itemvalue="Spring Boot.StoreFileService" />
         <item itemvalue="Spring Boot.GateWayApplication" />
         <item itemvalue="JUnit.AppTest.test02" />
       </list>
@@ -452,7 +684,9 @@
       <workItem from="1559260527692" duration="36321000" />
       <workItem from="1559310931570" duration="10048000" />
       <workItem from="1559385649060" duration="61557000" />
-      <workItem from="1559567701236" duration="60373000" />
+      <workItem from="1559567701236" duration="72644000" />
+      <workItem from="1559741738918" duration="7692000" />
+      <workItem from="1559785865985" duration="22718000" />
     </task>
     <servers />
   </component>
@@ -486,7 +720,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224744000" />
+    <option name="totallyTimeSpent" value="267425000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,9 +733,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33383915" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2723824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -510,25 +743,25 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.050847456" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.8508475" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.48469388" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23469388" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.4694915" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.46938777" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.9322034" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2677966" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.9489796" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32881355" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3282313" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.6118644" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" weight="0.7915254" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.75510204" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.7942177" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2488189" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.20864947" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.5356601" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.32965687" />
@@ -581,413 +814,387 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandCategoryController.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/BrandCategory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="187">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandController.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodCategory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+        <state relative-caret-position="-8">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSku.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/BrandVo.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSkuDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2024">
-          <caret line="136" column="5" lean-forward="true" selection-start-line="136" selection-start-column="5" selection-end-line="136" selection-end-column="5" />
-          <folding>
-            <element signature="e#3041#3042#0" expanded="true" />
-            <element signature="e#3074#3075#0" expanded="true" />
-            <element signature="e#3127#3128#0" expanded="true" />
-            <element signature="e#3171#3172#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/BrandMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/resources/mapping/BrandMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/Brand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="79" column="27" lean-forward="true" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-          <folding>
-            <element signature="e#4312#4313#0" expanded="true" />
-            <element signature="e#4345#4346#0" expanded="true" />
-            <element signature="e#4398#4399#0" expanded="true" />
-            <element signature="e#4442#4443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/system/BrandDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="149" lean-forward="true" selection-start-line="149" selection-end-line="149" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3699#3700#0" expanded="true" />
-            <element signature="e#3732#3733#0" expanded="true" />
-            <element signature="e#3785#3786#0" expanded="true" />
-            <element signature="e#3829#3830#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecGroupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="32" column="38" lean-forward="true" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpuDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/BrandCategoryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/BrandCategoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IBrandCategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/ShopModifyGoodSpuDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#514#515#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/shop/GoodSpuModifyDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4301#4302#0" expanded="true" />
-            <element signature="e#4332#4333#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/resources/mapping/BrandCategoryMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="31" column="76" selection-start-line="31" selection-start-column="76" selection-end-line="31" selection-end-column="76" />
+        <state relative-caret-position="-8">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/sql/seller.sql">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSkuStock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="-8">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/sql/admin.sql">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpecGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/constant/Del_FLAG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuDetailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpecItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/shop/ShopGoodSpuVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1157">
-          <caret line="152" column="5" lean-forward="true" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2434#2435#0" expanded="true" />
-            <element signature="e#2469#2470#0" expanded="true" />
-            <element signature="e#2892#2893#0" expanded="true" />
-            <element signature="e#2928#2929#0" expanded="true" />
-            <element signature="e#4755#4756#0" expanded="true" />
-            <element signature="e#4801#4802#0" expanded="true" />
-            <element signature="e#5255#5256#0" expanded="true" />
-            <element signature="e#5286#5287#0" expanded="true" />
-            <element signature="e#5334#5335#0" expanded="true" />
-            <element signature="e#5374#5375#0" expanded="true" />
-            <element signature="e#5425#5426#0" expanded="true" />
-            <element signature="e#5472#5473#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/shop/ShopGoodSpuDetailVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="56" lean-forward="true" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/sql/permission.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/sql/user.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-file-service/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-gateway/src/main/java/com/htg/gateway/GateWayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-file-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="50" lean-forward="true" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/GoodClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-gateway/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-client-feign/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/sql/auth.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/StoreGoodApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-8">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSkuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state relative-caret-position="108">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/GoodCategoryVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/BrandVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpuDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpecItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSkuDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/auth.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/admin.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/permission.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/UserSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/store-auth/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-gateway/src/main/resources/application.yaml">
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/AdminSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuDetailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+        <state relative-caret-position="46">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/UserAuthenticationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/GoodSpuListDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="55" lean-forward="true" selection-start-line="2" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/UserGoodSpuListDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSpuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSpuMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        <state relative-caret-position="108">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/base/GoodSpuVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="142">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addGoodSpu#0;class#GoodSpuServiceImpl#0" />
-            <element signature="method#modify#0;class#GoodSpuServiceImpl#0" />
-            <element signature="method#list#0;class#GoodSpuServiceImpl#0" />
-            <element signature="method#getShopGoodSpuDetailById#0;class#GoodSpuServiceImpl#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecItemController.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopGoodSpuVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="41" column="76" selection-start-line="41" selection-start-column="76" selection-end-line="41" selection-end-column="76" />
+        <state relative-caret-position="90">
+          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSpuVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserSpuGoodSpecValueVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/base/SpuGoodSpecValueVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopSpuGoodSpecValueVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopGoodSpuDetailVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/resources/mapping/SpuGoodSpecValueMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/SpuGoodSpecValueMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/SpuGoodSpecValueServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/ISpuGoodSpecValueService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/SpuGoodSpecValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1219">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/good.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="234" lean-forward="true" selection-start-line="234" selection-end-line="234" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/user/UserGoodSpuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSpuDetailVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="e#1258#1259#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopAddGoodSpuDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/GoodSpuModifyDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopModifyGoodSpuDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysModifyGoodSpuStateDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/SysVerifyGoodSpuDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/SysGoodSpuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -996,25 +1203,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/GoodSpecItem.java">
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="50" selection-start-line="50" selection-end-line="53" selection-end-column="28" />
+        <state relative-caret-position="107">
+          <caret line="266" column="102" selection-start-line="266" selection-start-column="102" selection-end-line="266" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getShopGoodSpuDetailById#0;class#GoodSpuServiceImpl#0" />
+            <element signature="method#getUserGoodSpuDetailById#0;class#GoodSpuServiceImpl#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/sql/good.sql">
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/constant/GoodSpuConst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+        <state relative-caret-position="38">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
         </state>
       </provider>
     </entry>
