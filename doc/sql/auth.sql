@@ -7,6 +7,20 @@
 
 /*参考文档  http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html*/
 /* https://www.cnblogs.com/Irving/p/9306008.html */
+/*https://www.cnblogs.com/xingxueliao/p/5911292.html*/
+
+
+
+
+/*http://blog.didispace.com/spring-security-oauth2-xjf-1/*/
+/*http://blog.didispace.com/spring-security-oauth2-xjf-2/*/
+/*http://blog.didispace.com/spring-security-oauth2-xjf-3/*/
+
+
+/* https://rensanning.iteye.com/blog/2386553  spring oauth2 的自定义*/
+
+
+/* https://blog.csdn.net/fanbojiayou/article/details/79323315  坑   */
 create database store_auth charset utf8;
 use store_auth;
 

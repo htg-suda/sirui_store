@@ -13,6 +13,7 @@
         <module>store-gateway</module>
         <module>store-user</module>
         <module>store-auth</module>
+        <module>store-admin</module>
     </modules>
     <groupId>com.htg</groupId>
     <artifactId>sirui_store</artifactId>

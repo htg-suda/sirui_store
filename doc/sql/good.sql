@@ -187,7 +187,7 @@ drop table  if exists sr_good_sku;
 create table sr_good_sku(
     id int primary key auto_increment comment '商品sku id',
     spu_id int not null comment '商品的spu id ,spu 和 sku 是一对多关系',
-    spu_num varchar(50) unique key not null comment '商品spu 编码',
+    sku_num varchar(50) unique key not null comment '商品sku 编码',
     collect_num int default 0 comment '商品sku收藏数量',
     name varchar(255) not null comment '商品的名字,或则标题',
     main_image varchar(255) not null comment '具体的商品的图片',

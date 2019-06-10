@@ -3,6 +3,8 @@ package com.htg.good.service;
 import com.htg.common.entity.good.SkuGoodSpecValue;
 import com.baomidou.mybatisplus.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * 商品sku规格值表 服务类
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface ISkuGoodSpecValueService extends IService<SkuGoodSpecValue> {
 
+    List<SkuGoodSpecValue> selectBySkuId(Integer skuId);
 }

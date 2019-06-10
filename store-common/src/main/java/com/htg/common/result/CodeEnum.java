@@ -26,7 +26,11 @@ public enum CodeEnum {
     ADD_GOOD_SPU_ERROR(-1021, "添加商品SPU异常"),
     Modify_GOOD_SPU_ERROR(-1022, "修改商品SPU异常"),
     Modify_GOOD_SPU_STATE_ERROR(-1023, "修改SPU状态异常"),
-    Modify_GOOD_SPU_VERIFY_ERROR(-1024, "修改SPU审核状态异常");
+    Modify_GOOD_SPU_VERIFY_ERROR(-1024, "修改SPU审核状态异常"),
+    GOOD_SPU_VERIFY_UNPASS(-1025, "商品SPU未审核通过"),
+    GOOD_SPU_STATE_NOT_ON_SALE(-1026, "商品SPU 不是在售状态"),
+    ADD_GOOD_SKU_ERROR(-1027, "添加商品SKU异常");
+
 
     private int code;
     private String msg;

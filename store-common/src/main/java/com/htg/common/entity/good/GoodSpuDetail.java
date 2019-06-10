@@ -27,7 +27,7 @@ public class GoodSpuDetail extends BaseEntity {
     private Integer spuId;
 
 
-    @ApiModelProperty(value = " 商品副图,字符串", example = " xxxx.png;xxxx.png")
+    @ApiModelProperty(value = " 商品副图,字符串", example = "xxxx.png;xxxx.png")
     @TableField("sub_img")
     private String subImg;
 

@@ -1,2 +1,8 @@
+com/htg/file/utils/SnowFlakeUtil.class
 com/htg/file/StoreFileService.class
+com/htg/file/config/Swagger2Config.class
+com/htg/file/config/WebMvcConfiguration.class
+com/htg/file/result/RespUrl.class
+com/htg/file/controller/FileController.class
 com/htg/file/service/FileService.class
+com/htg/file/config/FileConfig.class

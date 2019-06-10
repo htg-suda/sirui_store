@@ -19,6 +19,11 @@ create table sr_admin(
    update_time datetime not null comment '更新时间'
 )comment '管理员表' charset utf8;
 
+insert into sr_admin (group_id,admin_name,admin_password,tel,email,status,del_flag,create_user,update_user,create_time,update_time)
+value(0,'admin','$2a$10$6vAG/ICJCHXbJ3PA.WvW/.rSDRykYEizfI.6JIfx7ESpKSWM4Qdt.','18717919375','123@qq.com',1001,0,0,0,now(),now());
+
+
+
 
 /* 管理员操作日志表 */
 create table sr_admin_opt_log(

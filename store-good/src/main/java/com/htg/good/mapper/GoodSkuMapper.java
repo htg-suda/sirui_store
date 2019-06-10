@@ -3,6 +3,8 @@ package com.htg.good.mapper;
 import com.htg.common.entity.good.GoodSku;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
  * <p>
  * 商品的sku 表,具体到某一款商品 Mapper 接口
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  */
 public interface GoodSkuMapper extends BaseMapper<GoodSku> {
 
+    List<GoodSku> selectBySpuId(Integer spuId);
 }

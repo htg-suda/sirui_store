@@ -1,0 +1,17 @@
+server:
+  port: 8020
+
+
+spring:
+  application:
+    name: store-auth
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true  # 可以显示服务的真实IP 地址

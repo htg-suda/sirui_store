@@ -1,53 +1,48 @@
 package com.htg.file.controller;
 
 import com.htg.common.result.CommonResult;
+import com.htg.file.config.FileConfig;
+import com.htg.file.result.RespUrl;
 import com.htg.file.service.FileService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.joda.time.DateTime;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.util.Date;
+import java.util.Map;
 
+@Slf4j
 @RestController
 @RequestMapping("file")
 @Api(value = "FileController", tags = "文件服务")
 public class FileController {
     @Autowired
     private FileService fileService;
+    @Autowired
+    private FileConfig fileConfig;
 
-    private String global_file_path = "/home/htg/work/temp/sirui_store_file";
-    private String public_res = "/res/public";
-    private String private_res = "/res/private";
-    private String type_image = "/img";
-
-    private String domain_user = "/user";
-    private String domain_shop = "/shop";
-    private String domain_admin = "/admin";
-    private String domain_good = "/good";
-    private String domain_category = "/category";
-
-
-    /*
-     * 用户头像所在的目录:
-     * /res/private/img/user/portrait
-     *
-     * 类别图片
-     * /res/public/img/category/icon
-     *
-     *
+    /* domain 为 category, shop ...
+     * type 为 image video 等等 ....
+     *下载文件路径 为 http://localhost:8891/file/pub/{domain}/{type}/2019-11-11/xxxxxxx.png
      * */
+
     @ApiOperation(value = "上传分类图片", notes = "上传文件")
-    @RequestMapping(value = "/upload_category_icon_img", method = RequestMethod.POST)
+    @RequestMapping(value = "/upload/{domain}/{type}", method = RequestMethod.POST)
     @ResponseBody
-    public CommonResult uploadFile(@RequestParam("file") MultipartFile file) {
-        String path = global_file_path + "/res/public/img/category/icon/";
-        return fileService.saveFile(file, path);
+    public CommonResult<RespUrl> uploadFile(@RequestParam("file") MultipartFile file, @PathVariable String domain, @PathVariable String type) {
+        //    String path = global_file_path + "/res/public/img/category/icon/";
+
+        String globalPath = fileConfig.getGlobal_path();
+        String publicRes = fileConfig.getPublic_res();
+        String domainTypePath = "/" + domain + "/" + type + "/";
+
+        //  Map<String, String> pubResMap = fileConfig.getPub_res_map();
+        // String domainPath = pubResMap.get(domain);
+        String path = globalPath + publicRes + domainTypePath;
+        log.info("path is {}", path);
+        return fileService.saveFile(file, path, domainTypePath);
     }
     /* 文件下载 */
-
-
 }

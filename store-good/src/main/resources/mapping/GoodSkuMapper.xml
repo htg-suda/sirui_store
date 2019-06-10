@@ -4,21 +4,21 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.htg.common.entity.good.GoodSku">
-        <id column="id" property="id" />
-    <result column="create_user" property="createUser" />
-    <result column="update_user" property="updateUser" />
-    <result column="create_time" property="createTime" />
-    <result column="update_time" property="updateTime" />
-        <result column="spu_id" property="spuId" />
-        <result column="spu_num" property="spuNum" />
-        <result column="collect_num" property="collectNum" />
-        <result column="name" property="name" />
-        <result column="main_image" property="mainImage" />
-        <result column="price" property="price" />
-        <result column="promotion_price" property="promotionPrice" />
-        <result column="market_price" property="marketPrice" />
-        <result column="status" property="status" />
-        <result column="del_flag" property="delFlag" />
+        <id column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="spu_id" property="spuId"/>
+        <result column="sku_num" property="skuNum"/>
+        <result column="collect_num" property="collectNum"/>
+        <result column="name" property="name"/>
+        <result column="main_image" property="mainImage"/>
+        <result column="price" property="price"/>
+        <result column="promotion_price" property="promotionPrice"/>
+        <result column="market_price" property="marketPrice"/>
+        <result column="status" property="status"/>
+        <result column="del_flag" property="delFlag"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
@@ -27,7 +27,10 @@
         update_user,
         create_time,
         update_time,
-        id, spu_id, spu_num, collect_num, name, main_image, price, promotion_price, market_price, status, del_flag
+        id, spu_id, sku_num, collect_num, name, main_image, price, promotion_price, market_price, status, del_flag
     </sql>
+    <select id="selectBySpuId" resultMap="BaseResultMap" parameterType="integer">
+        select <include refid="Base_Column_List"/> from sr_good_sku where spu_id=#{spuId}
+    </select>
 
 </mapper>

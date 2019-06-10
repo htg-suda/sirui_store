@@ -16,7 +16,7 @@ import java.util.Date;
 @Slf4j
 @Service
 public class FileService {
-    public CommonResult<RespUrl> saveFile(MultipartFile file, String path) {
+    public CommonResult<RespUrl> saveFile(MultipartFile file, String path, String domainPath) {
         if (file.isEmpty()) {
             return CommonResult.error("上传失败");
         }
@@ -40,7 +40,7 @@ public class FileService {
         try {
             file.transferTo(dest);
             log.info("-- 上传成功 --");
-            return CommonResult.success(new RespUrl(dayTime + "/" + newFileName));
+            return CommonResult.success(new RespUrl(domainPath + dayTime + "/" + newFileName));
         } catch (IOException e) {
             log.error(e.toString(), e);
             return CommonResult.error("上传失败");

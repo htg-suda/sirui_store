@@ -1,9 +1,16 @@
 server:
   port: 8891
 
-img_path:
-  category: /res/public/img/category/icon/
-  user_head_: /res/public/img/category/icon/
+file-context:
+  global_path: /home/htg/work/temp/sirui_store_file
+  public_res: /res/public
+  private_res: /res/private
+  pub_res_map: {
+    "category": "/category/img/",
+    "user": "/user/img/",
+    "shop": "/shop/img/",
+    "admin": "/admin/img/",
+  }
 
 spring:
   application:
