@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htg.good.mapper.SkuGoodSpecValueMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.good.SkuGoodSpecValue">
+        <id column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="spec_value" property="specValue"/>
+        <result column="sku_id" property="skuId"/>
+        <result column="spec_item_id" property="specItemId"/>
+        <result column="spec_item_name" property="specItemName"/>
+        <result column="category_id" property="categoryId"/>
+        <result column="group_id" property="groupId"/>
+        <result column="spec_type" property="specType"/>
+        <result column="enum_options" property="enumOptions"/>
+        <result column="unit" property="unit"/>
+        <result column="is_necessary" property="isNecessary"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        create_user,
+        update_user,
+        create_time,
+        update_time,
+        id, spec_value, sku_id, spec_item_id, spec_item_name, category_id, group_id, spec_type, enum_options, unit, is_necessary
+    </sql>
+    <select id="selectBySkuId" resultMap="BaseResultMap" parameterType="integer">
+        select
+        <include refid="Base_Column_List"/>
+        from sr_sku_good_spec_value where sku_id=#{skuId}
+    </select>
+
+</mapper>
