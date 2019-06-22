@@ -2,7 +2,7 @@ package com.htg.admin.controller;
 
 
 import com.htg.admin.service.IAdminService;
-import com.htg.common.entity.Admin;
+import com.htg.common.entity.admin.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -5,6 +5,10 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.htg.common.base.BaseEntity;
+import io.swagger.annotations.ApiModelProperty;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * <p>
@@ -19,55 +23,43 @@ public class SkuGoodSpecValueVo extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 通用的规格参数值的id
-     */
-    @TableId(value = "id", type = IdType.AUTO)
+
+    @ApiModelProperty(value = "通用的规格参数值的id")
     private Integer id;
-    /**
-     * 规格参数值,当参数名规定了 numeric 的时候表示是可以转换为数值类型
-     */
-    @TableField("spec_value")
+
+    @ApiModelProperty(value = "规格参数值,当参数名规定了 numeric 的时候表示是可以转换为数值类型", example = "0.01", required = true)
     private String specValue;
-    /**
-     * 商品sku_id
-     */
-    @TableField("sku_id")
+
+
+    @ApiModelProperty(value = "商品sku_id", example = "1")
     private Integer skuId;
-    /**
-     * 规格参数名id
-     */
-    @TableField("spec_item_id")
+
+
+    @ApiModelProperty(value = "规格参数值,当参数名规定了 numeric 的时候表示是可以转换为数值类型", example = "1", required = true)
     private Integer specItemId;
-    /**
-     * 规格参数健值
-     */
-    @TableField("spec_item_name")
+
+
+    @ApiModelProperty(value = "规格参数健值", example = "每天价格")
     private String specItemName;
-    /**
-     * 产品分类id
-     */
-    @TableField("category_id")
+
+
+    @ApiModelProperty(value = "产品分类id", example = "1")
     private Integer categoryId;
-    /**
-     * 规格组id
-     */
-    @TableField("group_id")
+
+
+    @ApiModelProperty(value = "规格组id", example = "1")
     private Integer groupId;
-    /**
-     * 规格值的类型, num-数值类型 , enum 枚举类型 ,str-文本类型,images-图片url地址如xxx.png;xxx.png
-     */
-    @TableField("spec_type")
+
+
+    @ApiModelProperty(value = "规格值的类型, num-数值类型 , enum 枚举类型 ,str-文本类型,images-图片url地址如xxx.png;xxx.png", example = "1")
     private String specType;
-    /**
-     * 如果是枚举类型的话,其各个枚举值,以逗号分割
-     */
-    @TableField("enum_options")
+
+
+    @ApiModelProperty(value = "如果是枚举类型的话,其各个枚举值,以逗号分割", example = "1")
     private String enumOptions;
-    /**
-     * 在为数值类型的时候的单位,比如12mm中的mm
-     */
-    @TableField("unit")
+
+
+    @ApiModelProperty(value = "在为数值类型的时候的单位,比如12mm中的mm", example = "mm")
     private String unit;
 
 

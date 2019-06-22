@@ -32,7 +32,7 @@
         <include refid="Base_Column_List"/>
         from sr_good_category
         where
-        parent_id=#{parentId}
+        parent_id=#{parentId} order by sort asc
     </select>
 
     <select id="selectCountParentIdAnName" resultType="Integer" parameterType="map">

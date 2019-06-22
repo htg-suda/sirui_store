@@ -13,6 +13,8 @@ public class UserGoodSpuListDto {
 
     private String name;
 
+    private Integer storeId;
+
     public Integer getPageSize() {
         return pageSize;
     }
@@ -51,5 +53,13 @@ public class UserGoodSpuListDto {
 
     public void setBrandId(Integer brandId) {
         this.brandId = brandId;
+    }
+
+    public Integer getStoreId() {
+        return storeId;
+    }
+
+    public void setStoreId(Integer storeId) {
+        this.storeId = storeId;
     }
 }

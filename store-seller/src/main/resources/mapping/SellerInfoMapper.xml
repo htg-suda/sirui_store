@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htg.seller.mapper.SellerInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.seller.SellerInfo">
+        <id column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="sn" property="sn"/>
+        <result column="user_id" property="userId"/>
+        <result column="logo" property="logo"/>
+        <result column="state" property="state"/>
+        <result column="state_remark" property="stateRemark"/>
+        <result column="type" property="type"/>
+        <result column="admin_name" property="adminName"/>
+        <result column="admin_identity_num" property="adminIdentityNum"/>
+        <result column="admin_mob_phone" property="adminMobPhone"/>
+        <result column="business_range" property="businessRange"/>
+        <result column="admin_identity_front_url" property="adminIdentityFrontUrl"/>
+        <result column="admin_identity_back_url" property="adminIdentityBackUrl"/>
+        <result column="add_by" property="addBy"/>
+        <result column="del_flag" property="delFlag"/>
+    </resultMap>
+
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="Map01" type="com.htg.common.vo.seller.system.SysSellerListItem">
+        <id column="id" property="id"/>
+        <result column="sn" property="sn"/>
+        <result column="user_id" property="userId"/>
+        <result column="logo" property="logo"/>
+        <result column="state" property="state"/>
+        <result column="state_remark" property="stateRemark"/>
+        <result column="type" property="type"/>
+        <result column="admin_name" property="adminName"/>
+        <result column="admin_mob_phone" property="adminMobPhone"/>
+        <result column="add_by" property="addBy"/>
+        <result column="enterprise_name" property="enterpriseName"/>
+    </resultMap>
+
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        create_user,
+        update_user,
+        create_time,
+        update_time,
+        id, sn, user_id, logo, state, state_remark, type, admin_name, admin_identity_num, admin_mob_phone, business_range, admin_identity_front_url, admin_identity_back_url, add_by, del_flag
+    </sql>
+
+    <sql id="Map01_Colunm_List">
+        id, sn, user_id, logo, state, state_remark, type, admin_name,  admin_mob_phone, add_by,enterprise_name
+    </sql>
+
+    <select id="selectBySellerSn" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from sr_seller_info where sn=#{sellerSn};
+    </select>
+
+    <select id="selectByUserId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from sr_seller_info where user_id=#{userId};
+    </select>
+
+    <select id="selectSellerVerfiyInfoByPage" resultMap="Map01"
+            parameterType="com.htg.common.dto.seller.system.SellerListDto">
+        select
+        <include refid="Map01_Colunm_List"/>
+        from sr_seller_info sInfo left join sr_seller_enterprise_info eInfo
+        on (sInfo.sn=eInfo.seller_sn)
+        <where>
+            <if test="state!=null">
+                sInfo.state=#{state}
+            </if>
+            <if test="type!=null">
+                and  sInfo.type=#{type}
+            </if>
+            <if test="addBy!=null">
+                and sInfo.add_by=#{addBy}
+            </if>
+            <if test="tel!=null">
+                and sInfo.admin_mob_phone=#{tel}
+            </if>
+            <if test="sellerName!=null">
+                and sInfo.admin_name like #{sellerName}
+            </if>
+            <if test="sellerName!=null">
+                or eInfo.enterprise_name like #{sellerName}
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -14,6 +14,11 @@
         <module>store-user</module>
         <module>store-auth</module>
         <module>store-admin</module>
+        <module>store-test</module>
+
+        <module>store-seller</module>
+        <module>store-sms</module>
+
     </modules>
     <groupId>com.htg</groupId>
     <artifactId>sirui_store</artifactId>

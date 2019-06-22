@@ -1,8 +1,8 @@
 package com.htg.good.handler;
 
-import com.htg.good.exception.GlobalException;
 import com.htg.common.result.CodeEnum;
 import com.htg.common.result.CommonResult;
+import com.htg.common.exception.GlobalException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindException;
@@ -72,12 +72,13 @@ public class GlobalDefaultExceptionHandler {
         return CommonResult.error(CodeEnum.PARAM_ERROR, map);
     }
 
-    /* 表单请求参数异常 */
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler({GlobalException.class})
     public CommonResult handleGlobalException(GlobalException e) {
         return CommonResult.error(e.getCode(), e.getMsg());
     }
+
+
 
 
     /* path */

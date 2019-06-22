@@ -9,11 +9,14 @@
         <module name="store-good" />
         <module name="shop-registry" />
         <module name="store-file-service" />
+        <module name="store-gateway" />
         <module name="store-common" />
         <module name="store-user" />
-        <module name="store-gateway" />
-        <module name="store-admin" />
+        <module name="store-sms" />
         <module name="store-client-feign" />
+        <module name="store-test" />
+        <module name="store-seller" />
+        <module name="store-admin" />
         <module name="store-auth" />
       </profile>
     </annotationProcessing>
@@ -27,6 +30,11 @@
       <module name="store-file-service" target="1.8" />
       <module name="store-gateway" target="1.8" />
       <module name="store-good" target="1.8" />
+      <module name="store-security-common" target="1.8" />
+      <module name="store-seller" target="1.8" />
+      <module name="store-shop" target="1.8" />
+      <module name="store-sms" target="1.8" />
+      <module name="store-test" target="1.8" />
       <module name="store-user" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -40,6 +48,11 @@
       <module name="store-file-service" options="-parameters" />
       <module name="store-gateway" options="-parameters" />
       <module name="store-good" options="-parameters" />
+      <module name="store-security-common" options="-parameters" />
+      <module name="store-seller" options="-parameters" />
+      <module name="store-shop" options="-parameters" />
+      <module name="store-sms" options="-parameters" />
+      <module name="store-test" options="-parameters" />
       <module name="store-user" options="-parameters" />
     </option>
   </component>

@@ -4,14 +4,14 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.htg.common.entity.good.GoodSkuStock">
-    <result column="create_user" property="createUser" />
-    <result column="update_user" property="updateUser" />
-    <result column="create_time" property="createTime" />
-    <result column="update_time" property="updateTime" />
-        <result column="sku_id" property="skuId" />
-        <result column="stock" property="stock" />
-        <result column="stock_alarm" property="stockAlarm" />
-        <result column="del_flag" property="delFlag" />
+        <result column="create_user" property="createUser"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="sku_id" property="skuId"/>
+        <result column="stock" property="stock"/>
+        <result column="stock_alarm" property="stockAlarm"/>
+        <result column="del_flag" property="delFlag"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->

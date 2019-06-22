@@ -29,7 +29,29 @@ public enum CodeEnum {
     Modify_GOOD_SPU_VERIFY_ERROR(-1024, "修改SPU审核状态异常"),
     GOOD_SPU_VERIFY_UNPASS(-1025, "商品SPU未审核通过"),
     GOOD_SPU_STATE_NOT_ON_SALE(-1026, "商品SPU 不是在售状态"),
-    ADD_GOOD_SKU_ERROR(-1027, "添加商品SKU异常");
+    ADD_GOOD_SKU_ERROR(-1027, "添加商品SKU异常"),
+    ADD_SELLER_INFO_ERROR(-1028, "添加商户信息异常"),
+    ADD_ENTERPRISE_INFO_ERROR(-1029, "添加企业信息异常异常"),
+    ADD_SELLER_TYPE_ERROR(-1030, "添加商户类型异常"),
+    ADD_SELLER_LEGAL_PERSON_ERROR(-1031, "企业法人信息异常"),
+    ADD_SELLER_BANK_ACCOUNT_PERMIT_NUM_ERROR(-1032, "开户许可证编码不能为空"),
+    ADD_BANK_INFO_ERROR(-1033, "添加银行信息异常"),
+    SELLER_NOT_EXIST(-1034, "商户不存在"),
+    SELLER_STATE_ERROR(-1035, "商户状态异常"),
+    SELLER_HAS_EXIST(-1036, "此用户已经存在商户了"),
+    SELLER_SN_ERROR(-1037, "当前用户不持有该商户编号"),
+    USERNAME_HAS_EXIST(-1038, "用户名已经存在"),
+    TEL_HAS_EXIST(-1039, "手机号码已经存在"),
+    EMAIL_HAS_EXIST(-1040, "邮箱已存在"),
+    REGISTER_USER_ERROR(-1041, "用户注册异常"),
+    SELLER_STORE_HAS_EXIST(-1042, "您的店铺已存在,且只能创建一个店铺"),
+    SELLER_STORE_NOT_EXIST(-1043, "您还未创建店铺,无法获取商品"),
+    YOU_ARE_NOT_SELLER(-1044, "您还不是商户"),
+    SELLER_STORE_NOT_ACTIVE(-1045, "店铺被冻结"),
+    SKU_GOOD_NOT_EXIST(-1046, "sku 商品不存在"),
+    MSG_CODE_VALID_FAILED(-1046, "验证码校验失败");
+
+
 
 
     private int code;

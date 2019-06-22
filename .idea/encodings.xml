@@ -10,6 +10,9 @@
     <file url="file://$PROJECT_DIR$/store-file-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/store-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/store-good" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/store-seller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/store-sms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/store-test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/store-user" charset="UTF-8" />
   </component>
 </project>

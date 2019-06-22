@@ -6,6 +6,9 @@ import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import com.htg.common.base.BaseEntity;
 import com.htg.common.vo.good.base.SkuGoodSpecValueVo;
+import io.swagger.annotations.ApiModelProperty;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * <p>
@@ -15,12 +18,8 @@ import com.htg.common.vo.good.base.SkuGoodSpecValueVo;
  * @author htg
  * @since 2019-06-05
  */
-@TableName("sr_sku_good_spec_value")
 public class ShopSkuGoodSpecValueVo extends SkuGoodSpecValueVo {
-    /**
-     * 是否必填,0-不是, 1-是
-     */
-    @TableField("is_necessary")
+    @ApiModelProperty(value = "是否必填,0-不是, 1-是", example = "1")
     private Integer isNecessary;
 
 

@@ -18,7 +18,7 @@ eureka:
 zuul:
   routes:
     store-good: #这里是一个map, key 值是任意的
-      path: /sys/**
+      path: /good/**
       serviceId: store-good
-      stripPrefix: false  # 表示代理的时候是否要取消前缀 例如 /store/get/1 如果配置为true 则表示 代理转发到 /get/1
+      stripPrefix: true  # 表示代理的时候是否要取消前缀 例如 /store/get/1 如果配置为true 则表示 代理转发到 /get/1
 

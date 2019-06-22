@@ -2,25 +2,31 @@ package com.htg.good.service.impl;
 
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.htg.common.constant.SellerConst;
+import com.htg.common.constant.StoreConst;
 import com.htg.common.dto.good.shop.*;
 import com.htg.common.dto.good.system.SysModifyGoodSpuStateDto;
 import com.htg.common.dto.good.system.SysVerifyGoodSpuDto;
 import com.htg.common.dto.good.user.UserGoodSpuListDto;
 import com.htg.common.entity.good.*;
+import com.htg.common.entity.seller.SellerInfo;
+import com.htg.common.entity.seller.SellerStore;
 import com.htg.common.result.CodeEnum;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespPage;
+import com.htg.common.utils.AuthUtil;
 import com.htg.common.vo.good.shop.ShopGoodSpuDetailVo;
 import com.htg.common.vo.good.shop.ShopGoodSpuVo;
 import com.htg.common.vo.good.shop.ShopSpuGoodSpecValueVo;
 import com.htg.common.vo.good.user.UserGoodSpuDetailVo;
 import com.htg.common.vo.good.user.UserGoodSpuVo;
 import com.htg.common.vo.good.user.UserSpuGoodSpecValueVo;
+import com.htg.feign.client.SellerClient;
 import com.htg.good.constant.BrandConst;
-import com.htg.good.constant.Del_FLAG;
+import com.htg.common.constant.Del_FLAG;
 import com.htg.good.constant.GoodSpuConst;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.mapper.GoodSpuMapper;
 import com.htg.good.service.*;
 import lombok.extern.slf4j.Slf4j;
@@ -40,25 +46,33 @@ import java.util.List;
  * @author htg
  * @since 2019-05-29
  */
-
 @Slf4j
 @Service
 public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> implements IGoodSpuService {
     @Autowired
     private IGoodSpuDetailService goodSpuDetailService;
+
     @Autowired
     private IBrandService iBrandService;
+
     @Autowired
     private IGoodCategoryService goodCategoryService;
+
     @Autowired
     private IBrandCategoryService brandCategoryService;
 
     @Autowired
     private ISpuGoodSpecValueService iSpuGoodSpecValueService;
 
+    @Autowired
+    private SellerClient sellerClient;
+
     @Override
     @Transactional(rollbackFor = GlobalException.class)
     public CommonResult<RespId> addGoodSpu(ShopAddGoodSpuDto goodSpu) throws GlobalException {
+        SellerInfo sellerInfo = checkSellerInfo(AuthUtil.getLoginUserId());
+        SellerStore sellerStore = checkSellerStore(AuthUtil.getLoginUserId());
+
         GoodCategory goodCategory = goodCategoryService.selectById(goodSpu.getSpu().getCategoryId());
         if (goodCategory == null) {
             throw new GlobalException(CodeEnum.CATEGORY_NOT_EXIST);
@@ -73,7 +87,6 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
         if (count <= 0) {
             throw new GlobalException(CodeEnum.CATEGORY_BRAND_IS_ERROR);
         }
-        /* todo 检测商铺是否存在 且属于当前添加的用户*/
 
 
         GoodSpu spu = goodSpu.getSpu();
@@ -81,6 +94,7 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
         spu.setDelFlag(Del_FLAG.EXISTED);
         spu.setPayNum(0);
         spu.setEvaluateNum(0);
+        spu.setStoreId(sellerStore.getId());
         /* 商品在售 */
         spu.setState(GoodSpuConst.STATUS_WAIT_SALE);
         /* 商品待系统管理员审核*/
@@ -108,6 +122,9 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
     @Override
     @Transactional(rollbackFor = {GlobalException.class})
     public CommonResult<RespId> modify(ShopModifyGoodSpuDto goodSpuModifyDto) throws GlobalException {
+        SellerInfo sellerInfo = checkSellerInfo(AuthUtil.getLoginUserId());
+        SellerStore sellerStore = checkSellerStore(AuthUtil.getLoginUserId());
+
         GoodSpuModifyDto spuModify = goodSpuModifyDto.getSpuModify();
         GoodSpuDetailModifyDto spuDetailModify = goodSpuModifyDto.getSpuDetailModify();
 
@@ -123,7 +140,10 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
         if (goodSpu.getState() == GoodSpuConst.STATUS_FORBID) {
             return CommonResult.error("该商品已经禁止售卖,无法被修改");
         }
-        /*todo 对商品 进行验证 是否属于该 用户,是否属于该店面  */
+
+        if (goodSpu.getStoreId() != sellerStore.getId()) {  // 对用户进行的 store 进行测试 ,看能不能对应上商户的storeId
+            return CommonResult.error("您正在尝试修改一个不属于自己的商品");
+        }
 
 
         /** 如果商品之前是审核未通过的商品,那么 修改状态为待审核中,售卖状态为待售卖*/
@@ -154,22 +174,20 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
             if (!iSpuGoodSpecValueService.updateById(spuGoodSpecValue))
                 throw new GlobalException(CodeEnum.Modify_GOOD_SPU_ERROR);
         }
-
         return CommonResult.success("修改成功");
     }
 
     /*商户管理端*/
     @Override
-    public CommonResult<RespPage<ShopGoodSpuVo>> list(GoodSpuListDto dto) {
+    public CommonResult<RespPage<ShopGoodSpuVo>> list(GoodSpuListDto dto, Integer storeId) throws GlobalException {
         Page<GoodSpu> page = new Page<>(dto.getPageNum(), dto.getPageSize());
         String searchName = dto.getName();
         if (searchName != null) {
             searchName = "%" + searchName + "%";
             dto.setName(searchName);
         }
-        /* todo 这里是商家端 的列出商品 ,需要传入商家的 store id */
 
-        List<GoodSpu> goodSpuList = baseMapper.selectByPage(page, dto.getName(), null, dto.getCategoryId(), dto.getBrandId());
+        List<GoodSpu> goodSpuList = baseMapper.selectByPage(page, dto.getName(), storeId, dto.getCategoryId(), dto.getBrandId());
 
         List<ShopGoodSpuVo> shopGoodSpuVoList = new ArrayList<>();
 
@@ -198,21 +216,34 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
         return CommonResult.success(new RespPage(shopGoodSpuVoList, pages));
     }
 
+    @Override
+    public CommonResult<ShopGoodSpuDetailVo> getSysGoodSpuDetailById(Integer spuId) throws GlobalException {
+        GoodSpu spu = checkSpu(spuId);
+        return getGoodSpuDetailBySpu(spu);
+    }
+
+
 
     @Override
     public CommonResult<ShopGoodSpuDetailVo> getShopGoodSpuDetailById(Integer spuId) throws GlobalException {
-
-        /* todo 检测商铺是否存在 且属于当前添加的用户*/
-
+        SellerInfo sellerInfo = checkSellerInfo(AuthUtil.getLoginUserId());
+        SellerStore sellerStore = checkSellerStore(AuthUtil.getLoginUserId());
         GoodSpu spu = checkSpu(spuId);
-        GoodSpuDetail goodSpuDetail = checkSpuDetail(spu.getId());
+        if (spu.getStoreId() != sellerStore.getId()) {
+            return CommonResult.error("您正在尝试获取一个不属于您的商品");
+        }
+        return getGoodSpuDetailBySpu(spu);
+    }
 
+    private CommonResult<ShopGoodSpuDetailVo> getGoodSpuDetailBySpu(GoodSpu spu) throws GlobalException {
+
+        GoodSpuDetail goodSpuDetail = checkSpuDetail(spu.getId());
 
         ShopGoodSpuDetailVo shopGoodSpuDetailVo = new ShopGoodSpuDetailVo();
         BeanUtils.copyProperties(spu, shopGoodSpuDetailVo);
         BeanUtils.copyProperties(goodSpuDetail, shopGoodSpuDetailVo);
         /* 遍历 copy 规格值 */
-        List<SpuGoodSpecValue> specValueList = iSpuGoodSpecValueService.selectBySpuId(spuId);
+        List<SpuGoodSpecValue> specValueList = iSpuGoodSpecValueService.selectBySpuId(spu.getId());
         List<ShopSpuGoodSpecValueVo> shopSpecVoList = new ArrayList<>();
         for (SpuGoodSpecValue specValue : specValueList) {
 
@@ -241,9 +272,7 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
         } else {
             log.info("category error id is {}", categoryId);
         }
-
         return CommonResult.success(shopGoodSpuDetailVo);
-
     }
 
 
@@ -257,18 +286,16 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
             dto.setName(searchName);
         }
 
-
-        /*todo  这里是普通用户的列出商品, 由于现在没有商户 所以 暂时为空,且由于只做邦德家的商品,所以前端要写死 categroyId 和 brand的 id */
-        List<GoodSpu> goodSpuList = baseMapper.selectByPage(page, dto.getName(), null, dto.getCategoryId(), dto.getBrandId());
+        /*todo  这里是普通用户的列出商品, 由于现在没有商户 且由于只做邦德家的商品,所以前端要写死 categroyId 和 brand的 id , storeId */
+        List<GoodSpu> goodSpuList = baseMapper.selectByPage(page, dto.getName(), dto.getStoreId(), dto.getCategoryId(), dto.getBrandId());
 
         List<UserGoodSpuVo> userGoodSpuVos = new ArrayList<>();
 
         for (GoodSpu spu : goodSpuList) {
             if (spu.getState() != GoodSpuConst.STATUS_ON_SALE || spu.getVerify() != GoodSpuConst.VERIFY_PASS) {  // 过滤掉状态不是在售卖的商品
-                log.info("=====> spu state {}",spu.getState());
+                log.info("=====> spu state {}", spu.getState());
                 continue;
             }
-
             Integer brandId = spu.getBrandId();
             Brand brand = iBrandService.selectById(brandId);
             Integer categoryId = spu.getCategoryId();
@@ -287,7 +314,6 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
             } else {
                 log.info("brand err id is {}", brandId);
             }
-
             userGoodSpuVos.add(userGoodSpuVo);
         }
         long pages = page.getPages();
@@ -410,6 +436,25 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
             throw new GlobalException(CodeEnum.SPU_ID_ERROR);
         }
         return goodSpuDetail;
+    }
+
+
+    @Override
+    public SellerInfo checkSellerInfo(Integer userId) throws GlobalException {
+        SellerInfo sellerInfo = sellerClient.getSellerInfoByUserId(userId);
+        if (sellerInfo == null) throw new GlobalException(CodeEnum.YOU_ARE_NOT_SELLER); // 检查用户是否是商户
+        if (sellerInfo.getState() != SellerConst.STATE_VERIFY_PASS)
+            throw new GlobalException(CodeEnum.SELLER_STATE_ERROR); //状态是否已经审核通过
+        return sellerInfo;
+    }
+
+    @Override
+    public SellerStore checkSellerStore(Integer userId) throws GlobalException {
+        SellerStore sellerStore = sellerClient.getSellerStoreByUserId(userId);
+        if (sellerStore == null) throw new GlobalException(CodeEnum.SELLER_STORE_NOT_EXIST);  // 店铺是否已经存在
+        if (sellerStore.getStatus() != StoreConst.STATUS_ACTIVE)
+            throw new GlobalException(CodeEnum.SELLER_STORE_NOT_ACTIVE);
+        return sellerStore;
     }
 
 }

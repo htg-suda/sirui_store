@@ -4,7 +4,7 @@ package com.htg.good.controller.system;
 import com.htg.common.entity.good.BrandCategory;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.service.IBrandCategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -33,7 +33,6 @@ public class BrandCategoryController {
     private IBrandCategoryService brandCategoryService;
 
     @ApiOperation(value = "关联品牌和分类")
-    @Transactional
     @ResponseBody
     @PostMapping("/add")
     public CommonResult<RespId> addBrandCategory(@Valid @RequestBody BrandCategory brandCategory) throws GlobalException {

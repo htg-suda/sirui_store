@@ -3,7 +3,7 @@ import com.htg.common.entity.good.GoodSpecItem;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespList;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.service.IGoodSpecItemService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -30,13 +30,12 @@ import javax.validation.constraints.NotNull;
 @Api(value = "GoodSpecItemController", tags = "系统005-规格参数管理")
 @Validated
 @RestController
-@RequestMapping("/shop/spec_item")
+@RequestMapping("/sys/spec_item")
 public class GoodSpecItemController {
     @Autowired
     private IGoodSpecItemService goodSpecItemService;
 
     @ApiOperation(value = "添加规格参数名")
-    @Transactional
     @ResponseBody
     @PostMapping("/add")
     public CommonResult<RespId> addGoodSpecItem(@Valid @RequestBody GoodSpecItem goodSpecItem) throws GlobalException {

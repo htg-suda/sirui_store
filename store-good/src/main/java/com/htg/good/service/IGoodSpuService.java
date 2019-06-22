@@ -8,6 +8,8 @@ import com.htg.common.dto.good.system.SysVerifyGoodSpuDto;
 import com.htg.common.dto.good.user.UserGoodSpuListDto;
 import com.htg.common.entity.good.GoodSpu;
 import com.baomidou.mybatisplus.service.IService;
+import com.htg.common.entity.seller.SellerInfo;
+import com.htg.common.entity.seller.SellerStore;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespPage;
@@ -15,7 +17,7 @@ import com.htg.common.vo.good.shop.ShopGoodSpuDetailVo;
 import com.htg.common.vo.good.shop.ShopGoodSpuVo;
 import com.htg.common.vo.good.user.UserGoodSpuDetailVo;
 import com.htg.common.vo.good.user.UserGoodSpuVo;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 
 /**
  * <p>
@@ -32,7 +34,9 @@ public interface IGoodSpuService extends IService<GoodSpu> {
 
     CommonResult<RespId> modify(ShopModifyGoodSpuDto goodSpuModifyDto) throws GlobalException;
 
-    CommonResult<RespPage<ShopGoodSpuVo>> list(GoodSpuListDto goodSpuListDto);
+    CommonResult<RespPage<ShopGoodSpuVo>> list(GoodSpuListDto dto, Integer storeId) throws GlobalException;
+
+    CommonResult<ShopGoodSpuDetailVo> getSysGoodSpuDetailById(Integer spuId) throws GlobalException;
 
     CommonResult<ShopGoodSpuDetailVo> getShopGoodSpuDetailById(Integer spuId) throws GlobalException;
 
@@ -43,4 +47,8 @@ public interface IGoodSpuService extends IService<GoodSpu> {
     CommonResult<RespId> modify(SysModifyGoodSpuStateDto modifyState) throws GlobalException;
 
     CommonResult<RespId> modify(SysVerifyGoodSpuDto verifyGoodSpuDto) throws GlobalException;
+
+    SellerInfo checkSellerInfo(Integer userId) throws GlobalException;
+
+    SellerStore checkSellerStore(Integer userId) throws GlobalException;
 }

@@ -1,6 +1,7 @@
 package com.htg.common.entity.good;
 
 import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.htg.common.base.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ public class GoodSkuStock extends BaseEntity {
      * 参考商品的sku 表,和sku表一对一的关系
      */
     @ApiModelProperty(value = "商品SKU ID", hidden = true)
-    @TableField("sku_id")
+    @TableId("sku_id")
     private Integer skuId;
     /**
      * 商品的库存总量

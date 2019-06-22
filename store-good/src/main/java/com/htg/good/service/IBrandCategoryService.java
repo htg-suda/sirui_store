@@ -4,7 +4,7 @@ import com.htg.common.entity.good.BrandCategory;
 import com.baomidou.mybatisplus.service.IService;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 
 import java.util.List;
 

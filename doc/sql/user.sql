@@ -7,17 +7,11 @@ create table sr_user(
     id int primary key auto_increment comment '用户ID ，主键',
     username varchar(20) unique key not null comment '用户名',
     password varchar(80) not null comment '用户密码',
-    nikename varchar(20) not null comment '用户昵称',
-    invitation_code varchar(50) unique key not null comment '邀请码,随机生成的uuid',
-    be_invited tinyint  default 0 comment '是否是被邀请注册 0-不是, 1-是的',
-    inviter_id int comment '邀请人的id',
-    integral_used int default 0 comment '已使用积分',
-    integral_remain int default 0 comment '剩余积分',
+    nikename varchar(20) default null comment '用户昵称',
     tel varchar(20) unique key  comment '用户手机号码',
     email varchar(50) unique key  comment '用户电子邮箱',
     age tinyint unsigned comment '用户年龄',
     gender tinyint unsigned default 0 comment '性别 1-男 2-女 0-保密',
-    level tinyint default 1 comment '用户等级 1~5',
     status smallint not null default 1001 comment '用户状态 1001-可用, 1002-不可用',
     -- 附带信息
     del_flag tinyint default 0 comment '删除状态',
@@ -26,6 +20,41 @@ create table sr_user(
     create_time datetime not null comment '创建时间',
     update_time datetime not null comment '更新时间'
 )comment '用户表' charset utf8;
+
+
+/* 和用户表是一对一的关系 */
+create table sr_user_detail(
+    user_id int unique key comment '用户详细信息id 参考用户表',
+    invitation_code varchar(50) unique key not null comment '邀请码,随机生成的uuid',
+    be_invited tinyint  default 0 comment '是否是被邀请注册 0-不是, 1-是的',
+    inviter_id int comment '邀请人的id',
+    integral_used int default 0 comment '已使用积分',
+    integral_remain int default 0 comment '剩余积分',
+    level tinyint default 1 comment '用户等级 1~5',
+    -- 附带信息
+    del_flag tinyint default 0 comment '删除状态',
+    create_user varchar(100) not null comment '创建人的id',
+    update_user varchar(100) not null comment '更新人的id',
+    create_time datetime not null comment '创建时间',
+    update_time datetime not null comment '更新时间'
+)comment '用户详情表' charset utf8;
+
+
+/* 用户 和角色 组 表 */
+/* 最基本的 用户组 */
+create table tb_user_role_group(
+   id int primary key auto_increment comment '用户角色组id ,主键自增长',
+   user_id int not null comment '用户id',
+   role_group_id int not null comment '用户组所在的id',
+    -- 附带信息
+   del_flag tinyint default 0 comment '删除状态,0-有效,-1 -删除',
+   create_user varchar(100) not null comment '创建人的id',
+   update_user varchar(100) not null comment '更新人的id',
+   create_time datetime not null comment '创建时间',
+   update_time datetime not null comment '更新时间'
+)comment '用户角色组' charset utf8;
+
+
 
 
 create table sr_consignee_address(

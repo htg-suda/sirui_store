@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2019-06-05
  */
 @RestController
-@RequestMapping("/htg/spuGoodSpecValue")
+@RequestMapping("/htg/spu_spec_value")
 public class SpuGoodSpecValueController {
 
 }

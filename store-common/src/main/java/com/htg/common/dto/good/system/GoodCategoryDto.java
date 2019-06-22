@@ -5,10 +5,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
 
 /**
@@ -34,6 +31,7 @@ public class GoodCategoryDto extends BaseEntity {
     @ApiModelProperty(value = "父级别的类id, id为0的时候是根分类", example = "0", name = "parentId", dataType = "int", required = true)
     private Integer parentId;
 
+    @NotBlank(message = "分类名不能为空")
     @Length(min = 2, max = 10, message = "分类名必须在2~10字符之间")
     @ApiModelProperty(value = "分类名", example = "虚拟商品", name = "name", dataType = "String", required = true)
     private String name;

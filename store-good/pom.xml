@@ -16,6 +16,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+
+        <!--引入  feign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+        </dependency>
         <!-- mybatis 的使用-->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -35,6 +41,12 @@
             <version>1.0.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.htg</groupId>
+            <artifactId>store-client-feign</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- jjwt -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -48,6 +60,11 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <!-- spring cloud oauth2 包 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

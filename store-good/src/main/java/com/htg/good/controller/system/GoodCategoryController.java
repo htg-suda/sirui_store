@@ -6,7 +6,7 @@ import com.htg.common.result.RespId;
 import com.htg.common.result.RespList;
 import com.htg.common.vo.good.BrandVo;
 import com.htg.common.vo.good.GoodCategoryVo;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.service.IGoodCategoryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -17,7 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -42,7 +41,6 @@ public class GoodCategoryController {
 
 
     @ApiOperation(value = "添加分类", notes = "添加分类")
-    @Transactional
     @ResponseBody
     @PostMapping("/add")
     public CommonResult<RespId> addCategory(@Valid @RequestBody GoodCategory goodCategory) throws GlobalException {
@@ -73,7 +71,7 @@ public class GoodCategoryController {
 
 
 
-    @ApiOperation(value = "添加分类", notes = "添加分类")
+    @ApiOperation(value = "修改分类", notes = "修改分类")
     @Transactional
     @ResponseBody
     @PostMapping("/modify")

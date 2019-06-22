@@ -15,10 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/auth")
 public class AdminController {
-
     @Autowired
     private AuthenticationManager authenticationManager;
-
 
     @ApiOperation(value = "用户登录", notes = "根据用户名/手机号 密码登录")
     @ResponseBody
@@ -35,7 +33,5 @@ public class AdminController {
         }
         return CommonResult.error("login failed");
     }
-
-
 
 }

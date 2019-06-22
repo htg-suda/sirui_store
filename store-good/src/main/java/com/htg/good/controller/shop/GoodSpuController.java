@@ -3,12 +3,15 @@ package com.htg.good.controller.shop;
 import com.htg.common.dto.good.shop.GoodSpuListDto;
 import com.htg.common.dto.good.shop.ShopAddGoodSpuDto;
 import com.htg.common.dto.good.shop.ShopModifyGoodSpuDto;
+import com.htg.common.entity.seller.SellerInfo;
+import com.htg.common.entity.seller.SellerStore;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespPage;
+import com.htg.common.utils.AuthUtil;
 import com.htg.common.vo.good.shop.ShopGoodSpuDetailVo;
 import com.htg.common.vo.good.shop.ShopGoodSpuVo;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.service.IGoodSpuService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -58,8 +61,10 @@ public class GoodSpuController {
     @ApiOperation(value = "列出商品spu")
     @ResponseBody
     @PostMapping("/list")
-    public CommonResult<RespPage<ShopGoodSpuVo>> listGoodSpu(@Valid @RequestBody GoodSpuListDto goodSpuListDto) {
-        return goodSpuService.list(goodSpuListDto);
+    public CommonResult<RespPage<ShopGoodSpuVo>> listGoodSpu(@Valid @RequestBody GoodSpuListDto goodSpuListDto) throws GlobalException {
+        SellerInfo info = goodSpuService.checkSellerInfo(AuthUtil.getLoginUserId());
+        SellerStore sellerStore = goodSpuService.checkSellerStore(AuthUtil.getLoginUserId());
+        return goodSpuService.list(goodSpuListDto, sellerStore.getId());
     }
 
     @ApiOperation(value = "获取商品spu详情")
@@ -68,5 +73,7 @@ public class GoodSpuController {
     public CommonResult<ShopGoodSpuDetailVo> getShopGoodSpuDetailById(@NotNull(message = "spu id不能为空") @PathVariable Integer spuId) throws GlobalException {
         return goodSpuService.getShopGoodSpuDetailById(spuId);
     }
+
+
 }
 

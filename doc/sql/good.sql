@@ -248,7 +248,7 @@ create table sr_sku_good_spec_value (
      enum_options varchar(1000) comment '如果是枚举类型的话,其各个枚举值,以逗号分割',
      unit varchar(20) default null comment '在为数值类型的时候的单位,比如12mm中的mm',
      is_necessary tinyint default 1 comment '是否必填,0-不是, 1-是' ,
-    -- 附带信息
+    -- 附带信息1
      create_user int not null comment '创建人的id',
      update_user int not null comment '更新人的id',
      create_time datetime not null comment '创建时间',
@@ -259,3 +259,25 @@ create table sr_sku_good_spec_value (
 
 /*后期会面临的一个问题是, 一个参数是属于spu 的参数 ,还是 sku 的参数 ,比如工位的经纬度 ???? */
 --  ---------------------------------------------------------------------------------
+
+select SP.id
+from sr_good_spu SP
+         left join (select spu_id,
+                           max(case when spec_item_name = ? then spec_value else '' end) ?,
+                           max(case when spec_item_name = ? then spec_value else '' end) ?,
+                           max(case when spec_item_name = ? then spec_value else '' end) ?,
+                           max(case when spec_item_name = ? then spec_value else '' end) ?
+                    from sr_spu_good_spec_value
+                    where spec_item_name in (?, ?, ?, ?)) as VA on SP.id = VA.spu_id;
+
+
+
+
+
+select spu_id,
+      max(case  when spec_item_name='产品类型' then spec_value else '' end) 'type',
+      max( case  when spec_item_name='经度' then spec_value  end )'longitude',
+      max( case  when spec_item_name='纬度' then spec_value  end) 'latitude',
+      max(  case   when spec_item_name='具体位置' then spec_value end) pos
+from  sr_spu_good_spec_value where spec_item_name in ('产品类型','经度','纬度','具体位置')  group by spu_id;
+

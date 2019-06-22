@@ -1,6 +1,6 @@
 package com.htg.admin.service;
 
-import com.htg.common.entity.Admin;
+import com.htg.common.entity.admin.Admin;
 import com.baomidou.mybatisplus.service.IService;
 
 /**

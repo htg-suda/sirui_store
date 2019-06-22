@@ -23,14 +23,84 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        create_user,
+        create_user
         update_user,
         create_time,
         update_time,
         id, spu_id, sku_num, collect_num, name, main_image, price, promotion_price, market_price, status, del_flag
     </sql>
+
+
+    <sql id="Mapper_List">
+        id, spu_id, sku_num, collect_num, name, main_image, price, promotion_price, market_price, status, del_flag
+    </sql>
+
     <select id="selectBySpuId" resultMap="BaseResultMap" parameterType="integer">
-        select <include refid="Base_Column_List"/> from sr_good_sku where spu_id=#{spuId}
+        select
+        <include refid="Base_Column_List"/>
+        from sr_good_sku where spu_id=#{spuId}
+    </select>
+
+
+    <resultMap id="QueryResultMap" type="com.htg.common.vo.good.user.UserQuerySkuVo">
+        <id column="id" property="id"/>
+        <result column="spu_id" property="spuId"/>
+        <result column="sku_num" property="skuNum"/>
+        <result column="collect_num" property="collectNum"/>
+        <result column="name" property="name"/>
+        <result column="main_image" property="mainImage"/>
+        <result column="price" property="price"/>
+    </resultMap>
+
+
+    <!-- 将 规格表转换为 横表 -->
+    <sql id="sku_map_to_column">
+        select sku_id,
+        <foreach collection="specItems" item="item" index="index" separator="," open="" close="">
+            max(case when spec_item_name=#{item.name} then spec_value else '' end) #{item.name}
+        </foreach>
+        from sr_sku_good_spec_value
+        where spec_item_name in
+        <foreach collection="specItems" item="item" index="index" separator="," open="(" close=")">
+            #{item.name}
+        </foreach>
+        group by sku_id
+    </sql>
+
+    <!-- 根据规格组 和关键字 -->
+    <select id="selectSkuBySpecList" parameterType="com.htg.common.dto.good.user.UserSkuQuery"
+            resultMap="QueryResultMap">
+        select SK.id,SK.spu_id,SK.sku_num,SK.collect_num,SK.name,SK.main_image,SK.price
+        from sr_good_sku SK left join
+        (<include refid="sku_map_to_column"/>) as VA
+        on SK.id = VA.sku_id
+        <where>
+            <foreach collection="specItems" item="item" index="index" separator="" open="" close="">
+                and VA.${item.name} ${item.symbol} #{item.value}
+            </foreach>
+            <if test="keyWord!=null">
+                and SK.name like #{keyWord}
+            </if>
+        </where>
+    </select>
+
+
+    <sql id="spu_map_to_column">
+        select spu_id,
+        <foreach collection="list" item="item" index="index" separator="," open="" close="">
+            max(case when spec_item_name=#{item.name} then spec_value else '' end) #{item.name}
+        </foreach>
+        from sr_spu_good_spec_value
+        where spec_item_name in
+        <foreach collection="list" item="item" index="index" separator="," open="(" close=")">
+            #{item.name}
+        </foreach>
+        group by spu_id
+    </sql>
+
+
+    <select id="selectBySkuNum" parameterType="String" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from sr_good_sku where sku_num=#{skuNum}
     </select>
 
 </mapper>

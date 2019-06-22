@@ -1,25 +1,26 @@
 package com.htg.good.service.impl;
 
+import com.baomidou.mybatisplus.plugins.Page;
 import com.htg.common.dto.good.shop.ShopAddGoodSkuDto;
+import com.htg.common.dto.good.user.UserSkuQuery;
 import com.htg.common.entity.good.*;
-import com.htg.common.result.CodeEnum;
-import com.htg.common.result.CommonResult;
-import com.htg.common.result.RespId;
-import com.htg.common.result.RespList;
+import com.htg.common.result.*;
 import com.htg.common.vo.good.shop.ShopGoodSkuDetailVo;
 import com.htg.common.vo.good.shop.ShopGoodSkuVo;
 import com.htg.common.vo.good.shop.ShopSkuGoodSpecValueVo;
-import com.htg.good.constant.Del_FLAG;
+import com.htg.common.constant.Del_FLAG;
+import com.htg.common.vo.good.user.UserGoodSkuDetailVo;
+import com.htg.common.vo.good.user.UserGoodSkuVo;
+import com.htg.common.vo.good.user.UserQuerySkuVo;
+import com.htg.common.vo.good.user.UserSkuGoodSpecValueVo;
 import com.htg.good.constant.GoodSkuConst;
 import com.htg.good.constant.GoodSpuConst;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.mapper.GoodSkuMapper;
 import com.htg.good.service.*;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.sun.org.apache.bcel.internal.classfile.Code;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -44,7 +45,6 @@ public class GoodSkuServiceImpl extends ServiceImpl<GoodSkuMapper, GoodSku> impl
     private IGoodSpuService spuService;
     @Autowired
     private IGoodSkuStockService iGoodSkuStockService;
-
     @Autowired
     private ISkuGoodSpecValueService iSkuGoodSpecValueService;
 
@@ -132,8 +132,73 @@ public class GoodSkuServiceImpl extends ServiceImpl<GoodSkuMapper, GoodSku> impl
         return CommonResult.success(detailVo);
     }
 
+    @Override
+    public CommonResult<RespPage<UserQuerySkuVo>> listByQuery(UserSkuQuery userSkuQuery) {
+        Integer pageSize = userSkuQuery.getPageSize();
+        Integer pageNum = userSkuQuery.getPageNum();
+        Page<UserQuerySkuVo> page = new Page<>(pageNum, pageSize);
+        if (null != userSkuQuery.getKeyWord()) {
+            String keyWord = userSkuQuery.getKeyWord();
+            userSkuQuery.setKeyWord("%" + keyWord + "%");
+        }
+        List<UserQuerySkuVo> userQuerySkuVos = baseMapper.selectSkuBySpecList(page, userSkuQuery);
+        return CommonResult.success(new RespPage<>(userQuerySkuVos, page.getTotal()));
+    }
+
+    @Override
+    public CommonResult<UserGoodSkuVo> getUserSkuByNum(String skuNum) throws GlobalException {
+        GoodSku goodSku = baseMapper.selectBySkuNum(skuNum);
+        if (goodSku != null) {
+            Integer spuId = goodSku.getSpuId();
+            GoodSpu goodSpu = spuService.selectById(spuId);
+            if (goodSpu.getState() != GoodSpuConst.VERIFY_PASS) {  // 如果已经审核通过了
+                throw new GlobalException(CodeEnum.GOOD_SPU_VERIFY_UNPASS);
+            } else {
+                UserGoodSkuVo skuVo = new UserGoodSkuVo();
+                BeanUtils.copyProperties(goodSku, skuVo);
+                return CommonResult.success(skuVo);
+            }
+        } else {
+            throw new GlobalException(CodeEnum.SKU_GOOD_NOT_EXIST);
+        }
+    }
 
     /* 列出 sku */
+    @Override
+    public CommonResult<UserGoodSkuDetailVo> getUserSkuDetail(String skuNum) throws GlobalException {
+        GoodSku goodSku = baseMapper.selectBySkuNum(skuNum);
+        UserGoodSkuDetailVo detailVo = new UserGoodSkuDetailVo();
 
+        if (goodSku == null) throw new GlobalException(CodeEnum.SKU_GOOD_NOT_EXIST);
+        Integer spuId = goodSku.getSpuId();
+        GoodSpu goodSpu = spuService.selectById(spuId);
+        if (goodSpu.getState() != GoodSpuConst.VERIFY_PASS) throw new GlobalException(CodeEnum.GOOD_SPU_VERIFY_UNPASS);
+        BeanUtils.copyProperties(goodSku, detailVo);
+
+        Integer skuId = goodSku.getId();
+        /* 获取详情 */
+        GoodSkuDetail goodSkuDetail = iGoodSkuDetailService.selectById(skuId);
+        if (goodSkuDetail != null) {
+            BeanUtils.copyProperties(goodSkuDetail, detailVo);
+        }
+
+        /*获取库存信息*/
+        GoodSkuStock goodSkuStock = iGoodSkuStockService.selectById(skuId);
+        if (goodSkuStock != null) {
+            BeanUtils.copyProperties(goodSkuStock, detailVo);
+        }
+
+        /* 获取规格数据 */
+        List<SkuGoodSpecValue> specValueList = iSkuGoodSpecValueService.selectBySkuId(skuId);
+        List<UserSkuGoodSpecValueVo> valueVoList = new ArrayList<>();
+        for (SkuGoodSpecValue skuGoodSpecValue : specValueList) {
+            UserSkuGoodSpecValueVo valueVo = new UserSkuGoodSpecValueVo();
+            BeanUtils.copyProperties(skuGoodSpecValue, valueVo);
+            valueVoList.add(valueVo);
+        }
+        detailVo.setSpecValueList(valueVoList);
+
+        return CommonResult.success(detailVo);
+    }
 
 }

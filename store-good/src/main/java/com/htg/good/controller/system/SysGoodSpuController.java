@@ -8,7 +8,7 @@ import com.htg.common.result.RespId;
 import com.htg.common.result.RespPage;
 import com.htg.common.vo.good.shop.ShopGoodSpuDetailVo;
 import com.htg.common.vo.good.shop.ShopGoodSpuVo;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.service.IGoodSpuService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -52,14 +52,14 @@ public class SysGoodSpuController {
     @ApiOperation(value = "列出商品spu")
     @ResponseBody
     @PostMapping("/list")
-    public CommonResult<RespPage<ShopGoodSpuVo>> listGoodSpu(@Valid @RequestBody GoodSpuListDto goodSpuListDto) {
-        return goodSpuService.list(goodSpuListDto);
+    public CommonResult<RespPage<ShopGoodSpuVo>> listGoodSpu(@Valid @RequestBody GoodSpuListDto goodSpuListDto) throws GlobalException {
+        return goodSpuService.list(goodSpuListDto, null);
     }
 
     @ApiOperation(value = "获取商品spu详情")
     @ResponseBody
     @GetMapping("/detail/{spuId}")
     public CommonResult<ShopGoodSpuDetailVo> getShopGoodSpuDetailById(@NotNull(message = "spu id不能为空") @PathVariable Integer spuId) throws GlobalException {
-        return goodSpuService.getShopGoodSpuDetailById(spuId);
+        return goodSpuService.getSysGoodSpuDetailById(spuId);
     }
 }

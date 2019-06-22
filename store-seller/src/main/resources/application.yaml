@@ -1,0 +1,47 @@
+server:
+  port: 8024
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/sirui_store_seller?characterEncoding=utf-8&serverTimezone=GMT%2B8
+  application:
+    name: store-seller
+
+mybatis-plus:
+  mapperLocations: classpath:mapping/*.xml
+  # MyBaits 别名包扫描路径，通过该属性可以给包中的类注册别名，注册后在 Mapper 对应的 XML 文件中可以直接使用类名
+  typeAliasesPackage: com.htg
+  global-config:
+    id-type: 1
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+    # 是否开启自动驼峰命名规则（camel case）映射，即从经典数据库列名 A_COLUMN（下划线命名） 到经典 Java 属性名 aColumn（驼峰命名） 的类似映射。
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true # 可以显示服务的真实IP 地址
+
+security:
+  oauth2:
+    client:
+      # 指定OAuth2 client ID.
+      clientId: system
+      #客户端验证的密码
+      clientSecret: system
+      #指定获取access token的URI.
+      access-token-uri: http://localhost:8020/oauth/token
+    resource:
+      #token解码的URI.
+      token-info-uri: http://localhost:8020/oauth/check_token
+

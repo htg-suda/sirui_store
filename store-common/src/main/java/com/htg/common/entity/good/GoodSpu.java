@@ -33,17 +33,16 @@ public class GoodSpu extends BaseEntity {
     /**
      *
      */
-    @NotNull(message = "店铺id,参考店铺表")
-    @ApiModelProperty(value = "店铺id", example = "1",   required = true)
+
+    @ApiModelProperty(value = "店铺id", example = "1", hidden = true)
     @TableField("store_id")
     private Integer storeId;
 
 
     @NotNull(message = "分类id不能为空")
-    @ApiModelProperty(value = "分类id", example = "1",  required = true)
+    @ApiModelProperty(value = "分类id", example = "1", required = true)
     @TableField("category_id")
     private Integer categoryId;
-
 
 
     @NotBlank(message = "分类的id集合,不能为空")
@@ -53,7 +52,7 @@ public class GoodSpu extends BaseEntity {
 
 
     @NotNull(message = "品牌id不能为空")
-    @ApiModelProperty(value = "品牌id", example = "1",   required = true)
+    @ApiModelProperty(value = "品牌id", example = "1", required = true)
     @TableField("brand_id")
     private Integer brandId;
     /**
@@ -97,18 +96,17 @@ public class GoodSpu extends BaseEntity {
 
 
     @NotNull(message = "运费不能为空")
-    @Digits(integer = 10,fraction = 2, message = "运费需要保留两位有效数字,0.00表示包邮")
+    @Digits(integer = 10, fraction = 2, message = "运费需要保留两位有效数字,0.00表示包邮")
     @ApiModelProperty(value = "运费,0.00-包邮,免运费", example = "5.00", required = true)
     @TableField("freight")
     private BigDecimal freight;
-
 
 
     @ApiModelProperty(value = "商品状态: 0-下架(商家行为), 1-上架在售, 2-待售卖 ,10-违规被禁止售卖(管理员行为),一旦禁止售卖则无法上架,20-解禁,解禁后可以重新上架", hidden = true)
     @TableField("state")
     private Integer state;
 
-    @Length(max = 100,message = "违规原因字数不能超过100")
+    @Length(max = 100, message = "违规原因字数不能超过100")
     @ApiModelProperty(value = "违规原因", hidden = true)
     @TableField("state_remark")
     private String stateRemark;
@@ -119,21 +117,21 @@ public class GoodSpu extends BaseEntity {
     private Integer verify;
 
 
-    @Length(max = 100,message = "审核不通过原因字数不能超过100")
+    @Length(max = 100, message = "审核不通过原因字数不能超过100")
     @ApiModelProperty(value = "审核不通过原因", hidden = true)
     @TableField("verify_remark")
     private String verifyRemark;
     /**
      *
      */
-    @Length(max = 255,message = "包装清单字数不能超过255")
-    @ApiModelProperty(value = "包装清单",example = "包装清单",  dataType = "String", required = true)
+    @Length(max = 255, message = "包装清单字数不能超过255")
+    @ApiModelProperty(value = "包装清单", example = "包装清单", dataType = "String", required = true)
     @TableField("pack_list")
     private String packList;
 
 
-    @Length(max = 255,message = "售后服务字数不能超过255")
-    @ApiModelProperty(value = "售后服务",example = "售后服务,亲,提供上门安装服务哦",  dataType = "String", required = true)
+    @Length(max = 255, message = "售后服务字数不能超过255")
+    @ApiModelProperty(value = "售后服务", example = "售后服务,亲,提供上门安装服务哦", dataType = "String", required = true)
     @TableField("after_sell")
     private String afterSell;
 
@@ -243,7 +241,6 @@ public class GoodSpu extends BaseEntity {
     }
 
 
-
     public BigDecimal getFreight() {
         return freight;
     }
@@ -319,25 +316,25 @@ public class GoodSpu extends BaseEntity {
     @Override
     public String toString() {
         return "GoodSpu{" +
-        "id=" + id +
-        ", storeId=" + storeId +
-        ", categoryId=" + categoryId +
-        ", cateIds=" + cateIds +
-        ", brandId=" + brandId +
-        ", name=" + name +
-        ", subTitle=" + subTitle +
-        ", mainImg=" + mainImg +
-        ", promotionType=" + promotionType +
-        ", payNum=" + payNum +
-        ", evaluateNum=" + evaluateNum +
-        ", freight=" + freight +
-        ", state=" + state +
-        ", stateRemark=" + stateRemark +
-        ", verify=" + verify +
-        ", verifyRemark=" + verifyRemark +
-        ", packList=" + packList +
-        ", afterSell=" + afterSell +
-        ", delFlag=" + delFlag +
-        "}";
+                "id=" + id +
+                ", storeId=" + storeId +
+                ", categoryId=" + categoryId +
+                ", cateIds=" + cateIds +
+                ", brandId=" + brandId +
+                ", name=" + name +
+                ", subTitle=" + subTitle +
+                ", mainImg=" + mainImg +
+                ", promotionType=" + promotionType +
+                ", payNum=" + payNum +
+                ", evaluateNum=" + evaluateNum +
+                ", freight=" + freight +
+                ", state=" + state +
+                ", stateRemark=" + stateRemark +
+                ", verify=" + verify +
+                ", verifyRemark=" + verifyRemark +
+                ", packList=" + packList +
+                ", afterSell=" + afterSell +
+                ", delFlag=" + delFlag +
+                "}";
     }
 }

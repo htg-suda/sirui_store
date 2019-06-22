@@ -1,0 +1,31 @@
+server:
+  port: 8022
+
+spring:
+  application:
+    name: store-test
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true  # 可以显示服务的真实IP 地址
+
+security:
+  oauth2:
+    client:
+      # 指定OAuth2 client ID.
+      clientId: system
+      #客户端验证的密码
+      clientSecret: system
+      #指定获取access token的URI.
+      access-token-uri: http://localhost:8020/oauth/token
+    resource:
+      #token解码的URI.
+      token-info-uri: http://localhost:8020/oauth/check_token
+      #user-info-uri原理是在授权服务器认证后将认证信息Principal通过形参绑定的方法通过URL的方式获取用户信息
+      #user-info-uri: http://localhost:8020/user

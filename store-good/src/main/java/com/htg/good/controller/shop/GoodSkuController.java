@@ -1,19 +1,17 @@
 package com.htg.good.controller.shop;
 
-
 import com.htg.common.dto.good.shop.ShopAddGoodSkuDto;
-import com.htg.common.entity.good.GoodSku;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespList;
-import com.htg.common.result.RespPage;
 import com.htg.common.vo.good.shop.ShopGoodSkuDetailVo;
 import com.htg.common.vo.good.shop.ShopGoodSkuVo;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.service.IGoodSkuService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,22 +25,24 @@ import javax.validation.Valid;
  * @author htg
  * @since 2019-05-29
  */
+
 @Slf4j
-@Api(value = "GoodSkuController", tags = "商户002-商品SKU管理")
+@Api(value = "GoodSkuController", tags = "商户002-商品sku管理")
 @Validated
 @RestController
-@RequestMapping("/shop/good_sku")
+@RequestMapping("/shop/sku")
 public class GoodSkuController {
+    @Autowired
     private IGoodSkuService skuService;
 
-    @ApiOperation(value = "添加商品SKU")
+    @ApiOperation(value = "添加商品sku")
     @ResponseBody
     @PostMapping("/add")
     public CommonResult<RespId> addGoodSku(@Valid @RequestBody ShopAddGoodSkuDto goodSku) throws GlobalException {
         return skuService.addGoodSku(goodSku);
     }
 
-    @ApiOperation(value = "列出商品SKU")
+    @ApiOperation(value = "列出商品sku")
     @ResponseBody
     @PostMapping("/list/{spuId}")
     public CommonResult<RespList<ShopGoodSkuVo>> listSkuBySpuId(@PathVariable Integer spuId) {

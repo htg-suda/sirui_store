@@ -20,7 +20,7 @@ public class GoodSpuDetailModifyDto extends BaseEntity {
     @ApiModelProperty(value = "商品spu id", example = "1",  dataType = "int", required = true)
     private Integer spuId;
 
-    @ApiModelProperty(value = " 商品副图,字符串", example = " xxxx.png;xxxx.png")
+    @ApiModelProperty(value = "商品副图,字符串", example = " xxxx.png;xxxx.png")
     private String subImg;
 
 

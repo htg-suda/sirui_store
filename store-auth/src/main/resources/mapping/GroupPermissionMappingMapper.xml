@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htg.auth.mapper.GroupPermissionMappingMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.auth.GroupPermissionMapping">
+        <id column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="group_id" property="groupId"/>
+        <result column="permission_id" property="permissionId"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        create_user,
+        update_user,
+        create_time,
+        update_time,
+        id, group_id, permission_id
+    </sql>
+    <select id="selectByGroupId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from group_permission_mapping
+        <where>
+            group_id
+            in
+            <foreach collection="list" item="group_id" separator="," open="(" close=")">
+                #{group_id}
+            </foreach>
+        </where>
+
+
+    </select>
+
+</mapper>

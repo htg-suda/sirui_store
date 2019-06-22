@@ -5,7 +5,7 @@ import com.htg.common.entity.good.GoodSpecGroup;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespList;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.service.IGoodSpecGroupService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

@@ -11,6 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/store-file-service/store-file-service.iml" filepath="$PROJECT_DIR$/store-file-service/store-file-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/store-gateway/store-gateway.iml" filepath="$PROJECT_DIR$/store-gateway/store-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/store-good/store-good.iml" filepath="$PROJECT_DIR$/store-good/store-good.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-seller/store-seller.iml" filepath="$PROJECT_DIR$/store-seller/store-seller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-sms/store-sms.iml" filepath="$PROJECT_DIR$/store-sms/store-sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/store-test/store-test.iml" filepath="$PROJECT_DIR$/store-test/store-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/store-user/store-user.iml" filepath="$PROJECT_DIR$/store-user/store-user.iml" />
     </modules>
   </component>

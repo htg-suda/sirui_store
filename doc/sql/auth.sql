@@ -10,8 +10,6 @@
 /*https://www.cnblogs.com/xingxueliao/p/5911292.html*/
 
 
-
-
 /*http://blog.didispace.com/spring-security-oauth2-xjf-1/*/
 /*http://blog.didispace.com/spring-security-oauth2-xjf-2/*/
 /*http://blog.didispace.com/spring-security-oauth2-xjf-3/*/
@@ -41,7 +39,8 @@ CREATE TABLE `oauth_access_token`
   DEFAULT CHARSET = utf8;
 
 
-set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+set session sql_mode =
+        'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
 DROP TABLE IF EXISTS `oauth_approvals`;
 CREATE TABLE `oauth_approvals`
 (

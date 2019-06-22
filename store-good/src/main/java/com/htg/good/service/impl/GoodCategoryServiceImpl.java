@@ -10,8 +10,8 @@ import com.htg.common.result.CommonResult;
 import com.htg.common.vo.good.BrandVo;
 import com.htg.common.vo.good.GoodCategoryVo;
 import com.htg.good.constant.BrandConst;
-import com.htg.good.constant.Del_FLAG;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.constant.Del_FLAG;
+import com.htg.common.exception.GlobalException;
 import com.htg.good.mapper.GoodCategoryMapper;
 import com.htg.good.service.IBrandCategoryService;
 import com.htg.good.service.IBrandService;
@@ -78,7 +78,7 @@ public class GoodCategoryServiceImpl extends ServiceImpl<GoodCategoryMapper, Goo
         Integer parentId = goodCategory.getParentId();
 
         /** 检查父分类*/
-        if (parentId != 0 && null != selectById(parentId)) {
+        if (parentId != 0 && null == selectById(parentId)) {
             throw new GlobalException(CodeEnum.PARENT_CATEGORY_NOT_EXISTS);
         }
         /** 检查该分类下是否已经有了将要添加的分类*/
@@ -101,7 +101,7 @@ public class GoodCategoryServiceImpl extends ServiceImpl<GoodCategoryMapper, Goo
 
         Integer parentId = goodCategoryDto.getParentId();
         /** 检查父分类*/
-        if (parentId != 0 && null != selectById(parentId)) {
+        if (parentId != 0 && null == selectById(parentId)) {
             throw new GlobalException(CodeEnum.PARENT_CATEGORY_NOT_EXISTS);
         }
         /*检查是否存在该分类id */
@@ -118,8 +118,6 @@ public class GoodCategoryServiceImpl extends ServiceImpl<GoodCategoryMapper, Goo
                 throw new GlobalException(CodeEnum.CATEGORY_HAS_EXISTS);
             }
         }
-
-
         BeanUtils.copyProperties(goodCategoryDto, goodCategory);
         if (updateAllColumnById(goodCategory)) {
             return CommonResult.success("更新成功");

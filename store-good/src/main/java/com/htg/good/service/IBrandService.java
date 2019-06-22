@@ -7,7 +7,7 @@ import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespList;
 import com.htg.common.vo.good.BrandVo;
-import com.htg.good.exception.GlobalException;
+import com.htg.common.exception.GlobalException;
 
 /**
  * <p>
