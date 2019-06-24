@@ -54,7 +54,7 @@ public class SellerInfo extends BaseEntity {
     private Integer state;
 
 
-    @ApiModelProperty(value = "冻结原因或申请未通过原因",example = "logo 太难看了啊")
+    @ApiModelProperty(value = "冻结原因或申请未通过原因",example = "logo 太难看了啊",hidden = true)
     @TableField("state_remark")
     private String stateRemark;
 

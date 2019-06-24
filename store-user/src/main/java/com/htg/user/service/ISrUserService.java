@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.service.IService;
 import com.htg.common.exception.GlobalException;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
+import com.htg.common.vo.user.UserInfo;
 
 /**
  * <p>
@@ -25,4 +26,6 @@ public interface ISrUserService extends IService<SrUser> {
     SrUserBO getUserByTel(String tel);
 
     SrUserBO getUserByEmail(String email);
+
+    CommonResult<UserInfo> getUserInfo(Integer userId) throws GlobalException;
 }

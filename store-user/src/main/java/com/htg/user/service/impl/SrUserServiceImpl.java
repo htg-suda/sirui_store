@@ -1,20 +1,23 @@
 package com.htg.user.service.impl;
 
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.htg.common.bo.user.SrUserBO;
-import com.htg.common.constant.CodeConst;
-import com.htg.common.constant.Del_FLAG;
+import com.htg.common.constant.*;
 import com.htg.common.dto.seller.user.SrUserDto;
+import com.htg.common.entity.seller.SellerInfo;
+import com.htg.common.entity.seller.SellerStore;
 import com.htg.common.entity.user.SrUser;
 import com.htg.common.entity.user.UserRoleGroup;
 import com.htg.common.exception.GlobalException;
 import com.htg.common.result.CodeEnum;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
+import com.htg.common.vo.user.UserInfo;
+
 import com.htg.user.constant.UserConst;
 import com.htg.user.mapper.SrUserMapper;
-import com.htg.user.service.ISrUserService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.htg.user.service.IUserRoleGroupService;
+import com.htg.user.service.*;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -33,12 +36,30 @@ import org.springframework.transaction.annotation.Transactional;
  * @author htg
  * @since 2019-06-13
  */
+@Slf4j
 @Service
 public class SrUserServiceImpl extends ServiceImpl<SrUserMapper, SrUser> implements ISrUserService {
     @Autowired
     private IUserRoleGroupService iUserRoleGroupService;
+
+    @Autowired
+    private ISellerInfoService iSellerInfoService;
+
+
+    @Autowired
+    private ISellerBankInfoService iSellerBankInfoService;
+
+
+    @Autowired
+    private ISellerEnterpriseInfoService iSellerEnterpriseInfoService;
+
+
+    @Autowired
+    private ISellerStoreService iSellerStoreService;
+
     @Autowired
     private StringRedisTemplate redisTemplate;
+
 
     @Override
     @Transactional
@@ -89,6 +110,58 @@ public class SrUserServiceImpl extends ServiceImpl<SrUserMapper, SrUser> impleme
         return CommonResult.success(new RespId(srUser.getId()));
         /*todo  注册成功 应该不止这些数据的调用 ,还有用户组信息 ,权限 ,用户其他详情数据  */
     }
+
+
+    @Override
+    public CommonResult<UserInfo> getUserInfo(Integer userId) {
+        UserInfo userInfo = new UserInfo();
+        SrUser srUser = baseMapper.selectById(userId);
+        BeanUtils.copyProperties(srUser, userInfo);
+        SellerInfo sellerInfo = null;
+        /* 通过用户id获取商户信息 */
+        try {
+            sellerInfo = iSellerInfoService.getSellerInfo(userId);
+        } catch (GlobalException e) {
+            // e.printStackTrace();
+            log.info("user has no shop");
+        }
+
+        SellerStore store = null;
+        try {
+            store = iSellerInfoService.getStoreByUserId(userId);
+        } catch (GlobalException e) {
+            // e.printStackTrace();
+            log.info("user has no store");
+        }
+
+        if (sellerInfo != null) {
+            Integer state = sellerInfo.getState();
+            switch (state) {
+                case SellerConst.STATE_WAIT_FOR_VERIFY:  //待审核
+                    userInfo.setShopState(ShopConst.STATE_WAIT_VERIFY);
+                    break;
+                case SellerConst.STATE_VERIFY_PASS:     // 审核通过的话就去查看店铺的状态
+                    if (store == null) {                // 店铺存在
+                        userInfo.setShopState(ShopConst.STATE_VERIFY_PASS_NO_STORE);
+                    } else if (store.getStatus() == StoreConst.STATUS_ACTIVE) {  // 店铺处在激活状态
+                        userInfo.setShopState(ShopConst.STATE_VERIFY_PASS_HAS_STOER_ACTIVE);
+                    } else {                                                 // 店铺存在,但是未激活
+                        userInfo.setShopState(ShopConst.STATE_VERIFY_PASS_HAS_STOER_FROZEN);
+                    }
+                    break;
+                case SellerConst.STATE_VERIFY_UNPASS:   // 审核未通过
+                    userInfo.setShopState(ShopConst.STATE_VERIFY_UNPASS);
+                    break;
+                case SellerConst.STATE_FROZEN:          // 商户已经冻结
+                    userInfo.setShopState(ShopConst.STATE_SELLER_FROZEN);
+                    break;
+            }
+        } else {  //用户不存在商户
+            userInfo.setShopState(ShopConst.STATE_HAS_NO_SELLER_INFO);
+        }
+        return CommonResult.success(userInfo);
+    }
+
 
     @Override
     public SrUserBO getUserByName(String username) {

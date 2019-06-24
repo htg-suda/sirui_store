@@ -25,7 +25,9 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 /* swagger end */
                 .antMatchers("/oauth/**").permitAll().
                 /*  这里必须允许调用,否则认证中心无法 获取用户 */
-                        antMatchers("/user/**").permitAll().
+                 antMatchers("/user/name/**").permitAll().
+                 antMatchers("/user/tel/**").permitAll().
+                 antMatchers("/user/email/**").permitAll().
 
                 anyRequest().authenticated();
     }

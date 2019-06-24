@@ -22,7 +22,7 @@ import com.htg.common.vo.good.shop.ShopSpuGoodSpecValueVo;
 import com.htg.common.vo.good.user.UserGoodSpuDetailVo;
 import com.htg.common.vo.good.user.UserGoodSpuVo;
 import com.htg.common.vo.good.user.UserSpuGoodSpecValueVo;
-import com.htg.feign.client.SellerClient;
+import com.htg.feign.client.UserClient;
 import com.htg.good.constant.BrandConst;
 import com.htg.common.constant.Del_FLAG;
 import com.htg.good.constant.GoodSpuConst;
@@ -65,7 +65,7 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
     private ISpuGoodSpecValueService iSpuGoodSpecValueService;
 
     @Autowired
-    private SellerClient sellerClient;
+    private UserClient userClient;
 
     @Override
     @Transactional(rollbackFor = GlobalException.class)
@@ -441,7 +441,7 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
 
     @Override
     public SellerInfo checkSellerInfo(Integer userId) throws GlobalException {
-        SellerInfo sellerInfo = sellerClient.getSellerInfoByUserId(userId);
+        SellerInfo sellerInfo = userClient.getSellerInfoByUserId(userId);
         if (sellerInfo == null) throw new GlobalException(CodeEnum.YOU_ARE_NOT_SELLER); // 检查用户是否是商户
         if (sellerInfo.getState() != SellerConst.STATE_VERIFY_PASS)
             throw new GlobalException(CodeEnum.SELLER_STATE_ERROR); //状态是否已经审核通过
@@ -450,7 +450,7 @@ public class GoodSpuServiceImpl extends ServiceImpl<GoodSpuMapper, GoodSpu> impl
 
     @Override
     public SellerStore checkSellerStore(Integer userId) throws GlobalException {
-        SellerStore sellerStore = sellerClient.getSellerStoreByUserId(userId);
+        SellerStore sellerStore = userClient.getSellerStoreByUserId(userId);
         if (sellerStore == null) throw new GlobalException(CodeEnum.SELLER_STORE_NOT_EXIST);  // 店铺是否已经存在
         if (sellerStore.getStatus() != StoreConst.STATUS_ACTIVE)
             throw new GlobalException(CodeEnum.SELLER_STORE_NOT_ACTIVE);

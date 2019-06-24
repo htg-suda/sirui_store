@@ -11,6 +11,7 @@ use sirui_store_seller;
    todo 经营范围是一级分类
    todo 添加客服表
 */
+
 drop table  if exists sr_seller_info;
 create table  sr_seller_info(
      id int primary key auto_increment comment '卖家id',

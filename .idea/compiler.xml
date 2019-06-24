@@ -7,16 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="store-good" />
+        <module name="store-admin" />
         <module name="shop-registry" />
         <module name="store-file-service" />
-        <module name="store-gateway" />
         <module name="store-common" />
         <module name="store-user" />
         <module name="store-sms" />
-        <module name="store-client-feign" />
+        <module name="store-gateway" />
         <module name="store-test" />
-        <module name="store-seller" />
-        <module name="store-admin" />
+        <module name="store-client-feign" />
         <module name="store-auth" />
       </profile>
     </annotationProcessing>

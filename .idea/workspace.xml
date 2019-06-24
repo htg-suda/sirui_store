@@ -2,280 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e969e324-9247-494b-9f20-2a92b7f415c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_core_4_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/md_study.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/sql/test.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/GroupPermissionMappingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/PermissionCategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/PermissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/RoleGroupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/mapper/GroupPermissionMappingMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/mapper/PermissionCategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/mapper/PermissionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/mapper/RoleGroupMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/handler/MyAuthFailureHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/handler/MyAuthSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/IGroupPermissionMappingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/IPermissionCategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/IPermissionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/IRoleGroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/impl/GroupPermissionMappingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/impl/PermissionCategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/impl/PermissionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/impl/RoleGroupServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/resources/mapping/GroupPermissionMappingMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/resources/mapping/PermissionCategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/resources/mapping/PermissionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-auth/src/main/resources/mapping/RoleGroupMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/SellerClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/UserClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/config/FeignBasicAuthRequestInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/config/FeignSupportConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/bo/user/SrUserBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/CodeConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/SellerConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/StoreConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/details/LoginUserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/details/SrUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/SpecItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/UserSkuQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/shop/SellerAddDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerListDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/user/SrUserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/auth/GroupPermissionMapping.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/auth/Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/auth/PermissionCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/auth/RoleGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerBankInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerEnterpriseInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/user/SrUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/user/UserRoleGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/utils/AuthUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSkuDetailVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSkuVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserQuerySkuVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserSkuGoodSpecValueVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SysSellerListItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/test/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/user/UserGoodSkuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/security/ResourceServerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/simple/QueryBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/SellerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/config/Swagger2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/constant/AddByConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/shop/SellerBankInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/shop/SellerEnterpriseInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/shop/SellerInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/shop/SellerStoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/system/SystemSellerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/handler/CommonFieldFillHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/handler/GlobalDefaultExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/mapper/SellerBankInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/mapper/SellerEnterpriseInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/mapper/SellerInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/mapper/SellerStoreMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/security/ResourceServerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/ISellerBankInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/ISellerEnterpriseInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/ISellerInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/ISellerStoreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/impl/SellerBankInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/impl/SellerEnterpriseInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/impl/SellerInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/impl/SellerStoreServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/resources/mapping/SellerBankInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/resources/mapping/SellerEnterpriseInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/resources/mapping/SellerInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/src/main/resources/mapping/SellerStoreMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-seller/store-seller.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/SmsServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/bean/CustomServiceUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/bean/SMSResultBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/bean/SendBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/config/Swagger2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/controller/SMSController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/handler/GlobalDefaultExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/security/ResourceServerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/service/SMSCodeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/utils/SMSUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/store-sms.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-test/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-test/src/main/java/com/htg/test/TestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-test/src/main/java/com/htg/test/config/Swagger2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-test/src/main/java/com/htg/test/controller/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-test/src/main/java/com/htg/test/security/ResourceServerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-test/src/main/java/com/htg/test/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-test/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-test/store-test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/UserApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/MybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/Swagger2Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/constant/UserConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/SrUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/UserRoleGroupController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/handler/CommonFieldFillHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/handler/GlobalDefaultExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SrUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/UserRoleGroupMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/security/ResourceServerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/IUserRoleGroupService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/UserRoleGroupServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/resources/mapping/SrUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-user/src/main/resources/mapping/UserRoleGroupMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/WebMvcConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/ShopConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerVerifyDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/SellerInfoDetailsVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerBankInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerEnterpriseInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerInfoVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/WebMvcConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/constant/AddByConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/inner/SellerInnerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/inner/UserInnerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/shop/SellerBankInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/shop/SellerEnterpriseInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/shop/SellerInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/shop/SellerStoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SellerBankInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SellerEnterpriseInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SellerInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SellerStoreMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerBankInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerEnterpriseInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerStoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerBankInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerEnterpriseInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerStoreServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sql/admin.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/admin.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sql/auth.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/auth.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sql/good.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/good.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sql/order.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/order.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sql/permission.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/permission.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/sql/seller.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/seller.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sql/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/user.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/com/htg/admin/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/htg/admin/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/com/htg/admin/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/htg/admin/mapper/AdminMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/com/htg/admin/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/htg/admin/service/IAdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/java/com/htg/admin/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/java/com/htg/admin/service/impl/AdminServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-admin/src/main/resources/mapping/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/src/main/resources/mapping/AdminMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/AuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/AuthApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AdminSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AdminUserDetailService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/ResourceServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/ResourceServerConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/store-auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/store-auth.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-client-feign/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-client-feign/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/AdminClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/AdminClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-client-feign/store-client-feign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-client-feign/store-client-feign.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/GoodSpuDetailModifyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/GoodSpuDetailModifyDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/GoodSpuListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/GoodSpuListDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopAddGoodSkuDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopAddGoodSkuDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopAddGoodSpuDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopAddGoodSpuDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopModifyGoodSpuDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/shop/ShopModifyGoodSpuDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/GoodCategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/system/GoodCategoryDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/UserGoodSpuListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/UserGoodSpuListDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/admin/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSkuStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSkuStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/good/GoodSpu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/SellerClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/UserClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/exception/GlobalException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/base/SkuGoodSpecValueVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/base/SkuGoodSpecValueVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopSkuGoodSpecValueVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/shop/ShopSkuGoodSpecValueVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/store-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/store-common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/result/CodeEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/target/classes/com/htg/common/result/CodeEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/config/WebMvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-file-service/target/classes/com/htg/file/config/WebMvcConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-file-service/target/classes/com/htg/file/config/WebMvcConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-file-service/target/classes/com/htg/file/controller/FileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-file-service/target/classes/com/htg/file/controller/FileController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-gateway/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-gateway/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/StoreGoodApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/StoreGoodApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/config/Swagger2Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/constant/Del_FLAG.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/Del_FLAG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSkuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSkuStockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSkuStockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/GoodSpuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/SpuGoodSpecValueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/shop/SpuGoodSpecValueController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecGroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/GoodSpecItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/SysGoodSpuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/SysGoodSpuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/user/UserGoodSpuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/user/UserGoodSpuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/exception/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/exception/GlobalException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/handler/GlobalDefaultExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/handler/GlobalDefaultExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSkuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSkuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IBrandCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IBrandCategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IBrandService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IBrandService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodCategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSkuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpecGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpecGroupService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpecItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpecItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSpuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/BrandCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/BrandCategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/BrandServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/BrandServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodCategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpecGroupServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpecGroupServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpecItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpecItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/utils/AuthUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/utils/AuthUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/test/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/test/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodCategoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSkuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSkuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSkuStockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSkuStockMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/store-good.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/store-good.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/StoreGoodApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/StoreGoodApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/config/Swagger2Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/config/Swagger2Config.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/constant/Del_FLAG.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/shop/GoodSkuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/shop/GoodSkuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/shop/GoodSkuStockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/shop/GoodSkuStockController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/shop/GoodSpuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/shop/GoodSpuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/BrandCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/BrandCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/BrandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/BrandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodSpecGroupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodSpecGroupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodSpecItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/controller/system/GoodSpecItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/exception/GlobalException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/handler/GlobalDefaultExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/handler/GlobalDefaultExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSkuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/mapper/GoodSkuMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IBrandCategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IBrandCategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IBrandService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IBrandService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodCategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodCategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSkuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSkuService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpecGroupService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpecGroupService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpecItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpecItemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/IGoodSpuService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/BrandCategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/BrandCategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/BrandServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/BrandServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodCategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodCategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSkuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSkuServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpecGroupServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpecGroupServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpecItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpecItemServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/com/htg/good/service/impl/GoodSpuServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodCategoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSkuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSkuMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSkuStockMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/classes/mapping/GoodSkuStockMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-good/target/test-classes/com/htg/good/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/target/test-classes/com/htg/good/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/system/SystemSellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/system/SystemSellerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/impl/SellerInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/impl/SellerInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-seller/src/main/resources/mapping/SellerBankInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-seller/src/main/resources/mapping/SellerEnterpriseInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-seller/src/main/resources/mapping/SellerInfoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-seller/src/main/resources/mapping/SellerStoreMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/store-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/UserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/SrUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/SrUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/UserRoleGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/UserRoleGroupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/security/ResourceServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/security/ResourceServerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-user/store-user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/store-user.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -327,12 +111,109 @@
     <favorites_list name="sirui_store" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationSecurityConfig.java">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/SrUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="-414">
+              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#SrUserController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/Swagger2Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="461">
+              <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerInfoService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-94">
+              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="202" column="9" lean-forward="true" selection-start-line="202" selection-start-column="9" selection-end-line="202" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/SellerConst.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerVerifyDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+                <element signature="e#806#807#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
+                <element signature="e#909#910#0" expanded="true" />
+                <element signature="e#958#959#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="31" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -369,6 +250,7 @@
       <find>sku</find>
       <find>getAccessToken</find>
       <find>defa</find>
+      <find>SellerClient</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -377,96 +259,69 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/store-seller/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/shop/SellerInfoController.java" />
-        <option value="$PROJECT_DIR$/doc/sql/good.sql" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSpuVo.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/UserGoodSpuListDto.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/simple/SpecItem.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/simple/UserSkuQuery.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserQuerySkuVo.java" />
-        <option value="$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/good/user/UserSkuQuery.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSkuInfo.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSkuVO.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSkuVo.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/IGoodSkuService.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/resources/mapping/GoodSkuMapper.xml" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/mapper/GoodSkuMapper.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserSkuGoodSpecValueVo.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/good/user/UserGoodSkuDetailVo.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuServiceImpl.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/user/UserGoodSkuController.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/service/SMSCodeService.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/utils/SMSUtils.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/constant/CodeConst.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/bean/SendBean.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/handler/GlobalDefaultExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/security/ResourceServerConfiguration.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/controller/SMSController.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/store-sms/pom.xml" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/SmsServiceApplication.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/config/Swagger2Config.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/config/Swagger2Config.java" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/controller/SMSController.java" />
-        <option value="$PROJECT_DIR$/doc/sql/user.sql" />
-        <option value="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/service/SMSCodeService.java" />
-        <option value="$PROJECT_DIR$/store-user/pom.xml" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/CodeConst.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/SrUserController.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/user/SrUserDto.java" />
-        <option value="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/impl/SellerInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/user/SrUser.java" />
-        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/handler/MyAuthFailureHandler.java" />
-        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationProvider.java" />
-        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/ResourceServerConfiguration.java" />
-        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java" />
         <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/handler/MyAuthSuccessHandler.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java" />
+        <option value="$PROJECT_DIR$/store-user/pom.xml" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/UserApplication.java" />
+        <option value="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/impl/SellerInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/system/SystemSellerController.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SellerInfoMapper.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/constant/AddByConst.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerBankInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerEnterpriseInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerStoreServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/resources/mapping/SellerBankInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/store-user/src/main/resources/mapping/SellerEnterpriseInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/store-user/src/main/resources/mapping/SellerInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/store-user/src/main/resources/mapping/SellerStoreMapper.xml" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/inner/InnerController.java" />
+        <option value="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/SellerClient.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/test/TestController.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/inner/SellerInnerController.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/inner/UserInnerController.java" />
+        <option value="$PROJECT_DIR$/doc/sql/seller.sql" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/ShopConst.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/UserInfo.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/SrUserController.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/SellerInfoVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerEnterpriseInfo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerBankInfoVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerBankInfo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerEnterpriseInfoVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerInfoVo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/shop/SellerAddDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/SellerInfoDetailsVo.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/shop/SellerInfoController.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/utils/AuthUtil.java" />
+        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java" />
+        <option value="$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/UserClient.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/exception/GlobalException.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/WebMvcConfiguration.java" />
+        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/WebMvcConfiguration.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/security/ResourceServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerInfoService.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerVerifyDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java" />
       </list>
     </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sirui_store" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sirui_store" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sirui_store" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sirui_store" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-          <item name="org.springframework.boot:spring-boot-starter-test:2.1.4.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sirui_store" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-          <item name="org.springframework.boot:spring-boot-starter-validation:2.1.4.RELEASE" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="229" />
-    <option name="y" value="170" />
+    <option name="x" value="212" />
+    <option name="y" value="157" />
     <option name="width" value="1024" />
     <option name="height" value="555" />
   </component>
@@ -476,6 +331,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="CatdeaLogs" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -483,13 +340,46 @@
               <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
               <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
+              <item name="store-user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
+              <item name="store-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
+              <item name="store-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
+              <item name="store-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
+              <item name="store-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="CatdeaLogs" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -505,7 +395,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-sms/src/main/java/sms_service/security" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -515,30 +405,30 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-      <recent name="com.htg" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/store-sms/src/main/java/sms_service/security" />
-      <recent name="$PROJECT_DIR$/store-sms/src/main/resources" />
-      <recent name="$PROJECT_DIR$/store-sms/src/main/java" />
-      <recent name="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/security" />
-      <recent name="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/handler" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="sms_service.config" />
-      <recent name="sms_service.handler" />
-      <recent name="sms_service.utils" />
-      <recent name="sms_service.service" />
-      <recent name="com.htg.good.controller.test" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/store-user/src/main/resources/mapping" />
       <recent name="$PROJECT_DIR$/store-user/src/main/resources" />
       <recent name="$PROJECT_DIR$/store-seller/src/main/resources" />
       <recent name="$PROJECT_DIR$/doc" />
       <recent name="$PROJECT_DIR$/store-auth/src/main/resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.htg" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.htg.auth.config" />
+      <recent name="com.htg.user.constant" />
+      <recent name="sms_service.config" />
+      <recent name="sms_service.handler" />
+      <recent name="sms_service.utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller" />
+      <recent name="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service" />
+      <recent name="$PROJECT_DIR$/store-user/src/main/resources/mapping" />
+      <recent name="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper" />
+      <recent name="$PROJECT_DIR$/store-sms/src/main/java/sms_service/security" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -557,63 +447,31 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.22868218" />
+    <option name="contentProportion" value="0.2503876" />
   </component>
-  <component name="RunManager" selected="Spring Boot.SmsServiceApplication">
-    <configuration name="AppTest.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="store-good" />
+  <component name="RunManager" selected="Spring Boot.UserApplication">
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="store-auth" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.htg.good.*" />
+          <option name="PATTERN" value="com.htg.auth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.htg.good" />
-      <option name="MAIN_CLASS_NAME" value="com.htg.good.AppTest" />
-      <option name="METHOD_NAME" value="test04" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.htg.auth.AuthApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="store-good" />
+    <configuration name="RegisterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="shop-registry" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.htg.good.*" />
+          <option name="PATTERN" value="com.htg.registry.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.htg.good" />
-      <option name="MAIN_CLASS_NAME" value="com.htg.good.AppTest" />
-      <option name="METHOD_NAME" value="test05" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SellerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="store-seller" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.htg.seller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.htg.seller.SellerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SmsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="store-sms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.htg.sms_service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.htg.sms_service.SmsServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.htg.registry.RegisterApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -631,20 +489,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="store-user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.htg.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.htg.user.UserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.AppTest.test04" />
-      <item itemvalue="JUnit.AppTest.test05" />
       <item itemvalue="Spring Boot.StoreGoodApplication" />
-      <item itemvalue="Spring Boot.SellerApplication" />
-      <item itemvalue="Spring Boot.SmsServiceApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
+      <item itemvalue="Spring Boot.AuthApplication" />
+      <item itemvalue="Spring Boot.RegisterApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.SmsServiceApplication" />
-        <item itemvalue="Spring Boot.SellerApplication" />
+        <item itemvalue="Spring Boot.UserApplication" />
+        <item itemvalue="Spring Boot.AuthApplication" />
         <item itemvalue="Spring Boot.StoreGoodApplication" />
-        <item itemvalue="JUnit.AppTest.test05" />
-        <item itemvalue="JUnit.AppTest.test04" />
+        <item itemvalue="Spring Boot.RegisterApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -682,7 +551,8 @@
       <workItem from="1560866281228" duration="31363000" />
       <workItem from="1560985527260" duration="8626000" />
       <workItem from="1560998135454" duration="54639000" />
-      <workItem from="1561121791439" duration="4627000" />
+      <workItem from="1561121791439" duration="7754000" />
+      <workItem from="1561242247321" duration="28439000" />
     </task>
     <servers />
   </component>
@@ -719,7 +589,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="714942000" />
+    <option name="totallyTimeSpent" value="746508000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -734,7 +604,7 @@
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.18512899" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.34597877" />
       <window_info id="Structure" order="1" sideWeight="0.5037879" side_tool="true" weight="0.29742032" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -744,20 +614,20 @@
       <window_info id="Web" order="7" sideWeight="0.5022625" side_tool="true" weight="0.31562975" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.75680274" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1377551" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.86734694" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.7823129" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.9302721" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.05102041" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924126" visible="true" weight="0.1292517" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" side_tool="true" weight="0.75510204" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="12" visible="true" weight="0.26020408" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.39795917" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.75680274" />
-      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.9030612" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.28528073" side_tool="true" weight="0.7823129" />
+      <window_info anchor="bottom" id="Run Dashboard" order="12" sideWeight="0.7147193" weight="0.71428573" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.79931974" />
+      <window_info anchor="bottom" id="Database Changes" order="14" weight="0.9030612" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.05102041" />
       <window_info anchor="bottom" id="Thumbnails" order="16" weight="0.32993197" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24810319" />
@@ -773,7 +643,7 @@
       <window_info anchor="right" id="CDI" order="11" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.21581197" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.18816389" />
       <window_info id="Structure" order="1" sideWeight="0.5037879" side_tool="true" weight="0.29742032" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -783,20 +653,20 @@
       <window_info id="Web" order="7" sideWeight="0.5022625" side_tool="true" weight="0.31562975" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.75680274" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.1377551" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.86734694" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.7823129" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.9302721" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21428572" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.8180272" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" side_tool="true" weight="0.75510204" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Run Dashboard" order="12" weight="0.70068026" />
+      <window_info anchor="bottom" id="Run Dashboard" order="12" weight="0.26020408" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.39795917" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.75680274" />
-      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.32993197" />
+      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.9030612" />
       <window_info anchor="bottom" id="Thumbnails" order="16" weight="0.32993197" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24810319" />
@@ -820,398 +690,504 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/handler/GlobalDefaultExceptionHandler.java">
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/inner/SellerInnerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="198">
+          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/security/SecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/doc/sql/seller.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
+        <state relative-caret-position="144">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/StoreConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/inner/UserInnerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-106">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/controller/system/BrandCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/resources/application.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/utils/SMSUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/handler/GlobalDefaultExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/bean/SendBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/security/ResourceServerConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/SellerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/config/Swagger2Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/config/Swagger2Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/sql/user.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/SmsServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/CodeConst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-support/2.3/mybatis-plus-support-2.3-sources.jar!/com/baomidou/mybatisplus/service/impl/ServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/org/apache/commons/lang/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="230" column="26" selection-start-line="230" selection-start-column="26" selection-end-line="230" selection-end-column="26" />
-          <folding>
-            <element signature="e#7532#7533#0" expanded="true" />
-            <element signature="e#7587#7588#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/impl/SellerInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/service/ISellerInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/controller/shop/SellerInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state>
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/service/SMSCodeService.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerStore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/SrUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#SrUserController#0" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1291#1292#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/controller/SMSController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar!/org/apache/commons/lang/RandomStringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="30" />
-          <folding>
-            <element signature="e#2801#2802#0" expanded="true" />
-            <element signature="e#2851#2852#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/controller/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/user/SrUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="47" column="28" lean-forward="true" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/user/SrUserDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/handler/MyAuthFailureHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserDetailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
+        <state relative-caret-position="150">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerEnterpriseInfoVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding>
+            <element signature="e#1959#1960#0" expanded="true" />
+            <element signature="e#1996#1997#0" expanded="true" />
+            <element signature="e#2056#2057#0" expanded="true" />
+            <element signature="e#2108#2109#0" expanded="true" />
+            <element signature="e#2140#2141#0" expanded="true" />
+            <element signature="e#2168#2169#0" expanded="true" />
+            <element signature="e#2210#2211#0" expanded="true" />
+            <element signature="e#2244#2245#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="e#2322#2323#0" expanded="true" />
+            <element signature="e#2382#2383#0" expanded="true" />
+            <element signature="e#2434#2435#0" expanded="true" />
+            <element signature="e#2470#2471#0" expanded="true" />
+            <element signature="e#2501#2502#0" expanded="true" />
+            <element signature="e#2550#2551#0" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2622#2623#0" expanded="true" />
+            <element signature="e#2649#2650#0" expanded="true" />
+            <element signature="e#2690#2691#0" expanded="true" />
+            <element signature="e#2722#2723#0" expanded="true" />
+            <element signature="e#2756#2757#0" expanded="true" />
+            <element signature="e#2785#2786#0" expanded="true" />
+            <element signature="e#2830#2831#0" expanded="true" />
+            <element signature="e#2866#2867#0" expanded="true" />
+            <element signature="e#2906#2907#0" expanded="true" />
+            <element signature="e#2942#2943#0" expanded="true" />
+            <element signature="e#3000#3001#0" expanded="true" />
+            <element signature="e#3050#3051#0" expanded="true" />
+            <element signature="e#3085#3086#0" expanded="true" />
+            <element signature="e#3116#3117#0" expanded="true" />
+            <element signature="e#3164#3165#0" expanded="true" />
+            <element signature="e#3204#3205#0" expanded="true" />
+            <element signature="e#3249#3250#0" expanded="true" />
+            <element signature="e#3290#3291#0" expanded="true" />
+            <element signature="e#3358#3359#0" expanded="true" />
+            <element signature="e#3418#3419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerBankInfoVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+          <folding>
+            <element signature="e#1790#1791#0" expanded="true" />
+            <element signature="e#1828#1829#0" expanded="true" />
+            <element signature="e#1890#1891#0" expanded="true" />
+            <element signature="e#1944#1945#0" expanded="true" />
+            <element signature="e#1993#1994#0" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#2236#2237#0" expanded="true" />
+            <element signature="e#2286#2287#0" expanded="true" />
+            <element signature="e#2503#2504#0" expanded="true" />
+            <element signature="e#2552#2553#0" expanded="true" />
+            <element signature="e#2754#2755#0" expanded="true" />
+            <element signature="e#2792#2793#0" expanded="true" />
+            <element signature="e#2854#2855#0" expanded="true" />
+            <element signature="e#2908#2909#0" expanded="true" />
+            <element signature="e#2943#2944#0" expanded="true" />
+            <element signature="e#2974#2975#0" expanded="true" />
+            <element signature="e#3022#3023#0" expanded="true" />
+            <element signature="e#3062#3063#0" expanded="true" />
+            <element signature="e#3107#3108#0" expanded="true" />
+            <element signature="e#3148#3149#0" expanded="true" />
+            <element signature="e#3216#3217#0" expanded="true" />
+            <element signature="e#3276#3277#0" expanded="true" />
+            <element signature="e#3323#3324#0" expanded="true" />
+            <element signature="e#3366#3367#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/shop/SellerAddDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding>
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/SellerInfoDetailsVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#933#934#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerBankInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerBankInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/jdk1.8.0_144/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="49" column="16" lean-forward="true" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-support/2.3/mybatis-plus-support-2.3-sources.jar!/com/baomidou/mybatisplus/service/IService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="266" column="6" selection-start-line="266" selection-start-column="6" selection-end-line="266" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerEnterpriseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerEnterpriseInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerInfoVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
+            <element signature="e#2436#2437#0" expanded="true" />
+            <element signature="e#2486#2487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/shop/SellerInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-seller/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="34" selection-start-line="34" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="56" column="38" lean-forward="true" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/utils/AuthUtil.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/details/LoginUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE-sources.jar!/org/springframework/security/authentication/AbstractAuthenticationToken.java">
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        <state relative-caret-position="-360">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/OAuth2Authentication.java">
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserDetailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/TokenStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/store/redis/RedisTokenStoreSerializationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/store/redis/RedisTokenStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="55" lean-forward="true" selection-start-line="5" selection-start-column="55" selection-end-line="5" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE-sources.jar!/org/springframework/security/oauth2/common/DefaultOAuth2AccessToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1530">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE-sources.jar!/org/springframework/security/oauth2/common/OAuth2AccessToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/handler/MyAuthSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.4.RELEASE/spring-security-oauth2-2.3.4.RELEASE-sources.jar!/org/springframework/security/oauth2/provider/token/DefaultTokenServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        <state relative-caret-position="5">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/ResourceServerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/jdk1.8.0_144/src.zip!/java/lang/RuntimeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/StoreFileService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/config/FileConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/WebMvcConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/WebMvcConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="4" column="74" lean-forward="true" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/security/ResourceServerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/config/WebMvcConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-376">
+          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addUser#0;class#SrUserServiceImpl#0" />
+            <element signature="method#getUserInfo#0;class#SrUserServiceImpl#0" />
+            <element signature="e#6095#6096#0" expanded="true" />
+            <element signature="e#6155#6156#0" expanded="true" />
+            <element signature="e#6217#6218#0" expanded="true" />
+            <element signature="e#6267#6268#0" expanded="true" />
+            <element signature="e#6333#6334#0" expanded="true" />
+            <element signature="e#6387#6388#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/exception/GlobalException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding>
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-seller/src/main/java/com/htg/seller/security/ResourceServerConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1541">
+          <caret line="134" column="13" lean-forward="true" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/UserClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationProvider.java">
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/UserRoleGroupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationFilter.java">
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/SrUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="26" column="54" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        <state relative-caret-position="-414">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#SrUserController#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/ShopConst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="92" column="58" selection-start-line="92" selection-start-column="58" selection-end-line="92" selection-end-column="58" />
+        <state relative-caret-position="108">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="78">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerVerifyDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="108">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#806#807#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/constant/SellerConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="202" column="9" lean-forward="true" selection-start-line="202" selection-start-column="9" selection-end-line="202" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-94">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1265,11 +1241,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>store-seller</last-edited>
+          <last-edited>store-sms</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.15880322" />
+                <option value="0.2" />
                 <option value="0.6" />
               </list>
             </option>

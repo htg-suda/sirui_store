@@ -14,6 +14,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/store-security-common/pom.xml" />
+        <option value="$PROJECT_DIR$/store-seller/pom.xml" />
         <option value="$PROJECT_DIR$/store-shop/pom.xml" />
       </set>
     </option>

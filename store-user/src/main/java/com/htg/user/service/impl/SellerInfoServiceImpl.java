@@ -1,10 +1,13 @@
-package com.htg.seller.service.impl;
+package com.htg.user.service.impl;
 
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.htg.common.constant.Del_FLAG;
+import com.htg.common.constant.SellerConst;
+import com.htg.common.constant.StoreConst;
 import com.htg.common.dto.seller.shop.SellerAddDto;
 import com.htg.common.dto.seller.system.SellerListDto;
+import com.htg.common.dto.seller.system.SellerVerifyDto;
 import com.htg.common.entity.seller.SellerBankInfo;
 import com.htg.common.entity.seller.SellerEnterpriseInfo;
 import com.htg.common.entity.seller.SellerInfo;
@@ -15,16 +18,19 @@ import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespPage;
 import com.htg.common.utils.AuthUtil;
-import com.htg.common.vo.good.shop.ShopGoodSpuVo;
+import com.htg.common.vo.seller.shop.SellerInfoDetailsVo;
+import com.htg.common.vo.seller.shop.ShopSellerBankInfoVo;
+import com.htg.common.vo.seller.shop.ShopSellerEnterpriseInfoVo;
+import com.htg.common.vo.seller.shop.ShopSellerInfoVo;
 import com.htg.common.vo.seller.system.SysSellerListItem;
-import com.htg.seller.constant.AddByConst;
-import com.htg.common.constant.SellerConst;
-import com.htg.common.constant.StoreConst;
-import com.htg.seller.mapper.SellerInfoMapper;
-import com.htg.seller.service.ISellerBankInfoService;
-import com.htg.seller.service.ISellerEnterpriseInfoService;
-import com.htg.seller.service.ISellerInfoService;
-import com.htg.seller.service.ISellerStoreService;
+import com.htg.user.constant.AddByConst;
+import com.htg.user.mapper.SellerInfoMapper;
+import com.htg.user.service.ISellerBankInfoService;
+import com.htg.user.service.ISellerEnterpriseInfoService;
+import com.htg.user.service.ISellerInfoService;
+import com.htg.user.service.ISellerStoreService;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -36,6 +42,7 @@ import java.util.UUID;
  * <p>
  * 卖家/商户信息表 服务实现类
  * </p>
+ *
  * @author htg
  * @since 2019-06-12
  */
@@ -132,7 +139,6 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
     }
 
 
-
     /* 获取商户详情 */
     @Override
     public CommonResult<RespPage<SysSellerListItem>> getSellerList(SellerListDto listDto) {
@@ -146,15 +152,6 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         return CommonResult.success(new RespPage<>(sysSellerListItems, total));
     }
 
-    @Override
-    public CommonResult<RespPage<ShopGoodSpuVo>> getStoreSpuInfo(Integer pageSize, Integer pageNum) throws GlobalException {
-        SellerStore sellerStore = getStoreByUserId(AuthUtil.getLoginUserId());
-        if (sellerStore == null) throw new GlobalException(CodeEnum.SELLER_STORE_NOT_EXIST);
-        /*todo 根据 store id 查找 */
-        Integer storeId = sellerStore.getId();
-        return null;
-    }
-
 
     @Override
     public SellerInfo getSellerInfo(Integer userId) throws GlobalException {
@@ -163,6 +160,71 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
             throw new GlobalException(CodeEnum.SELLER_NOT_EXIST);
         }
         return info;
+    }
+
+
+    @Override
+    public CommonResult<SellerInfoDetailsVo> getSellerInfoDetails(Integer userId) throws GlobalException {
+        SellerInfoDetailsVo detailsVo = new SellerInfoDetailsVo();
+        ShopSellerInfoVo sellerInfoVo = new ShopSellerInfoVo();
+        ShopSellerBankInfoVo bankInfoVo = new ShopSellerBankInfoVo();
+        ShopSellerEnterpriseInfoVo enterpriseInfoVo = new ShopSellerEnterpriseInfoVo();
+        /* 获取商户信息 */
+        SellerInfo sellerInfo = getSellerInfo(userId);
+        BeanUtils.copyProperties(sellerInfo, sellerInfoVo);
+
+        SellerBankInfo sellerBankInfo = bankInfoService.selectById(sellerInfo.getSn());
+        if (sellerBankInfo == null) {
+            throw new GlobalException(CodeEnum.SELLER_HAS_NO_BANK_INFO);
+        }
+        BeanUtils.copyProperties(sellerBankInfo, bankInfoVo);
+
+        Integer type = sellerInfo.getType();
+        if (type == SellerConst.TYPE_ENTERPRISE) {  //商户类型,0-企业商户
+            SellerEnterpriseInfo sellerEnterpriseInfo = enterpriseInfoService.selectById(sellerInfo.getSn());
+            BeanUtils.copyProperties(sellerEnterpriseInfo, enterpriseInfoVo);
+            detailsVo.setEnterpriseInfoVo(enterpriseInfoVo);
+        } else if (type == SellerConst.TYPE_INDIVIDUALS) { //1-个人商户 如果是企业用户
+            detailsVo.setEnterpriseInfoVo(null);
+        } else {
+            throw new GlobalException(CodeEnum.ADD_SELLER_TYPE_ERROR);
+        }
+        detailsVo.setSellerInfoVo(sellerInfoVo);
+        detailsVo.setSellerBankInfoVo(bankInfoVo);
+
+        return CommonResult.success(detailsVo);
+    }
+
+    @Override
+    public CommonResult verifySellerInfo(SellerVerifyDto verifyDto) {
+        SellerInfo sellerInfo = selectById(verifyDto.getSellerId());
+        if (sellerInfo == null) {
+            throw new GlobalException(CodeEnum.SELLER_NOT_EXIST);
+        }
+
+        Integer state = verifyDto.getState();
+        if (state != SellerConst.STATE_VERIFY_PASS
+                && state != SellerConst.STATE_VERIFY_UNPASS
+                && state != SellerConst.STATE_FROZEN) {
+            throw new GlobalException(CodeEnum.SELLER_VERIDY_STATE_ERROR);
+        }
+
+        if ((state == SellerConst.STATE_VERIFY_UNPASS || state == SellerConst.STATE_FROZEN) && StringUtils.isBlank(verifyDto.getStateRemark())) {
+            throw new GlobalException(CodeEnum.SELLER_VERIDY_STATE_REMARK_ERROR);
+        }
+
+        sellerInfo.setState(verifyDto.getState());
+
+        sellerInfo.setStateRemark(verifyDto.getStateRemark());
+
+        if (verifyDto.getStateRemark() == null) {
+            sellerInfo.setStateRemark("");
+        }
+        if (updateById(sellerInfo)) {
+            return CommonResult.success("更新成功");
+        } else {
+            return CommonResult.error("更新失败");
+        }
     }
 
 

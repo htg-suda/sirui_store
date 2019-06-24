@@ -43,7 +43,7 @@ public class Swagger2Config {
                 .description("token令牌")
                 .modelRef(modelRef)
                 .parameterType("header")
-                .defaultValue("token_")
+                .defaultValue("bearer")
                 .required(false);
         params.add(tokenParamBuilder.build());
         //添加head参数end

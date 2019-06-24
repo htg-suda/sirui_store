@@ -123,6 +123,7 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
                 SrUserDetails userDetails = (SrUserDetails) authentication.getPrincipal();
                 /* 这里将 username 设置 为 userDetail */
                 LoginUserInfo userInfo = new LoginUserInfo();
+                log.info("=============> login user info is {}",userInfo);
                 BeanUtils.copyProperties(userDetails, userInfo);
                 response.put(USERNAME, userInfo);
 

@@ -49,9 +49,10 @@ public enum CodeEnum {
     YOU_ARE_NOT_SELLER(-1044, "您还不是商户"),
     SELLER_STORE_NOT_ACTIVE(-1045, "店铺被冻结"),
     SKU_GOOD_NOT_EXIST(-1046, "sku 商品不存在"),
-    MSG_CODE_VALID_FAILED(-1046, "验证码校验失败");
-
-
+    MSG_CODE_VALID_FAILED(-1047, "验证码校验失败"),
+    SELLER_HAS_NO_BANK_INFO(-1048, "商户没有银行信息"),
+    SELLER_VERIDY_STATE_ERROR(-1049, "审核状态异常"),
+    SELLER_VERIDY_STATE_REMARK_ERROR(-1050, "冻结或则审核不通过必须给出理由且不可为空");
 
 
     private int code;

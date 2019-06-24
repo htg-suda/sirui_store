@@ -1,11 +1,12 @@
-package com.htg.seller.controller.system;
+package com.htg.user.controller.system;
 
 
 import com.htg.common.dto.seller.system.SellerListDto;
+import com.htg.common.dto.seller.system.SellerVerifyDto;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespPage;
 import com.htg.common.vo.seller.system.SysSellerListItem;
-import com.htg.seller.service.ISellerInfoService;
+import com.htg.user.service.ISellerInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @Slf4j
-@Api(value = "SystemSellerController", tags = "管理员平台-商户管理")
+@Api(value = "SystemSellerController", tags = "002-管理员-商户管理")
 @Validated
 @RestController
 @RequestMapping("/sys/")
@@ -32,8 +33,19 @@ public class SystemSellerController {
         return sellerInfoService.getSellerList(listDto);
     }
 
+    /*todo 管理员添加商户 */
 
-    /* 管理员添加商户 */
+
+
+
+    /*todo 添加 管理员审核页面 */
+    @ApiOperation(value = "管理员审核商户")
+    @ResponseBody
+    @PostMapping("/seller/verify")
+    public CommonResult getSellerList(@Valid @RequestBody SellerVerifyDto verifyDto) {
+        return sellerInfoService.verifySellerInfo(verifyDto);
+    }
+
 
 
 }
