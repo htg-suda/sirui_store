@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htg.user.mapper.BaseAreaMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.area.BaseArea">
+        <result column="codeid" property="codeid"/>
+        <result column="parentid" property="parentid"/>
+        <result column="cityName" property="cityName"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        codeid, parentid, cityName
+    </sql>
+    <select id="selectByParentId" resultMap="BaseResultMap" parameterType="integer">
+        select
+        <include refid="Base_Column_List"/>
+        from base_area where parentid=#{parentId};
+
+    </select>
+
+
+    <select id="selectByCodeId" resultMap="BaseResultMap" parameterType="integer">
+        select
+        <include refid="Base_Column_List"/>
+        from base_area where codeid=#{codeId};
+
+    </select>
+</mapper>

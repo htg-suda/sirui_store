@@ -52,7 +52,8 @@ public enum CodeEnum {
     MSG_CODE_VALID_FAILED(-1047, "验证码校验失败"),
     SELLER_HAS_NO_BANK_INFO(-1048, "商户没有银行信息"),
     SELLER_VERIDY_STATE_ERROR(-1049, "审核状态异常"),
-    SELLER_VERIDY_STATE_REMARK_ERROR(-1050, "冻结或则审核不通过必须给出理由且不可为空");
+    SELLER_VERIDY_STATE_REMARK_ERROR(-1050, "冻结或则审核不通过必须给出理由且不可为空"),
+    ADD_USER_INFO_ERROR(-1051, "添加用户信息异常");
 
 
     private int code;

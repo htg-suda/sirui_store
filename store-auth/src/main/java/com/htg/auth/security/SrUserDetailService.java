@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 @Slf4j
 @Component
@@ -31,9 +32,21 @@ public class SrUserDetailService implements UserDetailsService {
     private IPermissionService permissionService;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        log.info(username);
-        SrUserBO srUserBo = userClient.getUserByName(username);
+    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
+        log.info(name);
+        SrUserBO srUserBo = null;
+        if (inferNameAsTel(name)) {
+            srUserBo = userClient.getUserByTel(name);
+            log.info("tel login");
+        } else if (inferNameAsEmail(name)) {
+            srUserBo = userClient.getUserByEmail(name);
+            log.info("email login");
+        } else {
+            srUserBo = userClient.getUserByName(name);
+            log.info("username login");
+        }
+
+
         log.info("user is {}", srUserBo);
         List<Integer> groupIdList = srUserBo.getGroupIdList();
 
@@ -44,6 +57,7 @@ public class SrUserDetailService implements UserDetailsService {
         Integer status = srUserBo.getStatus();
         String tel = srUserBo.getTel();
         Integer gender = srUserBo.getGender();
+        String username = srUserBo.getUsername();
         String nikename = srUserBo.getNikename();
         String password = srUserBo.getPassword();
 
@@ -74,5 +88,18 @@ public class SrUserDetailService implements UserDetailsService {
         );
 
         return srUserDetails;
+    }
+
+    private boolean inferNameAsEmail(String name) {
+
+        String patternStr = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+        Pattern pattern = Pattern.compile(patternStr);
+        return pattern.matcher(name).matches();
+    }
+
+    private boolean inferNameAsTel(String name) {
+        String patternStr = "^[1](([3|5|8][\\d])|([4][5,6,7,8,9])|([6][5,6])|([7][3,4,5,6,7,8])|([9][8,9]))[\\d]{8}$";
+        Pattern pattern = Pattern.compile(patternStr);
+        return pattern.matcher(name).matches();
     }
 }

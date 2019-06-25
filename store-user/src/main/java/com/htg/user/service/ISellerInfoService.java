@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.service.IService;
 import com.htg.common.dto.seller.shop.SellerAddDto;
 import com.htg.common.dto.seller.system.SellerListDto;
 import com.htg.common.dto.seller.system.SellerVerifyDto;
+import com.htg.common.dto.seller.system.SysSellerAddDto;
 import com.htg.common.entity.seller.SellerInfo;
 import com.htg.common.entity.seller.SellerStore;
 import com.htg.common.exception.GlobalException;
@@ -40,4 +41,5 @@ public interface ISellerInfoService extends IService<SellerInfo> {
     SellerStore getStoreByUserId(Integer userId) throws GlobalException;
 
 
+    CommonResult<RespId> addSysSeller(SysSellerAddDto sysSellerAddDto)   throws GlobalException;
 }

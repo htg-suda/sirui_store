@@ -22,6 +22,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 @Slf4j
 @RunWith(SpringRunner.class)
@@ -83,5 +84,25 @@ public class AppTest {
         skuQuery.setSpecItems(list);
         //  List<UserQuerySkuVo> userQuerySkuVos = mapper.selectSkuBySpecList(skuQuery);
         //    log.info("sku list is {}", userQuerySkuVos);
+    }
+
+    @Test
+    public void test() {
+        log.info("====>email  {}"+inferNameAsEmail("1250068829@qq.com"));
+        log.info("====>tel {}"+inferNameAsTel("18717919376"));
+    }
+
+
+    private boolean inferNameAsEmail(String name) {
+
+        String patternStr = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+        Pattern pattern = Pattern.compile(patternStr);
+        return pattern.matcher(name).matches();
+    }
+
+    private boolean inferNameAsTel(String name) {
+        String patternStr = "^[1](([3|5|8][\\d])|([4][5,6,7,8,9])|([6][5,6])|([7][3,4,5,6,7,8])|([9][8,9]))[\\d]{8}$";
+        Pattern pattern = Pattern.compile(patternStr);
+        return pattern.matcher(name).matches();
     }
 }

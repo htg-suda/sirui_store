@@ -8,6 +8,8 @@ import com.htg.common.constant.StoreConst;
 import com.htg.common.dto.seller.shop.SellerAddDto;
 import com.htg.common.dto.seller.system.SellerListDto;
 import com.htg.common.dto.seller.system.SellerVerifyDto;
+import com.htg.common.dto.seller.system.SysSellerAddDto;
+import com.htg.common.dto.seller.user.SrUserDto;
 import com.htg.common.entity.seller.SellerBankInfo;
 import com.htg.common.entity.seller.SellerEnterpriseInfo;
 import com.htg.common.entity.seller.SellerInfo;
@@ -25,10 +27,7 @@ import com.htg.common.vo.seller.shop.ShopSellerInfoVo;
 import com.htg.common.vo.seller.system.SysSellerListItem;
 import com.htg.user.constant.AddByConst;
 import com.htg.user.mapper.SellerInfoMapper;
-import com.htg.user.service.ISellerBankInfoService;
-import com.htg.user.service.ISellerEnterpriseInfoService;
-import com.htg.user.service.ISellerInfoService;
-import com.htg.user.service.ISellerStoreService;
+import com.htg.user.service.*;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +56,8 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
 
     @Autowired
     private ISellerStoreService sellerStoreService;
+
+    private ISrUserService srUserService;
 
     /* 添加商户 */
     @Override
@@ -196,7 +197,7 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
     }
 
     @Override
-    public CommonResult verifySellerInfo(SellerVerifyDto verifyDto) {
+    public CommonResult verifySellerInfo(SellerVerifyDto verifyDto) throws GlobalException {
         SellerInfo sellerInfo = selectById(verifyDto.getSellerId());
         if (sellerInfo == null) {
             throw new GlobalException(CodeEnum.SELLER_NOT_EXIST);
@@ -240,4 +241,63 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         SellerInfo sellerInfo = getSellerInfo(userId);
         return getStoreBySeller(sellerInfo);
     }
+
+    @Override
+    @Transactional
+    public CommonResult<RespId> addSysSeller(SysSellerAddDto sysSellerAddDto) throws GlobalException {
+        SrUserDto srUserDto = sysSellerAddDto.getSrUserDto();
+        SellerInfo sellerInfo = sysSellerAddDto.getSellerInfo();
+        SellerEnterpriseInfo enterpriseInfo = sysSellerAddDto.getEnterpriseInfo();
+        SellerBankInfo sellerBankInfo = sysSellerAddDto.getSellerBankInfo();
+        CommonResult<RespId> userResult = srUserService.addUser(srUserDto);
+        if (!userResult.isSuccess()) throw new GlobalException(CodeEnum.ADD_USER_INFO_ERROR);
+
+        Integer userId = userResult.getData().getId();
+        sellerInfo.setUserId(userId);
+
+        Integer sellerType = sellerInfo.getType();
+        /* 如果商户即不是企业类型也不是个人类型 ,那么就会报异常 */
+        if (sellerType != SellerConst.TYPE_ENTERPRISE && sellerType != SellerConst.TYPE_INDIVIDUALS)
+            throw new GlobalException(CodeEnum.ADD_SELLER_TYPE_ERROR);
+
+        /* 校验企业数据的完整性  */
+        if (sellerType == SellerConst.TYPE_ENTERPRISE) {  // 企业商户
+            if (enterpriseInfo == null) throw new GlobalException(CodeEnum.ADD_SELLER_TYPE_ERROR);
+            /* 如果是企业帐号 ,法人信息必须要有 */
+            if (sellerBankInfo.getLegalPersonIdentityBackUrl() == null || sellerBankInfo.getLegalPersonIdentityFrontUrl() == null || sellerBankInfo.getLegalPersonIdentityNum() == null || sellerBankInfo.getLegalPersonName() == null)
+                throw new GlobalException(CodeEnum.ADD_SELLER_LEGAL_PERSON_ERROR);
+            /* 如果是企业用户 那么开户许可证编号必须要有 是否为空 */
+            if (sellerBankInfo.getBankAccountPermitNum() == null)
+                throw new GlobalException(CodeEnum.ADD_SELLER_BANK_ACCOUNT_PERMIT_NUM_ERROR);
+        }
+
+
+        sellerInfo.setId(null);
+        sellerInfo.setUserId(userId);
+        sellerInfo.setAddBy(AddByConst.ADMIN);
+        sellerInfo.setDelFlag(Del_FLAG.EXISTED);
+        String sellerSn = UUID.randomUUID().toString();
+        sellerInfo.setSn(sellerSn);
+        // 默认为审核通过 的
+        sellerInfo.setState(SellerConst.STATE_VERIFY_PASS);
+        sellerInfo.setStateRemark(null);
+        /* 添加用户基本信息*/
+        if (!insert(sellerInfo)) throw new GlobalException(CodeEnum.ADD_SELLER_INFO_ERROR);
+
+        if (sellerType == SellerConst.TYPE_ENTERPRISE) {
+            enterpriseInfo.setSellerSn(sellerSn);
+            enterpriseInfo.setDelFlag(Del_FLAG.EXISTED);
+            /* 添加商户企业信息*/
+            if (!enterpriseInfoService.insert(enterpriseInfo))
+                throw new GlobalException(CodeEnum.ADD_ENTERPRISE_INFO_ERROR);
+        }
+        sellerBankInfo.setSellerSn(sellerSn);
+        sellerBankInfo.setDelFlag(Del_FLAG.EXISTED);
+        /* 添加银行信息 */
+        if (!bankInfoService.insert(sellerBankInfo)) throw new GlobalException(CodeEnum.ADD_BANK_INFO_ERROR);
+
+        return CommonResult.success(new RespId(userId));
+    }
+
+
 }
