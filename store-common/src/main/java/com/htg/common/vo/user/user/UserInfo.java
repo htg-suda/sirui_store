@@ -1,8 +1,11 @@
-package com.htg.common.vo.user;
+package com.htg.common.vo.user.user;
 
 import io.swagger.annotations.ApiModelProperty;
 
 public class UserInfo {
+
+    @ApiModelProperty(value = "用户名",example = "BD_xyz123")
+    private String username;
 
     @ApiModelProperty(value = "用户昵称", example = "123qwe")
     private String nikename;
@@ -83,10 +86,19 @@ public class UserInfo {
         this.shopState = shopState;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     @Override
     public String toString() {
         return "UserInfo{" +
-                "nikename='" + nikename + '\'' +
+                "username='" + username + '\'' +
+                ", nikename='" + nikename + '\'' +
                 ", tel='" + tel + '\'' +
                 ", email='" + email + '\'' +
                 ", age=" + age +

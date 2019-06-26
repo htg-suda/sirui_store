@@ -1,10 +1,13 @@
 package com.htg.user.controller.system;
+
 import com.htg.common.dto.seller.system.SellerListDto;
 import com.htg.common.dto.seller.system.SellerVerifyDto;
 import com.htg.common.dto.seller.system.SysSellerAddDto;
+import com.htg.common.dto.seller.system.SysSellerModifyDto;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespPage;
+import com.htg.common.vo.seller.shop.SellerInfoDetailsVo;
 import com.htg.common.vo.seller.system.SysSellerListItem;
 import com.htg.user.service.ISellerInfoService;
 import io.swagger.annotations.Api;
@@ -37,7 +40,7 @@ public class SystemSellerController {
     @ApiOperation(value = "添加商户和用户")
     @ResponseBody
     @PostMapping("/seller/add")
-    public CommonResult<RespId> addSeller(@Valid @RequestBody  SysSellerAddDto sysSellerAddDto) {
+    public CommonResult<RespId> addSeller(@Valid @RequestBody SysSellerAddDto sysSellerAddDto) {
         return sellerInfoService.addSysSeller(sysSellerAddDto);
     }
 
@@ -51,6 +54,22 @@ public class SystemSellerController {
     }
 
 
+    /* 检索客服 */
+    @ApiOperation(value = "根据商户ID,获取商户详情")
+    @ResponseBody
+    @GetMapping("/get_seller_detail_by_id/{sellerId}")
+    public CommonResult<SellerInfoDetailsVo> getSellerDetailById(@PathVariable("sellerId") Integer sellerId) {
+        return sellerInfoService.sysGetSellerInfoById(sellerId);
+    }
+
+
+    /* 修改商户信息  */
+    @ApiOperation(value = "修改商户信息")
+    @ResponseBody
+    @PostMapping("/modify_seller_detail")
+    public CommonResult modifySellerDetailById(@Valid @RequestBody SysSellerModifyDto sellerModifyDto) {
+        return sellerInfoService.sysModifySellerDto(sellerModifyDto);
+    }
 
 
 }

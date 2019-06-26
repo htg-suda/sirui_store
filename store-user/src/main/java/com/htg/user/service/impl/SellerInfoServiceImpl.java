@@ -6,10 +6,9 @@ import com.htg.common.constant.Del_FLAG;
 import com.htg.common.constant.SellerConst;
 import com.htg.common.constant.StoreConst;
 import com.htg.common.dto.seller.shop.SellerAddDto;
-import com.htg.common.dto.seller.system.SellerListDto;
-import com.htg.common.dto.seller.system.SellerVerifyDto;
-import com.htg.common.dto.seller.system.SysSellerAddDto;
+import com.htg.common.dto.seller.system.*;
 import com.htg.common.dto.seller.user.SrUserDto;
+import com.htg.common.entity.custom.CustomServiceInfo;
 import com.htg.common.entity.seller.SellerBankInfo;
 import com.htg.common.entity.seller.SellerEnterpriseInfo;
 import com.htg.common.entity.seller.SellerInfo;
@@ -45,7 +44,6 @@ import java.util.UUID;
  * @author htg
  * @since 2019-06-12
  */
-
 @Service
 public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerInfo> implements ISellerInfoService {
     @Autowired
@@ -57,7 +55,11 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
     @Autowired
     private ISellerStoreService sellerStoreService;
 
+    @Autowired
     private ISrUserService srUserService;
+
+    @Autowired
+    private ICustomServiceInfoService customServiceInfoService;
 
     /* 添加商户 */
     @Override
@@ -92,6 +94,7 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         sellerInfo.setId(null);
         sellerInfo.setUserId(userId);
         sellerInfo.setAddBy(AddByConst.SELLER_SELF);
+        sellerInfo.setCusServiceId(null);
         sellerInfo.setDelFlag(Del_FLAG.EXISTED);
         String sellerSn = UUID.randomUUID().toString();
         sellerInfo.setSn(sellerSn);
@@ -140,7 +143,6 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
     }
 
 
-    /* 获取商户详情 */
     @Override
     public CommonResult<RespPage<SysSellerListItem>> getSellerList(SellerListDto listDto) {
         Page<SysSellerListItem> page = new Page<>(listDto.getPageNum(), listDto.getPageSize());
@@ -149,8 +151,8 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
             listDto.setSellerName("%" + sellerName + "%");
         }
         List<SysSellerListItem> sysSellerListItems = baseMapper.selectSellerVerfiyInfoByPage(page, listDto);
-        long total = page.getPages();
-        return CommonResult.success(new RespPage<>(sysSellerListItems, total));
+        long pages = page.getPages();
+        return CommonResult.success(new RespPage<>(sysSellerListItems, pages));
     }
 
 
@@ -214,9 +216,23 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
             throw new GlobalException(CodeEnum.SELLER_VERIDY_STATE_REMARK_ERROR);
         }
 
+        if (state == SellerConst.STATE_VERIFY_UNPASS) {
+            if (verifyDto.getCusServiceId() == null) { // 审核通过必须分配客服
+                throw new GlobalException(CodeEnum.MUST_HAVE_CUSTOM_SERVICE);
+            } else {                                    // 有客服id 要做下检查是否真的存在
+                CustomServiceInfo serviceInfo = customServiceInfoService.selectById(verifyDto.getCusServiceId());
+                if (serviceInfo == null) {
+                    throw new GlobalException(CodeEnum.CUSTOM_SERVICE_NOT_EXIST);
+                }
+            }
+        }
+
+
         sellerInfo.setState(verifyDto.getState());
 
         sellerInfo.setStateRemark(verifyDto.getStateRemark());
+
+        sellerInfo.setCusServiceId(verifyDto.getCusServiceId());
 
         if (verifyDto.getStateRemark() == null) {
             sellerInfo.setStateRemark("");
@@ -271,6 +287,15 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
                 throw new GlobalException(CodeEnum.ADD_SELLER_BANK_ACCOUNT_PERMIT_NUM_ERROR);
         }
 
+        /* 对客服信息进行检查 */
+        if (sellerInfo.getCusServiceId() == null) { // 审核通过必须分配客服
+            throw new GlobalException(CodeEnum.MUST_HAVE_CUSTOM_SERVICE);
+        } else {                                    // 有客服id 要做下检查是否真的存在
+            CustomServiceInfo serviceInfo = customServiceInfoService.selectById(sellerInfo.getCusServiceId());
+            if (serviceInfo == null) {
+                throw new GlobalException(CodeEnum.CUSTOM_SERVICE_NOT_EXIST);
+            }
+        }
 
         sellerInfo.setId(null);
         sellerInfo.setUserId(userId);
@@ -299,5 +324,72 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         return CommonResult.success(new RespId(userId));
     }
 
+    @Override
+    public CommonResult<SellerInfoDetailsVo> sysGetSellerInfoById(Integer sellerId) {
+        SellerInfoDetailsVo detailsVo = new SellerInfoDetailsVo();
+        ShopSellerInfoVo sellerInfoVo = new ShopSellerInfoVo();
+        ShopSellerBankInfoVo bankInfoVo = new ShopSellerBankInfoVo();
+        ShopSellerEnterpriseInfoVo enterpriseInfoVo = new ShopSellerEnterpriseInfoVo();
+        /* 获取商户信息 */
+        SellerInfo sellerInfo = selectById(sellerId);
+        if (sellerInfo == null) {
+            throw new GlobalException(CodeEnum.SELLER_NOT_EXIST);
+        }
+        BeanUtils.copyProperties(sellerInfo, sellerInfoVo);
 
+        SellerBankInfo sellerBankInfo = bankInfoService.selectById(sellerInfo.getSn());
+        if (sellerBankInfo == null) {
+            throw new GlobalException(CodeEnum.SELLER_HAS_NO_BANK_INFO);
+        }
+        BeanUtils.copyProperties(sellerBankInfo, bankInfoVo);
+
+        Integer type = sellerInfo.getType();
+        if (type == SellerConst.TYPE_ENTERPRISE) {  //商户类型,0-企业商户
+            SellerEnterpriseInfo sellerEnterpriseInfo = enterpriseInfoService.selectById(sellerInfo.getSn());
+            BeanUtils.copyProperties(sellerEnterpriseInfo, enterpriseInfoVo);
+            detailsVo.setEnterpriseInfoVo(enterpriseInfoVo);
+        } else if (type == SellerConst.TYPE_INDIVIDUALS) { //1-个人商户 如果是企业用户
+            detailsVo.setEnterpriseInfoVo(null);
+        } else {
+            throw new GlobalException(CodeEnum.ADD_SELLER_TYPE_ERROR);
+        }
+        detailsVo.setSellerInfoVo(sellerInfoVo);
+        detailsVo.setSellerBankInfoVo(bankInfoVo);
+
+        return CommonResult.success(detailsVo);
+    }
+
+    @Override
+    @Transactional
+    public CommonResult sysModifySellerDto(SysSellerModifyDto sellerModifyDto) {
+        /* 前端修改的基本信息*/
+        SellerModifyInfo sellerModifyInfo = sellerModifyDto.getSellerModifyInfo();
+        /* 前端修改的企业信息 */
+        SellerEnterpriseModifyInfo enterpriseModifyInfo = sellerModifyDto.getEnterpriseModifyInfo();
+        /* 前端修改的银行信息 */
+        SellerBankModifyInfo sellerBankModifyInfo = sellerModifyDto.getSellerBankModifyInfo();
+        Integer id = sellerModifyInfo.getId();
+        /* 获取银行信息*/
+        SellerInfo sellerInfo = selectById(id);
+        SellerBankInfo bankInfo = bankInfoService.selectById(sellerInfo.getSn());
+        /* 获取企业信息 */
+        SellerEnterpriseInfo enterpriseInfo = null;
+        if (sellerInfo.getType() == SellerConst.TYPE_ENTERPRISE && enterpriseModifyInfo != null) {
+            enterpriseInfo = enterpriseInfoService.selectById(sellerInfo.getSn());
+            if (enterpriseInfo != null) {
+                BeanUtils.copyProperties(enterpriseModifyInfo, enterpriseInfo);
+            }
+        }
+
+        BeanUtils.copyProperties(sellerModifyInfo, sellerInfo);
+        BeanUtils.copyProperties(sellerBankModifyInfo, bankInfo);
+
+        if (!updateById(sellerInfo)) throw new GlobalException(CodeEnum.MODIFY_SELLER_INFO_ERROR);
+        if (!bankInfoService.updateById(bankInfo)) throw new GlobalException(CodeEnum.MODIFY_SELLER_BANK_INFO_ERROR);
+
+        if (enterpriseInfo != null && !enterpriseInfoService.updateById(enterpriseInfo)) {
+            throw new GlobalException(CodeEnum.MODIFY_SELLER_ENTERPRISE_INFO_ERROR);
+        }
+        return CommonResult.success("更新成功");
+    }
 }

@@ -1,7 +1,9 @@
-package com.htg.user.config;
+package com.htg.auth.config;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,9 +12,6 @@ import java.io.IOException;
 @Configuration
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CORSFilter implements Filter {
-
-
-
     @Override
     public void doFilter(ServletRequest req, ServletResponse resp,
                          FilterChain chain) throws IOException, ServletException {
@@ -30,6 +29,7 @@ public class CORSFilter implements Filter {
         }
 
     }
+
 
 
 }

@@ -1,11 +1,13 @@
 package com.htg.user.controller.user;
 
 import com.htg.common.dto.seller.user.SrUserDto;
+import com.htg.common.entity.custom.CustomServiceInfo;
 import com.htg.common.exception.GlobalException;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.utils.AuthUtil;
-import com.htg.common.vo.user.UserInfo;
+import com.htg.common.vo.user.user.UserInfo;
+import com.htg.user.service.ICustomServiceInfoService;
 import com.htg.user.service.ISrUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -34,6 +36,8 @@ public class SrUserController {
     @Autowired
     private ISrUserService srUserService;
 
+    @Autowired
+    private ICustomServiceInfoService customServiceInfoService;
  /*   @ApiOperation(value = "注册用户")
     @ResponseBody
     @PostMapping("/register")
@@ -59,6 +63,12 @@ public class SrUserController {
         return srUserService.getUserInfo(userId);
     }
 
-
+    @ApiOperation(value = "获取用户基本信息服务")
+    @ResponseBody
+    @GetMapping("/custom_service_info")
+    public CommonResult<CustomServiceInfo> getCustomServiceInfo() throws GlobalException {
+        Integer userId = AuthUtil.getLoginUserId();
+        return customServiceInfoService.getCustomServiceInfo(userId);
+    }
 }
 

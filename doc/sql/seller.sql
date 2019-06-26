@@ -28,6 +28,9 @@ create table  sr_seller_info(
      admin_identity_front_url varchar(20) not null comment '企业管理员或个人商户的身份证的正面照片',
      admin_identity_back_url varchar(20) not null comment '企业管理员或个人商户的身份证的背面照片',
      add_by tinyint not null comment '商户来源 0-用户添加,1-管理员自己添加',
+     -- 添加 客服用户id 参考用户 id
+     cus_service_id int default null comment '客服id,参考客服表',
+
        -- 附带信息
      del_flag tinyint default 0 comment '删除状态,0-有效,-1 -删除',
      create_user varchar(100) not null comment '创建人的id',

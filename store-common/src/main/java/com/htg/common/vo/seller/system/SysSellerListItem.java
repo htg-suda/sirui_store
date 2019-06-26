@@ -1,5 +1,4 @@
 package com.htg.common.vo.seller.system;
-
 import io.swagger.annotations.ApiModelProperty;
 
 public class SysSellerListItem {

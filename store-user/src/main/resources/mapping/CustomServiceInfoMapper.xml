@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.htg.user.mapper.CustomServiceInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.htg.common.entity.custom.CustomServiceInfo">
+        <id column="id" property="id"/>
+        <result column="create_user" property="createUser"/>
+        <result column="update_user" property="updateUser"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="user_id" property="userId"/>
+        <result column="service_name" property="serviceName"/>
+        <result column="del_flag" property="delFlag"/>
+    </resultMap>
+
+
+    <resultMap id="CustomServiceMap" type="com.htg.common.vo.user.admin.CustomServiceUserInfoVo">
+        <id column="id" property="id"/>
+        <result column="service_name" property="serviceName"/>
+        <result column="create_time" property="createTime"/>
+        <result column="tel" property="tel"/>
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        create_user,
+        update_user,
+        create_time,
+        update_time,
+        id, user_id, service_name, del_flag
+    </sql>
+    <select id="selectByUserId" resultMap="BaseResultMap" parameterType="integer">
+        select
+        <include refid="Base_Column_List"/>
+        from sr_custom_service_info
+        where user_id=#{userId}
+    </select>
+
+    <select id="selectCustomUserInfo" resultMap="CustomServiceMap" parameterType="map">
+        select CI.id,CI.service_name,CI.create_time,SU.tel from sr_custom_service_info CI left join sr_user SU on
+        CI.user_id=SU.id
+        <where>
+            <if test="tel!=null">
+                SU.tel=#{tel}
+            </if>
+            <if test="serviceName!=null">
+                and CI.service_name like #{serviceName}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectCustomUserInfoById" resultMap="CustomServiceMap" parameterType="map">
+        select CI.id,CI.service_name,CI.create_time,SU.tel from sr_custom_service_info CI left join sr_user SU on
+        CI.user_id=SU.id
+        <where>
+            CI.id=#{id}
+        </where>
+    </select>
+</mapper>

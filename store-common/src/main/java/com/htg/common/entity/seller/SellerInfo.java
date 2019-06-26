@@ -105,6 +105,9 @@ public class SellerInfo extends BaseEntity {
     @TableField("add_by")
     private Integer addBy;
 
+    @ApiModelProperty(value = "客服id,参考客服表",example = "0")
+    @TableField("cus_service_id")
+    private Integer cusServiceId;
 
 
     @ApiModelProperty(value = "删除状态,0-有效,-1 -删除",example = "0",hidden = true)
@@ -247,24 +250,33 @@ public class SellerInfo extends BaseEntity {
         return this;
     }
 
+    public Integer getCusServiceId() {
+        return cusServiceId;
+    }
+
+    public void setCusServiceId(Integer cusServiceId) {
+        this.cusServiceId = cusServiceId;
+    }
+
     @Override
     public String toString() {
         return "SellerInfo{" +
-        "id=" + id +
-        ", sn=" + sn +
-        ", userId=" + userId +
-        ", logo=" + logo +
-        ", state=" + state +
-        ", stateRemark=" + stateRemark +
-        ", type=" + type +
-        ", adminName=" + adminName +
-        ", adminIdentityNum=" + adminIdentityNum +
-        ", adminMobPhone=" + adminMobPhone +
-        ", businessRange=" + businessRange +
-        ", adminIdentityFrontUrl=" + adminIdentityFrontUrl +
-        ", adminIdentityBackUrl=" + adminIdentityBackUrl +
-        ", addBy=" + addBy +
-        ", delFlag=" + delFlag +
-        "}";
+                "id=" + id +
+                ", sn='" + sn + '\'' +
+                ", userId=" + userId +
+                ", logo='" + logo + '\'' +
+                ", state=" + state +
+                ", stateRemark='" + stateRemark + '\'' +
+                ", type=" + type +
+                ", adminName='" + adminName + '\'' +
+                ", adminIdentityNum='" + adminIdentityNum + '\'' +
+                ", adminMobPhone='" + adminMobPhone + '\'' +
+                ", businessRange='" + businessRange + '\'' +
+                ", adminIdentityFrontUrl='" + adminIdentityFrontUrl + '\'' +
+                ", adminIdentityBackUrl='" + adminIdentityBackUrl + '\'' +
+                ", addBy=" + addBy +
+                ", cusServiceId=" + cusServiceId +
+                ", delFlag=" + delFlag +
+                '}';
     }
 }

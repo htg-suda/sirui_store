@@ -231,7 +231,7 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
         *
         * */
         /* 覆盖原来的 /oauth/token*/
-        endpoints.pathMapping("/oauth/token", "/user/login");
+      //  endpoints.pathMapping("/oauth/token", "/user/login");
     }
 
 

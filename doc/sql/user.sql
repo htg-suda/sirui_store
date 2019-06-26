@@ -13,6 +13,8 @@ create table sr_user(
     age tinyint unsigned comment '用户年龄',
     gender tinyint unsigned default 0 comment '性别 1-男 2-女 0-保密',
     status smallint not null default 1001 comment '用户状态 1001-可用, 1002-不可用',
+    -- 商户 id ,一个用户只能有一个商户id ,但是一个商户可以被多个用户持有
+    seller_id int default null comment '商户id,参考商户表',
     -- 附带信息
     del_flag tinyint default 0 comment '删除状态',
     create_user varchar(100) not null comment '创建人的id',
@@ -21,6 +23,18 @@ create table sr_user(
     update_time datetime not null comment '更新时间'
 )comment '用户表' charset utf8;
 
+
+drop table if exists sr_custom_service_info;
+create table sr_custom_service_info(
+   id int primary key auto_increment comment '客服ID',
+   user_id int unique key comment '用户id, 参考用户id表',
+   service_name varchar(20) default null comment '客服昵称',
+   del_flag tinyint default 0 comment '删除状态',
+   create_user varchar(100) not null comment '创建人的id',
+   update_user varchar(100) not null comment '更新人的id',
+   create_time datetime not null comment '创建时间',
+   update_time datetime not null comment '更新时间'
+) comment '客服信息表' charset utf8;
 
 /* 和用户表是一对一的关系 */
 create table sr_user_detail(

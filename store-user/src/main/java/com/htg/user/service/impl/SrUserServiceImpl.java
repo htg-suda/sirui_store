@@ -12,7 +12,7 @@ import com.htg.common.exception.GlobalException;
 import com.htg.common.result.CodeEnum;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
-import com.htg.common.vo.user.UserInfo;
+import com.htg.common.vo.user.user.UserInfo;
 
 import com.htg.user.constant.UserConst;
 import com.htg.user.mapper.SrUserMapper;

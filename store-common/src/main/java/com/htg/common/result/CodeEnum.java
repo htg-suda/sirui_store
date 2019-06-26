@@ -53,7 +53,15 @@ public enum CodeEnum {
     SELLER_HAS_NO_BANK_INFO(-1048, "商户没有银行信息"),
     SELLER_VERIDY_STATE_ERROR(-1049, "审核状态异常"),
     SELLER_VERIDY_STATE_REMARK_ERROR(-1050, "冻结或则审核不通过必须给出理由且不可为空"),
-    ADD_USER_INFO_ERROR(-1051, "添加用户信息异常");
+    ADD_USER_INFO_ERROR(-1052, "添加用户信息异常"),
+    USER_NOT_EXIST(-1053, "用户不存在"),
+    CUSTOM_SERVICE_HAS_EXIST(-1054, "该用户已被添加为客服,不能重复添加"),
+    YOU_ARE_NOT_CUSTOM_SERVICE(-1055, "您还不是客服!"),
+    CUSTOM_SERVICE_NOT_EXIST(-1056, "客服不存在"),
+    MUST_HAVE_CUSTOM_SERVICE(-1057, "审核通过必须分配客服"),
+    MODIFY_SELLER_INFO_ERROR(-1058, "更新商户基本信息异常"),
+    MODIFY_SELLER_ENTERPRISE_INFO_ERROR(-1059, "更新商户企业信息异常"),
+    MODIFY_SELLER_BANK_INFO_ERROR(-1060, "更新商户银行信息异常");
 
 
     private int code;

@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.service.IService;
 import com.htg.common.exception.GlobalException;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
-import com.htg.common.vo.user.UserInfo;
+import com.htg.common.vo.user.user.UserInfo;
 
 /**
  * <p>

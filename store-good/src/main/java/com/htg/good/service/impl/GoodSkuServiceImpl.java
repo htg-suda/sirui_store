@@ -142,7 +142,7 @@ public class GoodSkuServiceImpl extends ServiceImpl<GoodSkuMapper, GoodSku> impl
             userSkuQuery.setKeyWord("%" + keyWord + "%");
         }
         List<UserQuerySkuVo> userQuerySkuVos = baseMapper.selectSkuBySpecList(page, userSkuQuery);
-        return CommonResult.success(new RespPage<>(userQuerySkuVos, page.getTotal()));
+        return CommonResult.success(new RespPage<>(userQuerySkuVos, page.getPages()));
     }
 
     @Override

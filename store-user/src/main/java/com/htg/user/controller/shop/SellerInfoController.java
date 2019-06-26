@@ -8,6 +8,7 @@ import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.utils.AuthUtil;
 import com.htg.common.vo.seller.shop.SellerInfoDetailsVo;
+import com.htg.common.vo.user.admin.CustomServiceUserInfoVo;
 import com.htg.user.service.ISellerInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -71,5 +72,7 @@ public class SellerInfoController {
         log.info("authUtils is {}", AuthUtil.getLoginUser());
         return CommonResult.success(AuthUtil.getLoginUser());
     }
+
+
 }
 

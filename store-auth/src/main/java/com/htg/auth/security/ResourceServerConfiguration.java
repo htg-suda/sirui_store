@@ -26,7 +26,6 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         registry.requestMatchers(CorsUtils::isPreFlightRequest).permitAll();//让Spring security放行所有preflight request
 
 
-
         http.authorizeRequests().antMatchers(HttpMethod.OPTIONS, "/oauth/**").permitAll()
                 /* swagger start */
                 .antMatchers("/swagger-ui.html").permitAll()
@@ -37,10 +36,10 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .antMatchers("/configuration/ui").permitAll()
                 .antMatchers("/configuration/security").permitAll()
                 /* swagger end */
-                .antMatchers("/oauth/*").permitAll()
-
+                .antMatchers("/oauth/**").permitAll()
 
                 .antMatchers("/user/login").permitAll()
+                .antMatchers("/oauth/token").permitAll()
                 /* 手机号码登录 */
                 .antMatchers("/mobile/login").permitAll()
                 .anyRequest().authenticated();
