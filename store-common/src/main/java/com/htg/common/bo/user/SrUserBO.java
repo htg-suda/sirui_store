@@ -1,5 +1,6 @@
 package com.htg.common.bo.user;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.List;
@@ -31,6 +32,9 @@ public class SrUserBO {
 
     @ApiModelProperty(value = "用户状态 1001-可用, 1002-不可用", example = "1001")
     private Integer status;
+
+    @ApiModelProperty(value = "商户id,参考商户表", example = "1")
+    private Integer sellerId;
 
 
     @ApiModelProperty(value = "删除状态,0-有效,-1 -删除", example = "0")
@@ -111,6 +115,14 @@ public class SrUserBO {
         this.status = status;
     }
 
+    public Integer getSellerId() {
+        return sellerId;
+    }
+
+    public void setSellerId(Integer sellerId) {
+        this.sellerId = sellerId;
+    }
+
     public Integer getDelFlag() {
         return delFlag;
     }
@@ -140,6 +152,7 @@ public class SrUserBO {
                 ", age=" + age +
                 ", gender=" + gender +
                 ", status=" + status +
+                ", sellerId=" + sellerId +
                 ", delFlag=" + delFlag +
                 ", groupIdList=" + groupIdList +
                 '}';

@@ -1,13 +1,10 @@
 package com.htg.common.vo.seller.shop;
 
-import com.baomidou.mybatisplus.annotations.TableField;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 public class ShopSellerInfoVo {
-
 
     @ApiModelProperty(value = "商户logo",example = "xxxx.png")
     private String logo;

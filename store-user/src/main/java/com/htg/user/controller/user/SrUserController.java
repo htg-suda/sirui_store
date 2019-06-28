@@ -6,6 +6,7 @@ import com.htg.common.exception.GlobalException;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.utils.AuthUtil;
+import com.htg.common.vo.seller.user.SellerStatusInfo;
 import com.htg.common.vo.user.user.UserInfo;
 import com.htg.user.service.ICustomServiceInfoService;
 import com.htg.user.service.ISrUserService;
@@ -55,7 +56,7 @@ public class SrUserController {
     }
 
 
-    @ApiOperation(value = "获取用户基本信息服务")
+    @ApiOperation(value = "获取用户基本信息")
     @ResponseBody
     @PostMapping("/get_user_info")
     public CommonResult<UserInfo> getUserInfo() throws GlobalException {
@@ -63,12 +64,20 @@ public class SrUserController {
         return srUserService.getUserInfo(userId);
     }
 
-    @ApiOperation(value = "获取用户基本信息服务")
+    @ApiOperation(value = "获取客服基本信息")
     @ResponseBody
     @GetMapping("/custom_service_info")
     public CommonResult<CustomServiceInfo> getCustomServiceInfo() throws GlobalException {
         Integer userId = AuthUtil.getLoginUserId();
         return customServiceInfoService.getCustomServiceInfo(userId);
+    }
+
+    @ApiOperation(value = "获取用户商户状态")
+    @ResponseBody
+    @GetMapping("/seller_status_info")
+    public CommonResult<SellerStatusInfo> getSellerStatusInfo() throws GlobalException {
+        Integer userId = AuthUtil.getLoginUserId();
+        return srUserService.getSellerStatusInfo(userId);
     }
 }
 

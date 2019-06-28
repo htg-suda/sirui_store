@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.service.IService;
 import com.htg.common.exception.GlobalException;
 import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
+import com.htg.common.vo.seller.user.SellerStatusInfo;
 import com.htg.common.vo.user.user.UserInfo;
 
 /**
@@ -26,6 +27,9 @@ public interface ISrUserService extends IService<SrUser> {
     SrUserBO getUserByTel(String tel);
 
     SrUserBO getUserByEmail(String email);
+
+    /* 获取商户状态 */
+    CommonResult<SellerStatusInfo> getSellerStatusInfo(Integer userId);
 
     CommonResult<UserInfo> getUserInfo(Integer userId) throws GlobalException;
 }

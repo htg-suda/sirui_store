@@ -61,7 +61,9 @@ public enum CodeEnum {
     MUST_HAVE_CUSTOM_SERVICE(-1057, "审核通过必须分配客服"),
     MODIFY_SELLER_INFO_ERROR(-1058, "更新商户基本信息异常"),
     MODIFY_SELLER_ENTERPRISE_INFO_ERROR(-1059, "更新商户企业信息异常"),
-    MODIFY_SELLER_BANK_INFO_ERROR(-1060, "更新商户银行信息异常");
+    MODIFY_SELLER_BANK_INFO_ERROR(-1060, "更新商户银行信息异常"),
+    SELLER_TO_USER_ERROR(-1061, "商户信息写入用户异常"),
+    SELLER_HAS_NOT_VERIFY_PASS(-1062, "商户还没有审核通过");
 
 
     private int code;

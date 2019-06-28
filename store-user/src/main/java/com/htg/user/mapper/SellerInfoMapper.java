@@ -20,7 +20,7 @@ public interface SellerInfoMapper extends BaseMapper<SellerInfo> {
 
     SellerInfo selectBySellerSn(String sellerSn);
 
-    SellerInfo selectByUserId(Integer userId);
+   // SellerInfo selectByUserId(Integer userId);
 
     List<SysSellerListItem> selectSellerVerfiyInfoByPage(Page<SysSellerListItem> page, SellerListDto listDto);
 }

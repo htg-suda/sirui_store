@@ -39,7 +39,7 @@ public class SellerInfo extends BaseEntity {
      * 用户id,参考用户表
      */
 
-    @ApiModelProperty(value = "用户id,参考用户表",example = "0",hidden = true)
+    @ApiModelProperty(value = "商户管理员id,参考用户表",example = "0",hidden = true)
     @TableField("user_id")
     private Integer userId;
 

@@ -9,8 +9,8 @@ import io.swagger.annotations.ApiModelProperty;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.*;
+
 /**
- *
  * <p>
  * 用户表
  * </p>
@@ -26,7 +26,6 @@ public class SrUser extends BaseEntity {
     @ApiModelProperty(value = "用户ID主键", example = "1", hidden = true)
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
-
 
 
     @Pattern(regexp = "^[a-zA-Z]{1}[a-zA-Z0-9_]{5,16}$", message = "由字母数字下划线组成且开头必须是字母,位数5~16位")
@@ -77,6 +76,10 @@ public class SrUser extends BaseEntity {
     @ApiModelProperty(value = "用户状态 1001-可用, 1002-不可用", example = "1001", hidden = true)
     @TableField("status")
     private Integer status;
+
+    @ApiModelProperty(value = "商户id,参考商户表", example = "1")
+    @TableField("seller_id")
+    private Integer sellerId;
 
 
 
@@ -175,19 +178,28 @@ public class SrUser extends BaseEntity {
         return this;
     }
 
+    public Integer getSellerId() {
+        return sellerId;
+    }
+
+    public void setSellerId(Integer sellerId) {
+        this.sellerId = sellerId;
+    }
+
     @Override
     public String toString() {
-        return "SrUserDetails{" +
+        return "SrUser{" +
                 "id=" + id +
-                ", username=" + username +
-                ", password=" + password +
-                ", nikename=" + nikename +
-                ", tel=" + tel +
-                ", email=" + email +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", nikename='" + nikename + '\'' +
+                ", tel='" + tel + '\'' +
+                ", email='" + email + '\'' +
                 ", age=" + age +
                 ", gender=" + gender +
                 ", status=" + status +
+                ", sellerId=" + sellerId +
                 ", delFlag=" + delFlag +
-                "}";
+                '}';
     }
 }

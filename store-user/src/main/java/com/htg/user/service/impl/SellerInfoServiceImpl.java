@@ -13,6 +13,7 @@ import com.htg.common.entity.seller.SellerBankInfo;
 import com.htg.common.entity.seller.SellerEnterpriseInfo;
 import com.htg.common.entity.seller.SellerInfo;
 import com.htg.common.entity.seller.SellerStore;
+import com.htg.common.entity.user.SrUser;
 import com.htg.common.exception.GlobalException;
 import com.htg.common.result.CodeEnum;
 import com.htg.common.result.CommonResult;
@@ -61,7 +62,7 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
     @Autowired
     private ICustomServiceInfoService customServiceInfoService;
 
-    /* 添加商户 */
+    /* 添加商户*/
     @Override
     @Transactional
     public CommonResult<RespId> addSeller(SellerAddDto sellerAddDto) throws GlobalException {
@@ -74,7 +75,7 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         if (sellerType != SellerConst.TYPE_ENTERPRISE && sellerType != SellerConst.TYPE_INDIVIDUALS)
             throw new GlobalException(CodeEnum.ADD_SELLER_TYPE_ERROR);
 
-        /* 校验企业数据的完整性  */
+        /* 校验企业数据的完整性 */
         if (sellerType == SellerConst.TYPE_ENTERPRISE) {  // 企业商户
             if (enterpriseInfo == null) throw new GlobalException(CodeEnum.ADD_SELLER_TYPE_ERROR);
             /* 如果是企业帐号 ,法人信息必须要有 */
@@ -85,13 +86,18 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
                 throw new GlobalException(CodeEnum.ADD_SELLER_BANK_ACCOUNT_PERMIT_NUM_ERROR);
         }
 
+
         Integer userId = AuthUtil.getLoginUserId();
-        SellerInfo info = baseMapper.selectByUserId(userId);
-        if (info != null) {  // 该用户已经存在了一家商户了
-            throw new GlobalException(CodeEnum.SELLER_HAS_EXIST);
-        }
+        SrUser srUser = srUserService.selectById(userId);
+
+        //SellerInfo info = baseMapper(userId);
+
+        Integer sellerIdExt = srUser.getSellerId();
+        // 该用户已经存在了一家商户了
+        if (sellerIdExt != null) throw new GlobalException(CodeEnum.SELLER_HAS_EXIST);
 
         sellerInfo.setId(null);
+        /* 设置商户管理员ID */
         sellerInfo.setUserId(userId);
         sellerInfo.setAddBy(AddByConst.SELLER_SELF);
         sellerInfo.setCusServiceId(null);
@@ -116,14 +122,25 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         /* 添加银行信息 */
         if (!bankInfoService.insert(bankInfo)) throw new GlobalException(CodeEnum.ADD_BANK_INFO_ERROR);
 
-        return CommonResult.success(new RespId(sellerInfo.getId()));
+        Integer sellerId = sellerInfo.getId();
+        srUser.setSellerId(sellerId);
+
+        if (!srUserService.updateById(srUser)) throw new GlobalException(CodeEnum.SELLER_TO_USER_ERROR);
+
+        return CommonResult.success(new RespId(sellerId));
     }
 
     /* 添加店铺*/
     @Override
     @Transactional
     public CommonResult<RespId> addStore(SellerStore sellerStore) throws GlobalException {
+
+        /* 这里已经抛出了异常 */
         SellerInfo info = getSellerInfo(AuthUtil.getLoginUserId());
+
+
+        if (info.getState() != SellerConst.STATE_VERIFY_PASS)
+            throw new GlobalException(CodeEnum.SELLER_HAS_NOT_VERIFY_PASS);
 
         SellerStore storeExt = getStoreBySeller(info);
         if (storeExt != null) {
@@ -150,6 +167,7 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         if (sellerName != null) {
             listDto.setSellerName("%" + sellerName + "%");
         }
+        /*todo  目前返回 的没有商户的登陆名和昵称 */
         List<SysSellerListItem> sysSellerListItems = baseMapper.selectSellerVerfiyInfoByPage(page, listDto);
         long pages = page.getPages();
         return CommonResult.success(new RespPage<>(sysSellerListItems, pages));
@@ -158,8 +176,14 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
 
     @Override
     public SellerInfo getSellerInfo(Integer userId) throws GlobalException {
-        SellerInfo info = baseMapper.selectByUserId(userId);
-        if (info == null) {  // 商户还未开通,不能添加店铺
+        SrUser srUser = srUserService.selectById(userId);
+        if (srUser == null) {
+            throw new GlobalException(CodeEnum.USER_NOT_EXIST);
+        }
+
+        SellerInfo info = null;
+        Integer sellerId = srUser.getSellerId();
+        if (sellerId == null || (info = selectById(sellerId)) == null) {  // 商户还未开通,不能添加店铺
             throw new GlobalException(CodeEnum.SELLER_NOT_EXIST);
         }
         return info;
@@ -177,9 +201,11 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         BeanUtils.copyProperties(sellerInfo, sellerInfoVo);
 
         SellerBankInfo sellerBankInfo = bankInfoService.selectById(sellerInfo.getSn());
+
         if (sellerBankInfo == null) {
             throw new GlobalException(CodeEnum.SELLER_HAS_NO_BANK_INFO);
         }
+
         BeanUtils.copyProperties(sellerBankInfo, bankInfoVo);
 
         Integer type = sellerInfo.getType();
@@ -201,9 +227,7 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
     @Override
     public CommonResult verifySellerInfo(SellerVerifyDto verifyDto) throws GlobalException {
         SellerInfo sellerInfo = selectById(verifyDto.getSellerId());
-        if (sellerInfo == null) {
-            throw new GlobalException(CodeEnum.SELLER_NOT_EXIST);
-        }
+        if (sellerInfo == null) throw new GlobalException(CodeEnum.SELLER_NOT_EXIST);
 
         Integer state = verifyDto.getState();
         if (state != SellerConst.STATE_VERIFY_PASS
@@ -226,7 +250,6 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
                 }
             }
         }
-
 
         sellerInfo.setState(verifyDto.getState());
 
@@ -265,6 +288,7 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         SellerInfo sellerInfo = sysSellerAddDto.getSellerInfo();
         SellerEnterpriseInfo enterpriseInfo = sysSellerAddDto.getEnterpriseInfo();
         SellerBankInfo sellerBankInfo = sysSellerAddDto.getSellerBankInfo();
+        /* 注册用户 */
         CommonResult<RespId> userResult = srUserService.addUser(srUserDto);
         if (!userResult.isSuccess()) throw new GlobalException(CodeEnum.ADD_USER_INFO_ERROR);
 
@@ -316,11 +340,15 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
             if (!enterpriseInfoService.insert(enterpriseInfo))
                 throw new GlobalException(CodeEnum.ADD_ENTERPRISE_INFO_ERROR);
         }
+
         sellerBankInfo.setSellerSn(sellerSn);
         sellerBankInfo.setDelFlag(Del_FLAG.EXISTED);
         /* 添加银行信息 */
         if (!bankInfoService.insert(sellerBankInfo)) throw new GlobalException(CodeEnum.ADD_BANK_INFO_ERROR);
 
+        SrUser srUser = srUserService.selectById(userId);
+        srUser.setSellerId(sellerInfo.getId());
+        if (!srUserService.updateById(srUser)) throw new GlobalException(CodeEnum.SELLER_TO_USER_ERROR);
         return CommonResult.success(new RespId(userId));
     }
 
@@ -368,9 +396,10 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         SellerEnterpriseModifyInfo enterpriseModifyInfo = sellerModifyDto.getEnterpriseModifyInfo();
         /* 前端修改的银行信息 */
         SellerBankModifyInfo sellerBankModifyInfo = sellerModifyDto.getSellerBankModifyInfo();
-        Integer id = sellerModifyInfo.getId();
+        Integer sellerModifyInfoId = sellerModifyInfo.getId();
+        /* 获取商户信息*/
+        SellerInfo sellerInfo = selectById(sellerModifyInfoId);
         /* 获取银行信息*/
-        SellerInfo sellerInfo = selectById(id);
         SellerBankInfo bankInfo = bankInfoService.selectById(sellerInfo.getSn());
         /* 获取企业信息 */
         SellerEnterpriseInfo enterpriseInfo = null;
@@ -380,7 +409,6 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
                 BeanUtils.copyProperties(enterpriseModifyInfo, enterpriseInfo);
             }
         }
-
         BeanUtils.copyProperties(sellerModifyInfo, sellerInfo);
         BeanUtils.copyProperties(sellerBankModifyInfo, bankInfo);
 

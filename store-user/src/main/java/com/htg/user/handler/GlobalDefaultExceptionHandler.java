@@ -36,7 +36,7 @@ public class GlobalDefaultExceptionHandler {
      * @return
      */
     /* JSON请求参数异常 */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler({MethodArgumentNotValidException.class})
     public CommonResult handleValidationBodyException(MethodArgumentNotValidException e) {
         BindingResult result = e.getBindingResult();

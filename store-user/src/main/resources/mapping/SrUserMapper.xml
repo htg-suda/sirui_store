@@ -17,6 +17,7 @@
         <result column="age" property="age"/>
         <result column="gender" property="gender"/>
         <result column="status" property="status"/>
+        <result column="seller_id" property="sellerId"/>
         <result column="del_flag" property="delFlag"/>
     </resultMap>
 
@@ -32,6 +33,7 @@
         <result column="age" property="age"/>
         <result column="gender" property="gender"/>
         <result column="status" property="status"/>
+        <result column="seller_id" property="sellerId"/>
         <result column="del_flag" property="delFlag"/>
         <collection property="groupIdList" ofType="Integer">
             <result column="role_group_id"></result>
@@ -45,12 +47,12 @@
         update_user,
         create_time,
         update_time,
-        id, username, password, nikename, tel, email, age, gender, status, del_flag
+        id, username, password, nikename, tel, email, age, gender, status, seller_id,del_flag
     </sql>
 
 
     <sql id="Map01_Column_List">
-        SU.id, SU.username, SU.password, SU.nikename, SU.tel, SU.email, SU.age, SU.gender, SU.status, SU.del_flag, UG.role_group_id
+        SU.id, SU.username, SU.password, SU.nikename, SU.tel, SU.email, SU.age, SU.gender, SU.status,SU.seller_id, SU.del_flag, UG.role_group_id
     </sql>
 
 

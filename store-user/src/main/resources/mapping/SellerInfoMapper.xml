@@ -93,7 +93,7 @@
             <if test="sellerName!=null">
                 and sInfo.admin_name like #{sellerName}
             </if>
-            <if test="sellerName!=null">
+            <if test="enterprise_name!=null">
                 or eInfo.enterprise_name like #{sellerName}
             </if>
         </where>

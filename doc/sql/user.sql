@@ -22,6 +22,7 @@ create table sr_user(
     create_time datetime not null comment '创建时间',
     update_time datetime not null comment '更新时间'
 )comment '用户表' charset utf8;
+alter table sr_user add column  seller_id int default null comment '商户id,参考商户表' after  status;
 
 
 drop table if exists sr_custom_service_info;
