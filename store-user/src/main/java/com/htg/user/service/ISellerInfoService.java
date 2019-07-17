@@ -13,6 +13,7 @@ import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespPage;
 import com.htg.common.vo.seller.shop.SellerInfoDetailsVo;
+import com.htg.common.vo.seller.system.SysSellerInfoDetailsVo;
 import com.htg.common.vo.seller.system.SysSellerListItem;
 
 /**
@@ -44,7 +45,7 @@ public interface ISellerInfoService extends IService<SellerInfo> {
 
     CommonResult<RespId> addSysSeller(SysSellerAddDto sysSellerAddDto)   throws GlobalException;
 
-    CommonResult<SellerInfoDetailsVo> sysGetSellerInfoById(Integer sellerId);
+    CommonResult<SysSellerInfoDetailsVo> sysGetSellerInfoById(Integer sellerId);
 
     CommonResult sysModifySellerDto(SysSellerModifyDto sellerModifyDto);
 }

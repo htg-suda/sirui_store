@@ -40,6 +40,8 @@
         <result column="admin_mob_phone" property="adminMobPhone"/>
         <result column="add_by" property="addBy"/>
         <result column="enterprise_name" property="enterpriseName"/>
+        <result column="username" property="username"/>
+        <result column="nikename" property="nikename"/>
     </resultMap>
 
 
@@ -67,7 +69,11 @@
     </select>
 
     <sql id="Map01_Colunm_List">
-        id, sn, user_id, logo, state, state_remark, type, admin_name,  admin_mob_phone, add_by,enterprise_name
+        sInfo.id, sInfo.sn, sInfo.user_id, sInfo.logo, sInfo.state
+        ,sInfo.state_remark, sInfo.type, sInfo.admin_name,
+        sInfo.admin_mob_phone, sInfo.add_by
+        ,eInfo.enterprise_name
+        ,SU.username , SU.nikename
     </sql>
 
 
@@ -76,7 +82,7 @@
         select
         <include refid="Map01_Colunm_List"/>
         from sr_seller_info sInfo left join sr_seller_enterprise_info eInfo
-        on (sInfo.sn=eInfo.seller_sn)
+        on (sInfo.sn=eInfo.seller_sn) left join sr_user SU on sInfo.user_id =SU.id
         <where>
             <if test="state!=null">
                 sInfo.state=#{state}
@@ -90,12 +96,11 @@
             <if test="tel!=null">
                 and sInfo.admin_mob_phone=#{tel}
             </if>
+            <!-- 对于个人商户 ,管理员名称 就相当于 企业中的企业民称 -->
             <if test="sellerName!=null">
-                and sInfo.admin_name like #{sellerName}
+                and sInfo.admin_name like #{sellerName} or eInfo.enterprise_name like #{sellerName}
             </if>
-            <if test="enterprise_name!=null">
-                or eInfo.enterprise_name like #{sellerName}
-            </if>
+
         </where>
     </select>
 </mapper>

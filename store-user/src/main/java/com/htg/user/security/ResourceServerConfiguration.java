@@ -5,6 +5,7 @@ import org.springframework.security.config.annotation.web.configurers.Expression
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.web.cors.CorsUtils;
+
 /*
    配置资源服务器
 */
@@ -29,13 +30,15 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .antMatchers("/configuration/ui").permitAll()
                 .antMatchers("/configuration/security").permitAll()
                 /* swagger end */
-                .antMatchers("/oauth/**").permitAll().
-                /*  这里必须允许调用,否则认证中心无法 获取用户 */
-                 antMatchers("/user/name/**").permitAll().
-                 antMatchers("/user/tel/**").permitAll().
-                 antMatchers("/user/email/**").permitAll().
-                 antMatchers("/area/**").permitAll().
+                .antMatchers("/oauth/**").permitAll()
 
+                /*  这里必须允许调用,否则认证中心无法 获取用户 */
+                .antMatchers("/user/name/**").permitAll().
+                antMatchers("/user/tel/**").permitAll().
+                antMatchers("/user/email/**").permitAll().
+                antMatchers("/area/**").permitAll().
+                antMatchers("/user/register_by_tel").permitAll().
+                antMatchers("/user/reset_password_by_tel").permitAll().
                 anyRequest().authenticated();
     }
 }

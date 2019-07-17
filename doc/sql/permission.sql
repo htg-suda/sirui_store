@@ -14,10 +14,10 @@ create table role_group
     update_time datetime    not null comment '更新时间'
 ) comment '权限组表' charset utf8;
 
-insert into role_group (id, name, create_user, update_user, create_time, update_time)
+/*insert into role_group (id, name, create_user, update_user, create_time, update_time)
 values (1001, '普通用户', 0, 0, now(), now()),
        (2001, '管理员', 0, 0, now(), now()),
-       (3001, '商户', 0, 0, now(), now());
+       (3001, '商户', 0, 0, now(), now());*/
 
 
 /* 权限分类 */

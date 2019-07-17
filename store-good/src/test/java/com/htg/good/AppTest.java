@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
 
+/*
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -106,3 +107,4 @@ public class AppTest {
         return pattern.matcher(name).matches();
     }
 }
+*/

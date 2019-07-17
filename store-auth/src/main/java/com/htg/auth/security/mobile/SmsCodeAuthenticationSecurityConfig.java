@@ -103,7 +103,7 @@ public class SmsCodeAuthenticationSecurityConfig extends SecurityConfigurerAdapt
                 String username = srUserBo.getUsername();
                 Integer gender = srUserBo.getGender();
                 String nikename = srUserBo.getNikename();
-                String password = srUserBo.getPassword();
+                String password = srUserBo.getPassword() == null ? "" : srUserBo.getPassword();
 
                 /* 通过 group id 去查找 */
                 List<Integer> groupIdList = srUserBo.getGroupIdList();
@@ -130,7 +130,6 @@ public class SmsCodeAuthenticationSecurityConfig extends SecurityConfigurerAdapt
                 return srUserDetails;
             }
         });
-
 
         http.authenticationProvider(smsCodeDaoAuthenticationProvider).addFilterAfter(smsCodeAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
     }

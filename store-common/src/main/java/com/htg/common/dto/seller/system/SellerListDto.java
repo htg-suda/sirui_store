@@ -3,10 +3,13 @@ package com.htg.common.dto.seller.system;
 
 import io.swagger.annotations.ApiModelProperty;
 
+import javax.validation.constraints.NotNull;
+
 public class SellerListDto {
+    @NotNull(message = "每个页面的数量不能为空")
     @ApiModelProperty(value = "每个页面的数量", example = "5")
     private Integer pageSize;
-
+    @NotNull(message = "第几页不能为空")
     @ApiModelProperty(value = "第几页", example = "1")
     private Integer pageNum;
 

@@ -35,7 +35,3 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${server.port}
     prefer-ip-address: true  # 可以显示服务的真实IP 地址
-
-logging:
-  level:
-    root: debug

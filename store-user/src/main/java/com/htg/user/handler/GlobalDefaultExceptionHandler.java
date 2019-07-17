@@ -55,7 +55,7 @@ public class GlobalDefaultExceptionHandler {
 
 
     /* 表单请求参数异常 */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler({BindException.class})
     public CommonResult handleValidationBodyException(BindException e) {
         BindingResult result = e.getBindingResult();
@@ -73,7 +73,7 @@ public class GlobalDefaultExceptionHandler {
     }
 
     /* 表单请求参数异常 */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler({GlobalException.class})
     public CommonResult handleGlobalException(GlobalException e) {
         return CommonResult.error(e.getCode(), e.getMsg());
@@ -81,7 +81,7 @@ public class GlobalDefaultExceptionHandler {
 
 
     /* path */
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler({ConstraintViolationException.class})
     public CommonResult handleGlobalException(ConstraintViolationException e) {
         return CommonResult.error(CodeEnum.PARAM_ERROR.getCode(), e.getMessage());

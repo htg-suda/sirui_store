@@ -2,6 +2,7 @@ package com.htg.user.controller.system;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.htg.common.bo.user.SrUserBO;
 import com.htg.common.dto.custom.CustomSearchDto;
+import com.htg.common.dto.custom.ModifyCusServiceDto;
 import com.htg.common.entity.custom.CustomServiceInfo;
 import com.htg.common.exception.GlobalException;
 import com.htg.common.result.*;
@@ -88,6 +89,13 @@ public class SysCustomServiceInfoController {
     @PostMapping("/custom_service/get_info_by_id/{id}")
     public CommonResult<CustomServiceUserInfoVo> getCustomServiceInfoById(@PathVariable("id") Integer id) {
         return customServiceInfoService.getCustomServiceInfoById(id);
+    }
+
+    @ApiOperation(value = "修改客服昵称")
+    @ResponseBody
+    @PostMapping("/custom_service/modify")
+    public CommonResult modifyCustomService(@Valid @RequestBody ModifyCusServiceDto modifyCusServiceDto) {
+        return customServiceInfoService.modifyCustomService(modifyCusServiceDto);
     }
 
 }

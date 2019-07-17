@@ -13,6 +13,7 @@ use sirui_store_seller;
 */
 
 drop table  if exists sr_seller_info;
+
 create table  sr_seller_info(
      id int primary key auto_increment comment '卖家id',
      sn varchar(50) unique key  not null comment '商户编号,uuid ,参考商户表',
@@ -25,8 +26,8 @@ create table  sr_seller_info(
      admin_identity_num varchar(50) not null comment '管理员的身份证号码,如果是个人商户就是个人的身份证号码',
      admin_mob_phone varchar(20) not null comment '企业管理员或个人商户的手机号码',
      business_range varchar(255) not null comment '经营范围 以逗号隔开',
-     admin_identity_front_url varchar(20) not null comment '企业管理员或个人商户的身份证的正面照片',
-     admin_identity_back_url varchar(20) not null comment '企业管理员或个人商户的身份证的背面照片',
+     admin_identity_front_url varchar(255) not null comment '企业管理员或个人商户的身份证的正面照片',
+     admin_identity_back_url varchar(255) not null comment '企业管理员或个人商户的身份证的背面照片',
      add_by tinyint not null comment '商户来源 0-用户添加,1-管理员自己添加',
      -- 添加 客服用户id 参考用户 id
      cus_service_id int default null comment '客服id,参考客服表',
@@ -63,13 +64,14 @@ create table sr_seller_enterprise_info(
 ) comment '企业信息表' charset utf8;
 
 
+drop table if exists sr_seller_bank_info ;
 /* */
 create table sr_seller_bank_info(
     seller_sn varchar(50) unique key  not null comment '商户编号,uuid ,参考商户表',
     legal_person_name   varchar(50)  comment '法人姓名,对于企业商户必须要有法人',
     legal_person_identity_num varchar(50)  comment '法人身份证号码,对于企业商户必须要有法人',
-    legal_person_identity_front_url varchar(20)  comment '法人身份证的正面照片',
-    legal_person_identity_back_url varchar(20)  comment '法人身份证的背面照片',
+    legal_person_identity_front_url varchar(255)  comment '法人身份证的正面照片',
+    legal_person_identity_back_url varchar(255)  comment '法人身份证的背面照片',
     bank_account_name varchar(50)  not null comment '账户开户人姓名',
     bank_name varchar(50) not null comment '开户银行',
     bank_account_card_num  varchar(100) not null comment '开户银行卡号',
@@ -99,6 +101,16 @@ create table sr_seller_store(
     create_time datetime not null comment '创建时间',
     update_time datetime not null comment '更新时间'
 ) comment '商铺表' charset utf8;
+
+
+
+
+
+
+
+
+
+
 
 
 drop table if exists user;

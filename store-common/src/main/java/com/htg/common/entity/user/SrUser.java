@@ -28,14 +28,13 @@ public class SrUser extends BaseEntity {
     private Integer id;
 
 
-    @Pattern(regexp = "^[a-zA-Z]{1}[a-zA-Z0-9_]{5,16}$", message = "由字母数字下划线组成且开头必须是字母,位数5~16位")
+    @Pattern(regexp = "^[a-zA-Z]{1}[a-zA-Z0-9_]{5,16}$", message = "由字母数字下划线组成且开头必须是字母,位数6~16位")
     @ApiModelProperty(value = "用户名", example = "htg")
     @TableField("username")
     private String username;
 
 
     @Pattern(regexp = "^[a-zA-Z0-9]{6,20}$", message = "密码必须是字母和数字的组合,且位数为6~20位")
-    @NotBlank(message = "密码不能为空")
     @ApiModelProperty(value = "用户密码", example = "123qwe")
     @TableField("password")
     private String password;

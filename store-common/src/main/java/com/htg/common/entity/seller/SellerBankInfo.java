@@ -29,24 +29,24 @@ public class SellerBankInfo extends BaseEntity {
     private String sellerSn;
 
 
-    @NotBlank(message = "法人姓名,对于企业商户必须要有法人")
+
     @ApiModelProperty(value = "法人姓名",example = "招财猫")
     @TableField("legal_person_name")
     private String legalPersonName;
 
-    @NotBlank(message = "对于企业商户必须要有法人")
+
     @ApiModelProperty(value = "法人身份证号码",example = "346767655434521678")
     @TableField("legal_person_identity_num")
     private String legalPersonIdentityNum;
 
 
-    @NotBlank(message = "法人身份证的正面照片不能为空")
+
     @ApiModelProperty(value = "法人身份证的正面照片",example = "xxxx.png")
     @TableField("legal_person_identity_front_url")
     private String legalPersonIdentityFrontUrl;
 
 
-    @NotBlank(message = "法人身份证的背面照片不能为空")
+
     @ApiModelProperty(value = "法人身份证的正面照片",example = "xxxx.png")
     @TableField("legal_person_identity_back_url")
     private String legalPersonIdentityBackUrl;
@@ -71,7 +71,7 @@ public class SellerBankInfo extends BaseEntity {
     private String bankAccountCardNum;
 
 
-    @NotBlank(message = "开户许可证编码,对于企业商户必须要有")
+
     @ApiModelProperty(value = "开户许可证编码",example = "记记记哦积极哦i机")
     @TableField("bank_account_permit_num")
     private String bankAccountPermitNum;

@@ -6,7 +6,7 @@ use sirui_store_user;
 create table sr_user(
     id int primary key auto_increment comment '用户ID ，主键',
     username varchar(20) unique key not null comment '用户名',
-    password varchar(80) not null comment '用户密码',
+    password varchar(100) default null comment '用户密码',
     nikename varchar(20) default null comment '用户昵称',
     tel varchar(20) unique key  comment '用户手机号码',
     email varchar(50) unique key  comment '用户电子邮箱',
@@ -22,7 +22,7 @@ create table sr_user(
     create_time datetime not null comment '创建时间',
     update_time datetime not null comment '更新时间'
 )comment '用户表' charset utf8;
-alter table sr_user add column  seller_id int default null comment '商户id,参考商户表' after  status;
+-- alter table sr_user add column  seller_id int default null comment '商户id,参考商户表' after  status;
 
 
 drop table if exists sr_custom_service_info;

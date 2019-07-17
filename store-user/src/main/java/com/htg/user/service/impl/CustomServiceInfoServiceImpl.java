@@ -3,6 +3,7 @@ package com.htg.user.service.impl;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.htg.common.constant.Del_FLAG;
+import com.htg.common.dto.custom.ModifyCusServiceDto;
 import com.htg.common.entity.custom.CustomServiceInfo;
 import com.htg.common.entity.user.SrUser;
 import com.htg.common.exception.GlobalException;
@@ -69,5 +70,19 @@ public class CustomServiceInfoServiceImpl extends ServiceImpl<CustomServiceInfoM
         CustomServiceUserInfoVo customServiceUserInfoVo = baseMapper.selectCustomUserInfoById(id);
         if (customServiceUserInfoVo == null) throw new GlobalException(CodeEnum.CUSTOM_SERVICE_NOT_EXIST);
         return CommonResult.success(customServiceUserInfoVo);
+    }
+
+    @Override
+    public CommonResult modifyCustomService(ModifyCusServiceDto modifyCusServiceDto) {
+        Integer cusServiceId = modifyCusServiceDto.getCusServiceId();
+        CustomServiceInfo serviceInfo = selectById(cusServiceId);
+        if (serviceInfo == null) throw new GlobalException(CodeEnum.CUSTOM_SERVICE_NOT_EXIST);
+
+        serviceInfo.setServiceName(modifyCusServiceDto.getCusName());
+        if (!updateById(serviceInfo)) {
+            return CommonResult.error("修改失败");
+        } else {
+            return CommonResult.success("修改成功");
+        }
     }
 }

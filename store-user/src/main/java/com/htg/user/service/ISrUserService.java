@@ -1,6 +1,7 @@
 package com.htg.user.service;
 
 import com.htg.common.bo.user.SrUserBO;
+import com.htg.common.dto.seller.user.ResetPasswordDto;
 import com.htg.common.dto.seller.user.SrUserDto;
 import com.htg.common.entity.user.SrUser;
 import com.baomidou.mybatisplus.service.IService;
@@ -32,4 +33,6 @@ public interface ISrUserService extends IService<SrUser> {
     CommonResult<SellerStatusInfo> getSellerStatusInfo(Integer userId);
 
     CommonResult<UserInfo> getUserInfo(Integer userId) throws GlobalException;
+
+    CommonResult resetPasswordByTel(ResetPasswordDto resetPasswordDto);
 }

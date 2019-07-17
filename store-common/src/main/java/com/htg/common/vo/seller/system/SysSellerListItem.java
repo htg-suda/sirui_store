@@ -47,6 +47,13 @@ public class SysSellerListItem {
     private String enterpriseName;
 
 
+    @ApiModelProperty(value = "企业登录名", example = "BD_ls0")
+    private String username;
+
+
+    @ApiModelProperty(value = "用户昵称", example = "蓝色忧郁")
+    private String nikename;
+
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
@@ -137,5 +144,40 @@ public class SysSellerListItem {
 
     public void setEnterpriseName(String enterpriseName) {
         this.enterpriseName = enterpriseName;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getNikename() {
+        return nikename;
+    }
+
+    public void setNikename(String nikename) {
+        this.nikename = nikename;
+    }
+
+    @Override
+    public String toString() {
+        return "SysSellerListItem{" +
+                "id=" + id +
+                ", sn='" + sn + '\'' +
+                ", userId=" + userId +
+                ", logo='" + logo + '\'' +
+                ", state=" + state +
+                ", stateRemark='" + stateRemark + '\'' +
+                ", type=" + type +
+                ", adminName='" + adminName + '\'' +
+                ", adminMobPhone='" + adminMobPhone + '\'' +
+                ", addBy=" + addBy +
+                ", enterpriseName='" + enterpriseName + '\'' +
+                ", username='" + username + '\'' +
+                ", nikename='" + nikename + '\'' +
+                '}';
     }
 }

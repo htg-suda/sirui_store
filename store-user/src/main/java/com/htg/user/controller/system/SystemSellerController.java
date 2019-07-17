@@ -8,6 +8,7 @@ import com.htg.common.result.CommonResult;
 import com.htg.common.result.RespId;
 import com.htg.common.result.RespPage;
 import com.htg.common.vo.seller.shop.SellerInfoDetailsVo;
+import com.htg.common.vo.seller.system.SysSellerInfoDetailsVo;
 import com.htg.common.vo.seller.system.SysSellerListItem;
 import com.htg.user.service.ISellerInfoService;
 import io.swagger.annotations.Api;
@@ -58,7 +59,7 @@ public class SystemSellerController {
     @ApiOperation(value = "根据商户ID,获取商户详情")
     @ResponseBody
     @GetMapping("/get_seller_detail_by_id/{sellerId}")
-    public CommonResult<SellerInfoDetailsVo> getSellerDetailById(@PathVariable("sellerId") Integer sellerId) {
+    public CommonResult<SysSellerInfoDetailsVo> getSellerDetailById(@PathVariable("sellerId") Integer sellerId) {
         return sellerInfoService.sysGetSellerInfoById(sellerId);
     }
 

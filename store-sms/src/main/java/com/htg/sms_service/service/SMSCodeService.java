@@ -5,16 +5,16 @@ import com.aliyuncs.exceptions.ClientException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.htg.common.constant.CodeConst;
 import com.htg.common.result.CommonResult;
+import com.htg.sms_service.bean.SMSResultBean;
+import com.htg.sms_service.utils.SMSUtils;
 import org.apache.commons.lang.RandomStringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
-import com.htg.sms_service.bean.SMSResultBean;
-import com.htg.common.constant.CodeConst;
-import com.htg.sms_service.utils.SMSUtils;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -33,6 +33,8 @@ public class SMSCodeService {
     /* 验证码存在的时间 为 300 秒*/
     private static int CODE_ACTIVE_TIME = 300;
 
+    private static final boolean debug = true;
+
     /* 发送验证码 */
     public CommonResult sendSMSValidCodeMsg(String phoneNumbers) {
         String key = CodeConst.CODE_PREFIX + phoneNumbers;
@@ -41,8 +43,13 @@ public class SMSCodeService {
         if (remainTime > 0 && CODE_ACTIVE_TIME - remainTime < 60) { // redis 中存在这个 验证码 ,并且验证码才产生少于60秒 ,就又去请求,就表示请求太过频繁
             return CommonResult.error("请求过于频繁,稍后再次尝试");
         }
+
         try {
             String code = RandomStringUtils.randomNumeric(6);
+            if (debug) {
+                redisTemplate.opsForValue().set(key, code, CODE_ACTIVE_TIME, TimeUnit.SECONDS);
+                return CommonResult.success(code);
+            }
             CommonResponse commonResponse = SMSUtils.sendCodeMsg(phoneNumbers, code);
             String data = commonResponse.getData();
             ObjectMapper mapper = new ObjectMapper();
@@ -72,8 +79,5 @@ public class SMSCodeService {
         }
         return CommonResult.error("请求验证码失败");
     }
-
-
-
 
 }

@@ -3,7 +3,6 @@ package com.htg.common.vo.user.user;
 import io.swagger.annotations.ApiModelProperty;
 
 public class UserInfo {
-
     @ApiModelProperty(value = "用户名",example = "BD_xyz123")
     private String username;
 

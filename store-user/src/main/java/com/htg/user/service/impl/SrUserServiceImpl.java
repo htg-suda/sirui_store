@@ -3,6 +3,7 @@ package com.htg.user.service.impl;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.htg.common.bo.user.SrUserBO;
 import com.htg.common.constant.*;
+import com.htg.common.dto.seller.user.ResetPasswordDto;
 import com.htg.common.dto.seller.user.SrUserDto;
 import com.htg.common.entity.seller.SellerInfo;
 import com.htg.common.entity.seller.SellerStore;
@@ -46,18 +47,6 @@ public class SrUserServiceImpl extends ServiceImpl<SrUserMapper, SrUser> impleme
     @Autowired
     private ISellerInfoService iSellerInfoService;
 
-
-    @Autowired
-    private ISellerBankInfoService iSellerBankInfoService;
-
-
-    @Autowired
-    private ISellerEnterpriseInfoService iSellerEnterpriseInfoService;
-
-
-    @Autowired
-    private ISellerStoreService iSellerStoreService;
-
     @Autowired
     private StringRedisTemplate redisTemplate;
 
@@ -92,11 +81,13 @@ public class SrUserServiceImpl extends ServiceImpl<SrUserMapper, SrUser> impleme
         /* 注册时将商户 id 设置为空 */
         srUser.setSellerId(null);
         /* 对用户密码进行 加密 */
-        String password = srUser.getPassword();
-        PasswordEncoder encoder = new BCryptPasswordEncoder();
-        String ePass = encoder.encode(password);
-        srUser.setPassword(ePass);
 
+        String password = srUser.getPassword();
+        if(!StringUtils.isBlank(password)){
+            PasswordEncoder encoder = new BCryptPasswordEncoder();
+            String ePass = encoder.encode(password);
+            srUser.setPassword(ePass);
+        }
         /* 存入数据库 */
         if (!insert(srUser)) throw new GlobalException(CodeEnum.REGISTER_USER_ERROR);
 
@@ -114,11 +105,11 @@ public class SrUserServiceImpl extends ServiceImpl<SrUserMapper, SrUser> impleme
 
     /* 获取商户状态 */
     @Override
-    public CommonResult<SellerStatusInfo> getSellerStatusInfo(Integer userId){
+    public CommonResult<SellerStatusInfo> getSellerStatusInfo(Integer userId) {
         SrUser srUser = selectById(userId);
         Integer sellerId = srUser.getSellerId();
-        SellerStatusInfo sellerStatusInfo=new SellerStatusInfo();
-        if(sellerId==null){
+        SellerStatusInfo sellerStatusInfo = new SellerStatusInfo();
+        if (sellerId == null) {
             sellerStatusInfo.setShopStatus(ShopConst.STATE_HAS_NO_SELLER_INFO);
             return CommonResult.success(sellerStatusInfo);
         }
@@ -154,13 +145,8 @@ public class SrUserServiceImpl extends ServiceImpl<SrUserMapper, SrUser> impleme
                 sellerStatusInfo.setShopStatus(ShopConst.STATE_SELLER_FROZEN);
                 break;
         }
-
         return CommonResult.success(sellerStatusInfo);
-
     }
-
-
-
 
 
     @Override
@@ -169,6 +155,29 @@ public class SrUserServiceImpl extends ServiceImpl<SrUserMapper, SrUser> impleme
         SrUser srUser = baseMapper.selectById(userId);
         BeanUtils.copyProperties(srUser, userInfo);
         return CommonResult.success(userInfo);
+    }
+
+    @Override
+    public CommonResult resetPasswordByTel(ResetPasswordDto resetPasswordDto) {
+        String smsCode = resetPasswordDto.getSmsCode();
+        String tel = resetPasswordDto.getTel();
+        String newPass = resetPasswordDto.getNewPass();
+        if (!checkMsgCode(tel, smsCode)) throw new GlobalException(CodeEnum.MSG_CODE_VALID_FAILED);
+
+        SrUserBO userBO = getUserByTel(tel);
+        if (userBO == null) throw new GlobalException(CodeEnum.USER_NOT_EXIST);
+
+        Integer id = userBO.getId();
+        SrUser srUser=new SrUser();
+        PasswordEncoder encoder = new BCryptPasswordEncoder();
+        String ePass = encoder.encode(newPass);
+        srUser.setId(id);
+        srUser.setPassword(ePass);
+       if(updateById(srUser)){
+           return CommonResult.success("修改成功");
+       }else {
+           return CommonResult.success("修改失败");
+       }
     }
 
 

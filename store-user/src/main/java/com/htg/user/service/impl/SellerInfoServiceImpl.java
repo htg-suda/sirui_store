@@ -1,5 +1,4 @@
 package com.htg.user.service.impl;
-
 import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.htg.common.constant.Del_FLAG;
@@ -24,6 +23,8 @@ import com.htg.common.vo.seller.shop.SellerInfoDetailsVo;
 import com.htg.common.vo.seller.shop.ShopSellerBankInfoVo;
 import com.htg.common.vo.seller.shop.ShopSellerEnterpriseInfoVo;
 import com.htg.common.vo.seller.shop.ShopSellerInfoVo;
+import com.htg.common.vo.seller.system.SrUserVo;
+import com.htg.common.vo.seller.system.SysSellerInfoDetailsVo;
 import com.htg.common.vo.seller.system.SysSellerListItem;
 import com.htg.user.constant.AddByConst;
 import com.htg.user.mapper.SellerInfoMapper;
@@ -167,8 +168,13 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         if (sellerName != null) {
             listDto.setSellerName("%" + sellerName + "%");
         }
-        /*todo  目前返回 的没有商户的登陆名和昵称 */
+
         List<SysSellerListItem> sysSellerListItems = baseMapper.selectSellerVerfiyInfoByPage(page, listDto);
+         /*for(SysSellerListItem item:sysSellerListItems){
+            if(item.getType()==SellerConst.TYPE_INDIVIDUALS){
+                item.setEnterpriseName(item.getAdminName());
+            }
+        }*/
         long pages = page.getPages();
         return CommonResult.success(new RespPage<>(sysSellerListItems, pages));
     }
@@ -353,23 +359,32 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
     }
 
     @Override
-    public CommonResult<SellerInfoDetailsVo> sysGetSellerInfoById(Integer sellerId) {
-        SellerInfoDetailsVo detailsVo = new SellerInfoDetailsVo();
+    public CommonResult<SysSellerInfoDetailsVo> sysGetSellerInfoById(Integer sellerId) {
+        SysSellerInfoDetailsVo detailsVo = new SysSellerInfoDetailsVo();
         ShopSellerInfoVo sellerInfoVo = new ShopSellerInfoVo();
         ShopSellerBankInfoVo bankInfoVo = new ShopSellerBankInfoVo();
         ShopSellerEnterpriseInfoVo enterpriseInfoVo = new ShopSellerEnterpriseInfoVo();
+        SrUserVo srUserVo = new SrUserVo();
+
         /* 获取商户信息 */
         SellerInfo sellerInfo = selectById(sellerId);
+
+
         if (sellerInfo == null) {
             throw new GlobalException(CodeEnum.SELLER_NOT_EXIST);
         }
         BeanUtils.copyProperties(sellerInfo, sellerInfoVo);
+
+        SrUser srUser = srUserService.selectById(sellerInfo.getUserId());
+        if (srUser == null) throw new GlobalException(CodeEnum.USER_NOT_EXIST);
+        BeanUtils.copyProperties(srUser, srUserVo);
 
         SellerBankInfo sellerBankInfo = bankInfoService.selectById(sellerInfo.getSn());
         if (sellerBankInfo == null) {
             throw new GlobalException(CodeEnum.SELLER_HAS_NO_BANK_INFO);
         }
         BeanUtils.copyProperties(sellerBankInfo, bankInfoVo);
+
 
         Integer type = sellerInfo.getType();
         if (type == SellerConst.TYPE_ENTERPRISE) {  //商户类型,0-企业商户
@@ -383,6 +398,9 @@ public class SellerInfoServiceImpl extends ServiceImpl<SellerInfoMapper, SellerI
         }
         detailsVo.setSellerInfoVo(sellerInfoVo);
         detailsVo.setSellerBankInfoVo(bankInfoVo);
+
+        detailsVo.setSrUserVo(srUserVo);
+
 
         return CommonResult.success(detailsVo);
     }

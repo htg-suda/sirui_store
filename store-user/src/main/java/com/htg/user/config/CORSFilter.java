@@ -10,9 +10,6 @@ import java.io.IOException;
 @Configuration
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CORSFilter implements Filter {
-
-
-
     @Override
     public void doFilter(ServletRequest req, ServletResponse resp,
                          FilterChain chain) throws IOException, ServletException {
@@ -28,8 +25,5 @@ public class CORSFilter implements Filter {
         } else {
             chain.doFilter(req, resp);
         }
-
     }
-
-
 }

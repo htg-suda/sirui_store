@@ -2,52 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e969e324-9247-494b-9f20-2a92b7f415c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/user/SellerStatusInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/config/WebMvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_7_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_14.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_13.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_14.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_1_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/custom/ModifyCusServiceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/user/ResetPasswordDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SrUserVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SysSellerInfoDetailsVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_8_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_7_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_14.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_13.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_1_0_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sirui_store.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sirui_store.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sql/permission.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/permission.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/sql/seller.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/seller.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/sql/user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/user.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-registry/shop-registry.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-registry/shop-registry.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-admin/store-admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-admin/store-admin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-auth/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-auth/store-auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-auth/store-auth.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-client-feign/store-client-feign.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-client-feign/store-client-feign.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/bo/user/SrUserBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/bo/user/SrUserBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerListDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerBankInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerBankInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/user/SrUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/user/SrUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerInfoVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerInfoVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SysSellerListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SysSellerListItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/admin/UserInfoWithId.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/admin/UserInfoWithId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/user/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/user/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-common/store-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/store-common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/config/WebMvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/service/FileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-file-service/store-file-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-file-service/store-file-service.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-gateway/store-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-gateway/store-gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-good/store-good.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-good/store-good.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/SmsServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/SmsServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/service/SMSCodeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/service/SMSCodeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-sms/store-sms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-sms/store-sms.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-test/store-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-test/store-test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/CORSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SysCustomServiceInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SysCustomServiceInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/SrUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/SrUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/handler/GlobalDefaultExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/handler/GlobalDefaultExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SellerInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SellerInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/security/ResourceServerConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/security/ResourceServerConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ICustomServiceInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ICustomServiceInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/CustomServiceInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/CustomServiceInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-user/src/main/resources/mapping/SellerInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/resources/mapping/SellerInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-user/src/main/resources/mapping/SrUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/src/main/resources/mapping/SrUserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-user/store-user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/store-user/store-user.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -99,16 +108,62 @@
     <favorites_list name="sirui_store" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/shop-registry/src/main/java/com/htg/registry/RegisterApplication.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doc/sql/permission.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="4" column="74" lean-forward="true" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
-              <folding>
-                <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1314">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-auth/src/main/resources/mapping/GroupPermissionMappingMapper.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/mapper/GroupPermissionMappingMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/impl/GroupPermissionMappingServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserDetailService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/IGroupPermissionMappingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationSecurityConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1404">
+              <caret line="112" column="96" selection-start-line="112" selection-start-column="96" selection-end-line="112" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -151,6 +206,10 @@
       <find>Map01</find>
       <find>getStoreByUserId</find>
       <find>getSellerInfo</find>
+      <find>addSysSeller</find>
+      <find>admin_identity_front_url</find>
+      <find>admin_identity_front_u</find>
+      <find>SellerInfoDetailsVo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,81 +218,71 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/CORSFilter.java" />
-        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/config/CORSFilter.java" />
-        <option value="$PROJECT_DIR$/store-auth/src/main/resources/application.yaml" />
-        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/ResourceServerConfiguration.java" />
-        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/UserInfo.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/admin/UserInfoWithId.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/admin/CustomUserInfoVo.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/admin/CustomServiceUserInfoVo.java" />
-        <option value="$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSkuServiceImpl.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/custom/CustomSearchDto.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/custom/CustomServiceInfo.java" />
-        <option value="$PROJECT_DIR$/doc/sql/seller.sql" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerVerifyDto.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/resources/mapping/CustomServiceInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/CustomServiceInfoMapper.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ICustomServiceInfoService.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/CustomServiceInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SysCustomServiceInfoController.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/shop/SellerInfoController.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SysSellerListItem.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerEnterpriseModifyInfo.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerBankInfo.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerBankModifyInfo.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SysSellerModifyDto.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java" />
         <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerInfoService.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerModifyInfo.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerInfoVo.java" />
         <option value="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/SmsServiceApplication.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/user/SrUser.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/bo/user/SrUserBO.java" />
         <option value="$PROJECT_DIR$/store-user/src/main/resources/mapping/SrUserMapper.xml" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/user/SellerStatusInfo.java" />
-        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/user/UserInfo.java" />
         <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SellerInfoMapper.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/SrUserController.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/resources/mapping/SellerInfoMapper.xml" />
         <option value="$PROJECT_DIR$/store-user/pom.xml" />
         <option value="$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/config/WebMvcConfiguration.java" />
-        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/service/FileService.java" />
         <option value="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/config/WebMvcConfiguration.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/doc/sql/user.sql" />
         <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/config/CORSFilter.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/user/ResetPasswordDto.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/security/ResourceServerConfiguration.java" />
+        <option value="$PROJECT_DIR$/doc/sql/user.sql" />
+        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerBankInfo.java" />
         <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/handler/GlobalDefaultExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/user/SrUser.java" />
+        <option value="$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/service/SMSCodeService.java" />
+        <option value="$PROJECT_DIR$/doc/sql/seller.sql" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/SrUserController.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerListDto.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SysSellerListItem.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/resources/mapping/SellerInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/custom/ModifyCusServiceDto.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ICustomServiceInfoService.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/CustomServiceInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/admin/UserInfoWithId.java" />
+        <option value="$PROJECT_DIR$/deploy.sh" />
+        <option value="$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java" />
+        <option value="$PROJECT_DIR$/store-auth/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/store-user/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/store-good/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SysCustomServiceInfoController.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/user/UserInfo.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SysSellerInfoDetailsVo.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java" />
+        <option value="$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SrUserVo.java" />
+        <option value="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/doc/sql/permission.sql" />
+        <option value="$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserDetailService.java" />
       </list>
     </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="store-admin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="store-admin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1366" />
-    <option name="y" value="-2" />
-    <option name="width" value="1920" />
-    <option name="height" value="1082" />
+    <option name="x" value="66" />
+    <option name="y" value="69" />
+    <option name="width" value="1024" />
+    <option name="height" value="555" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -241,7 +290,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -255,105 +303,11 @@
               <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
               <item name="store-auth" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="security" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sirui_store" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sirui_store" type="462c0819:PsiDirectoryNode" />
-              <item name="store-auth" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="CatdeaLogs" />
     </panes>
   </component>
@@ -380,9 +334,23 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/store-user/src/main/resources/mapping" />
+      <recent name="$PROJECT_DIR$/store-user/src/main/resources" />
+      <recent name="$PROJECT_DIR$/store-seller/src/main/resources" />
+      <recent name="$PROJECT_DIR$/doc" />
+      <recent name="$PROJECT_DIR$/store-auth/src/main/resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="com.htg" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.htg.common.vo.seller.system" />
+      <recent name="com.htg.sms_service.config" />
+      <recent name="com.htg.common.dto.seller.system" />
+      <recent name="com.htg.auth.config" />
+      <recent name="com.htg.user.controller.custom" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service" />
@@ -390,20 +358,6 @@
       <recent name="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller" />
       <recent name="$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper" />
       <recent name="$PROJECT_DIR$/store-sms/src/main/java/sms_service/security" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.htg.sms_service.config" />
-      <recent name="com.htg.common.dto.seller.system" />
-      <recent name="com.htg.auth.config" />
-      <recent name="com.htg.user.controller.custom" />
-      <recent name="com.htg.user.mapper" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/store-user/src/main/resources/mapping" />
-      <recent name="$PROJECT_DIR$/store-user/src/main/resources" />
-      <recent name="$PROJECT_DIR$/store-seller/src/main/resources" />
-      <recent name="$PROJECT_DIR$/doc" />
-      <recent name="$PROJECT_DIR$/store-auth/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -422,9 +376,9 @@
         </RuleState>
       </list>
     </option>
-    <option name="contentProportion" value="0.2503876" />
+    <option name="contentProportion" value="0.35746607" />
   </component>
-  <component name="RunManager" selected="Spring Boot.UserApplication">
+  <component name="RunManager" selected="Spring Boot.SmsServiceApplication">
     <configuration name="RegisterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="shop-registry" />
       <extension name="coverage">
@@ -492,17 +446,17 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.RegisterApplication" />
-      <item itemvalue="Spring Boot.SmsServiceApplication" />
       <item itemvalue="Spring Boot.StoreGoodApplication" />
       <item itemvalue="Spring Boot.StoreFileService" />
       <item itemvalue="Spring Boot.UserApplication" />
+      <item itemvalue="Spring Boot.SmsServiceApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SmsServiceApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Spring Boot.StoreFileService" />
         <item itemvalue="Spring Boot.StoreGoodApplication" />
-        <item itemvalue="Spring Boot.SmsServiceApplication" />
         <item itemvalue="Spring Boot.RegisterApplication" />
       </list>
     </recent_temporary>
@@ -548,7 +502,17 @@
       <workItem from="1561442686821" duration="21581000" />
       <workItem from="1561499594189" duration="31709000" />
       <workItem from="1561599769086" duration="30290000" />
-      <workItem from="1561686957306" duration="472000" />
+      <workItem from="1561686957306" duration="25289000" />
+      <workItem from="1561768679456" duration="3929000" />
+      <workItem from="1561790609912" duration="11837000" />
+      <workItem from="1561941978782" duration="11419000" />
+      <workItem from="1562031609171" duration="2052000" />
+      <workItem from="1562140936937" duration="641000" />
+      <workItem from="1562204850952" duration="819000" />
+      <workItem from="1562249408212" duration="2997000" />
+      <workItem from="1562498549403" duration="26000" />
+      <workItem from="1563177492342" duration="4576000" />
+      <workItem from="1563326184016" duration="428000" />
     </task>
     <servers />
   </component>
@@ -585,7 +549,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="847846000" />
+    <option name="totallyTimeSpent" value="911387000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -597,9 +561,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
+    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.21474358" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.37936267" />
       <window_info id="Structure" order="1" sideWeight="0.5037879" side_tool="true" weight="0.29742032" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -609,17 +574,17 @@
       <window_info id="Web" order="7" sideWeight="0.5022625" side_tool="true" weight="0.31562975" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.75680274" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.82482994" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.11734694" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.7823129" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.9302721" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924126" weight="0.052721087" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49924126" visible="true" weight="0.3622449" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" side_tool="true" weight="0.75510204" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.28603944" side_tool="true" weight="0.9489796" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="12" sideWeight="0.7139605" visible="true" weight="0.5803668" />
+      <window_info anchor="bottom" id="Run Dashboard" order="12" sideWeight="0.7139605" weight="0.09863946" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.79931974" />
       <window_info anchor="bottom" id="Database Changes" order="14" weight="0.9030612" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.05102041" />
@@ -627,7 +592,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24810319" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.18740515" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.2905918" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.59332323" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.32852808" />
@@ -638,7 +603,7 @@
       <window_info anchor="right" id="CDI" order="11" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.30500758" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.2367223" />
       <window_info id="Structure" order="1" sideWeight="0.5037879" side_tool="true" weight="0.29742032" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -648,17 +613,17 @@
       <window_info id="Web" order="7" sideWeight="0.5022625" side_tool="true" weight="0.31562975" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.75680274" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.82482994" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.11734694" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.7823129" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.9302721" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924126" weight="0.052721087" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924126" weight="0.39795917" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" side_tool="true" weight="0.75510204" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.28603944" side_tool="true" weight="0.9489796" />
-      <window_info anchor="bottom" id="Run Dashboard" order="12" sideWeight="0.7139605" visible="true" weight="0.31462586" />
+      <window_info anchor="bottom" id="Run Dashboard" order="12" sideWeight="0.7139605" visible="true" weight="0.09863946" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.79931974" />
       <window_info anchor="bottom" id="Database Changes" order="14" weight="0.9030612" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.05102041" />
@@ -685,128 +650,145 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SysSellerAddDto.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/admin/UserInfoWithId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/custom/CustomSearchDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="12" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-sms/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shop-registry/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/custom/CustomServiceInfo.java">
+    <entry file="file://$PROJECT_DIR$/store-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/test.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/auth.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-735">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#1867#1868#0" expanded="true" />
-            <element signature="e#1897#1898#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-702" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerBankInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SysCustomServiceInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SysSellerModifyDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerModifyInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerBankModifyInfo.java">
+    <entry file="file://$PROJECT_DIR$/doc/sql/admin.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerEnterpriseModifyInfo.java">
+    <entry file="file://$PROJECT_DIR$/store-auth/target/auth_temp.log" />
+    <entry file="file://$PROJECT_DIR$/store-good/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
+        <state relative-caret-position="-864" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/SmsServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/store-good/src/test/java/com/htg/good/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="4" column="72" lean-forward="true" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
-          <folding>
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="318">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/StoreGoodApplication.java">
+    <entry file="file://$PROJECT_DIR$/store-client-feign/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/test/java/com/htg/auth/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#586#587#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/seller/SellerInfo.java">
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/AuthApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="54">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/bo/user/SrUserBO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding>
-            <element signature="e#2541#2542#0" expanded="true" />
-            <element signature="e#2572#2573#0" expanded="true" />
-            <element signature="e#2621#2622#0" expanded="true" />
-            <element signature="e#2661#2662#0" expanded="true" />
-            <element signature="e#2394#2395#0" expanded="true" />
-            <element signature="e#2424#2425#0" expanded="true" />
-            <element signature="e#2471#2472#0" expanded="true" />
-            <element signature="e#2509#2510#0" expanded="true" />
-            <element signature="e#2555#2556#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/admin/UserInfoWithId.java">
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/resources/application.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-good/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/SrUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="41" column="63" lean-forward="true" selection-start-line="41" selection-start-column="63" selection-end-line="41" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ICustomServiceInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/CustomServiceInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="75" column="55" lean-forward="true" selection-start-line="75" selection-start-column="55" selection-end-line="75" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/custom/ModifyCusServiceDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -815,309 +797,218 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/user/user/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="252">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/entity/user/SrUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-          <folding>
-            <element signature="e#4325#4326#0" expanded="true" />
-            <element signature="e#4356#4357#0" expanded="true" />
-            <element signature="e#4405#4406#0" expanded="true" />
-            <element signature="e#4445#4446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/user/SellerStatusInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISrUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SrUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1624">
-          <caret line="69" column="47" lean-forward="true" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/user/SrUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="5" column="42" lean-forward="true" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding>
-            <element signature="docComment;class#SrUserController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/resources/mapping/SrUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/shop/SellerAddDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SellerListDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerInfoVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-file-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/config/WebMvcConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/user/SrUserDto.java">
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/ShopSellerBankInfoVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/SellerInfoDetailsVo.java">
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SysCustomServiceInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+        <state relative-caret-position="1332">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/inner/SellerInnerController.java">
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="18">
+          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="269" lean-forward="true" selection-start-line="269" selection-end-line="269" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="39" column="28" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/GoodClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/AdminClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-good/src/main/java/com/htg/good/service/impl/GoodSpuServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="439" lean-forward="true" selection-start-line="439" selection-end-line="439" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-client-feign/src/main/java/com/htg/feign/client/UserClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/resources/mapping/SellerInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/service/FileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/config/WebMvcConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/http/HttpStatus.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/handler/GlobalDefaultExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/handler/CommonFieldFillHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/AuthServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="62" column="31" lean-forward="true" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/local/jdk1.8.0_144/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="751" column="7" lean-forward="true" selection-start-line="751" selection-start-column="7" selection-end-line="751" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/doc/sql/user.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/mapper/SellerInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/result/CodeEnum.java">
+    <entry file="file://$PROJECT_DIR$/store-sms/src/main/java/com/htg/sms_service/SmsServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-file-service/src/main/java/com/htg/file/StoreFileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="4" column="72" lean-forward="true" selection-start-line="4" selection-start-column="72" selection-end-line="4" selection-end-column="72" />
           <folding>
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/UserApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shop-registry/src/main/java/com/htg/registry/RegisterApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="4" column="74" lean-forward="true" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#344#345#0" expanded="true" />
             <element signature="e#408#409#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/shop/SellerInfoDetailsVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="47" lean-forward="true" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SysSellerInfoDetailsVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+            <element signature="e#1390#1391#0" expanded="true" />
+            <element signature="e#1440#1441#0" expanded="true" />
+            <element signature="e#1480#1481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/impl/SellerInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/service/ISellerInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/vo/seller/system/SrUserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/system/SysSellerAddDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-common/src/main/java/com/htg/common/dto/seller/user/SrUserDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-user/src/main/java/com/htg/user/controller/system/SystemSellerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/order.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/user.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/good.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/seller.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="54" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/area.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/resources/mapping/PermissionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/permission.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/resources/mapping/GroupPermissionMappingMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/mapper/GroupPermissionMappingMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/impl/GroupPermissionMappingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/service/IGroupPermissionMappingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/mobile/SmsCodeAuthenticationSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="112" column="96" selection-start-line="112" selection-start-column="96" selection-end-line="112" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store-auth/src/main/java/com/htg/auth/security/SrUserDetailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>

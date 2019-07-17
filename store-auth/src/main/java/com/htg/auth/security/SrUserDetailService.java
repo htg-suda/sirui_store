@@ -60,28 +60,32 @@ public class SrUserDetailService implements UserDetailsService {
         String username = srUserBo.getUsername();
         String nikename = srUserBo.getNikename();
         String password = srUserBo.getPassword();
-
-
-        /* 通过 group id 去查找 */
-        List<GroupPermissionMapping> mappings = groupPermissionMappingService.selectByGroupIdList(groupIdList);
-
-        List<Integer> permissionIds = new ArrayList<>();
-        for (GroupPermissionMapping mapping : mappings) {
-            permissionIds.add(mapping.getPermissionId());
-        }
-        log.info("permissionIds is {}", permissionIds);
-
-        List<Permission> permissions = permissionService.selectBatchIds(permissionIds);
-
-        log.info("permissions is {}", permissions);
-        permissions.forEach((v) -> {
-            log.info(v.toString());
-        });
-
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        for (Permission permission : permissions) {
-            authorities.add(new SimpleGrantedAuthority(permission.getCode()));
+        if(groupIdList != null && groupIdList.size()>0){
+            /* 通过 group id 去查找 */
+            List<GroupPermissionMapping> mappings = groupPermissionMappingService.selectByGroupIdList(groupIdList);
+
+            List<Integer> permissionIds = new ArrayList<>();
+            for (GroupPermissionMapping mapping : mappings) {
+                permissionIds.add(mapping.getPermissionId());
+            }
+            log.info("permissionIds is {}", permissionIds);
+
+            List<Permission> permissions = permissionService.selectBatchIds(permissionIds);
+
+            log.info("permissions is {}", permissions);
+            permissions.forEach((v) -> {
+                log.info(v.toString());
+            });
+
+
+            for (Permission permission : permissions) {
+                authorities.add(new SimpleGrantedAuthority(permission.getCode()));
+            }
         }
+
+
+
 
         SrUserDetails srUserDetails = new SrUserDetails(username, password, authorities, id, nikename, tel, email, age, gender
                 , status, delFlag

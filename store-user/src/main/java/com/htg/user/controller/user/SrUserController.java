@@ -1,5 +1,6 @@
 package com.htg.user.controller.user;
 
+import com.htg.common.dto.seller.user.ResetPasswordDto;
 import com.htg.common.dto.seller.user.SrUserDto;
 import com.htg.common.entity.custom.CustomServiceInfo;
 import com.htg.common.exception.GlobalException;
@@ -78,6 +79,15 @@ public class SrUserController {
     public CommonResult<SellerStatusInfo> getSellerStatusInfo() throws GlobalException {
         Integer userId = AuthUtil.getLoginUserId();
         return srUserService.getSellerStatusInfo(userId);
+    }
+
+
+    /* 忘记密码 */
+    @ApiOperation(value = "手机号码重置密码")
+    @ResponseBody
+    @PostMapping("/reset_password_by_tel")
+    public CommonResult resetPasswordByTel(@Valid @RequestBody ResetPasswordDto resetPasswordDto)  {
+        return srUserService.resetPasswordByTel(resetPasswordDto);
     }
 }
 
